@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: inherit;
+}
+
+.Store .container {
+    background-color: white;
+    width: 1240px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 160px;
+    overflow: hidden;
+}
+
+.stores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stores .storeInfo {
+    margin: 17px 0 0 0;
+}
+
+.stores .storeInfo .storeTlt {
+    color: #333;
+    padding-left: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.stores .storeInfo .add {
+    background: url(../../../public/images/map.png) no-repeat 0 center/auto 15px;
+    text-align: left;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.stores .storeInfo p:nth-child(n+2) {
+    text-align: left;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+.stores .storeInfo .addEn {
+    font-size: .7rem;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.stores .storeInfo .time {
+    background: url(../../../public/images/time.png) no-repeat 0 center/auto 15px;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.stores .storeInfo .tel {
+    background: url(../../../public/images/tel.png) no-repeat 0 center/auto 15px;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.stores .storeInfo .map {
+    border: 1px solid #333;
+}
