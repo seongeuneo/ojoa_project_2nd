@@ -1,0 +1,45 @@
+/* ====================================================== */
+/* bodyFloating */
+.right_quick1 {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    margin-top: -55px;
+    z-index: 5;
+}
+
+.right_quick1 .btn_top {
+    margin: 3px 0px;
+}
+
+[class^='btn'] img {
+    margin: -2px 1px 0;
+    vertical-align: middle;
+}
+
+.right_quick1 img {
+    border: 1px solid #e5e5e5;
+}
+
+.right_quick1 img:hover {
+    border: 1px solid #333;
+}
+
+.right_quick2 img {
+    width: 50px;
+}
+
+.btn_recent1 {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    z-index: 1000;
+
+}
+
+.btn_recent2 {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    z-index: 1000;
+}
