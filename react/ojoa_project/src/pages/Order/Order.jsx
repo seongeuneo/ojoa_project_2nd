@@ -4,10 +4,9 @@ import "./Order.css";
 function Order() {
     return (
         <div className="Order">
-            {/* <!------------------------------------------------------------->
-      <!-- 주문조회페이지/order페이지 --> */}
+            {/*  주문조회페이지/order페이지  */}
             <div class="container">
-                {/* <!-- order = od로 요약 --> */}
+                {/*  order = od로 요약  */}
                 <div id="od_backbody">
                     <div id="od_frame">
                         <form>

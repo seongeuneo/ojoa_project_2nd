@@ -1,7 +1,41 @@
 import React from "react";
 import "./ProductDetail.css";
+import { useState, useRef } from "react";
+
 
 function MainInfo() {
+
+
+    //======================================
+    // 수량 변경한 만큼 가격에 계산
+    const [count, setCount] = useState(1);
+
+    const onDecrease = () => {
+        if (count >= 2) {
+            setCount(count - 1);
+        }
+    }
+    const onIncrease = () => {
+        if (count >= 1) {
+
+            setCount(count + 1);
+        }
+    }
+
+    const sum = count * 199000;
+    //======================================
+    // 대표 썸네일 이미지 클릭시 변경
+
+    const [mainImg, setMainImg] = useState("../images/vintagefabricC1.jpg");
+
+    const imgChange = (e) => {
+        setMainImg(e)
+    };
+    //======================================
+
+
+
+
     return (
         <div className="MainInfo">
             {/* <!-- main product detail --> */}
@@ -20,7 +54,7 @@ function MainInfo() {
                     <tbody>
                         <tr>
                             <th>판매가</th>
-                            <td class="price">199&#44;000</td>
+                            <td class="price">199&#44;000원</td>
                         </tr>
                         <tr>
                             <th>상품코드</th>
@@ -34,15 +68,20 @@ function MainInfo() {
                             <th>구매수량</th>
                             <td>
                                 <div class="pd_length">
-                                    <input type="number" min="1" value="1" />
-                                    <a href="#a">증가</a>
-                                    <a href="#a">감소</a>
+                                    <button onClick={onDecrease}>-</button>
+                                    <input type="number" min="1" value={count} />
+                                    <button onClick={onIncrease}>+</button>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th>사용가능쿠폰</th>
-                            <td>0개</td>
+                            <td>
+                                <select>
+                                    <option>-</option>
+                                    {/* <option>신규가입쿠폰 5%</option> */}
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <th>옵션선택</th>
@@ -58,17 +97,18 @@ function MainInfo() {
                         </tr>
                         <tr>
                             <th>결제금액</th>
-                            <td class="total"><strong>199&#44;000</strong>원</td>
+                            <td class="total"><strong>{sum}</strong>원</td>
                         </tr>
                     </tbody>
                 </table>
 
                 <div class="pd_img">
-                    <img src="../images/chair0.jpg" alt="" />
+                    <img src={mainImg} alt="" id="mainImg" />
                     <ul>
-                        <li class="on"><a href="./product_detail_img2.html"><img src="../images/chair0_2.jpg" alt="" /></a></li>
-                        <li><a href="./product_detail_img3.html"><img src="../images/chair0_3.jpg" alt="" /></a></li>
-                        <li><a href="./product_detail_img4.html"><img src="../images/chair0_4.jpg" alt="" /></a></li>
+                        <li><img onClick={() => imgChange("../images/vintagefabricC1.jpg")} src="../images/vintagefabricC1.jpg" alt="" id="thumb1" /></li>
+                        <li><img onClick={() => imgChange("../images/vintagefabricC2.jpg")} src="../images/vintagefabricC2.jpg" alt="" id="thumb2" /></li>
+                        <li><img onClick={() => imgChange("../images/vintagefabricC3.jpg")} src="../images/vintagefabricC3.jpg" alt="" id="thumb3" /></li>
+                        <li><img onClick={() => imgChange("../images/vintagefabricC4.jpg")} src="../images/vintagefabricC4.jpg" alt="" id="thumb4" /></li>
                     </ul>
                 </div>
 
