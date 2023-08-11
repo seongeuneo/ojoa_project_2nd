@@ -13,25 +13,13 @@ li {
     list-style-type: none;
 }
 
-/* body {
-    margin: auto;
-} */
-
+/* ====================================================== */
+/* myPage_main */
 .container {
     background-color: white;
-    /* min-height: 450px; */
     width: 1240px;
     margin: auto;
 }
-
-/* ====================================================== */
-/* myPage_main */
-/* .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    margin-bottom: 80px;
-    /* overflow: hidden; */
 
 /*======================================================*/
 /* thumbnail */

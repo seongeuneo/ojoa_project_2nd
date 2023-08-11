@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../components/Header/Header.css';
-// import bodyFloating from './pages/bodyFloating';
 
 function Header() {
     return (
         <>
             <header>
+                <Link to="/Qna" className="mtalk"><img src="/images/mtalk_icon.png" alt="mtalk" /></Link>
+                <Link to="/Qna" className="mchannel"><img src="/images/mchannel_icon.png" alt="mchannel" /></Link>
                 <div id="mheader">
                     {/*---------------------------------------------------------*/}
                     {/* header */}
@@ -18,18 +19,18 @@ function Header() {
                         {/* 상단 네비 */}
                         <div className="navBar">
                             <ul>
-                                <li><Link to="../login">LOGIN </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../Login">LOGIN </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../MyPage">MYPAGE </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../Order">ORDER </Link>&nbsp;<span>|</span></li>
-                                <li><Link to="../cart">CART </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../Cart">CART </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../Qna">QNA </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../Store">STORE </Link></li>
                             </ul>
                         </div>
                     </div>
                     <br />
                     <div className="search">
-                        <input type="text" name="query" defaultValue />
-                        <Link to="#"><img src="/images/btn_search.gif" alt="search"/></Link>
+                        <Link to="/Search"><img src="/images/btn_search.gif" alt="search" /></Link>
                     </div>
                 </div>
             </header>
@@ -69,7 +70,7 @@ function Header() {
                             <li><Link to="#">탈부착형</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="./ProductList">의자(구현)</Link>
+                    <li><Link to="Product_list">의자(구현)</Link>
                         <ul>
                             <li><Link to="#">탁상의자</Link></li>
                             <li><Link to="#">주방의자</Link></li>
