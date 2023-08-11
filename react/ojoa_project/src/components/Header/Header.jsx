@@ -20,7 +20,7 @@ function Header() {
                             <ul>
                                 <li><Link to="../login">LOGIN </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../MyPage">MYPAGE </Link>&nbsp;<span>|</span></li>
-                                <li><Link to="../order">ORDER </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../Order">ORDER </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../cart">CART </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../Store">STORE </Link></li>
                             </ul>
@@ -69,7 +69,7 @@ function Header() {
                             <li><Link to="#">탈부착형</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="./product_list">의자(구현)</Link>
+                    <li><Link to="./ProductList">의자(구현)</Link>
                         <ul>
                             <li><Link to="#">탁상의자</Link></li>
                             <li><Link to="#">주방의자</Link></li>

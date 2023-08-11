@@ -1,0 +1,71 @@
+
+/* ==================  product_list 페이지네이션 ================== */
+
+.pl_page {
+    text-align: center;
+    width: 50%;
+    margin: 80px auto;
+  }
+  
+  .pl_pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .pl_pagination li {
+    display: inline;
+    text-align: center;
+  }
+  
+  .pl_pagination a {
+    float: left;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #686b6e;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  
+  .pl_first {
+    margin-right: 15px;
+  }
+  
+  .pl_last {
+    margin-left: 15px;
+  }
+  
+  .pl_first:hover,
+  .pl_arrow:hover,
+  .pl_last:hover,
+  pl_left:hover,
+  .pl_right:hover {
+    color: #2e9cdf;
+  }
+  
+  .pl_pagination a:active {
+    cursor: default;
+    color: #ffffff;
+    outline: none;
+  }
+  
+  .pl_pagination a:active {
+    outline: none;
+  }
+  
+  .pl_modal .pl_num {
+    margin-left: 3px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  
+  .pl_modal .pl_num:hover {
+    background-color: #2e9cdf;
+    cursor: pointer;
+  }
+  
