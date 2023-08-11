@@ -17,15 +17,15 @@ const OrderState = () => {
                         </li>
                         <li>
                             <strong>배송준비중</strong>
-                            <Link to="#" className="count">2</Link>
+                            <Link to="#" className="count">1</Link>
                         </li>
                         <li>
                             <strong>배송중</strong>
-                            <Link to="#" className="count">2</Link>
+                            <Link to="#" className="count">1</Link>
                         </li>
                         <li>
                             <strong>배송완료</strong>
-                            <Link to="#" className="count">4</Link>
+                            <Link to="#" className="count">6</Link>
                         </li>
                     </ul>
                     <ul className="cs">

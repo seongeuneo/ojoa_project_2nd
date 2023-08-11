@@ -6,6 +6,7 @@ import MyPage from './pages/MyPage/MyPage';
 import Store from './pages/Store/Store';
 import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound/NotFound';
+import TopButton from './components/TopButton';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        <TopButton />
       </BrowserRouter>
     </div>
   );

@@ -1,0 +1,20 @@
+.scroll {
+    position: fixed;
+    right: 1%;
+    bottom: 40%;
+    z-index: 1;
+
+    button {
+        font-weight: bold;
+        font-size: 10px;
+        padding: 15px 10px;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        border-radius: 50%;
+        /* outline: none; */
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+}

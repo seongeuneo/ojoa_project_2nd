@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../components/Header/Header.css';
-// import bodyFloating from './pages/bodyFloating';
 
 function Header() {
     return (
         <>
             <header>
+                <Link to="/qna" className="mtalk"><img src="/images/mtalk_icon.png" alt="mtalk" /></Link>
+                <Link to="/qna" className="mchannel"><img src="/images/mchannel_icon.png" alt="mchannel" /></Link>
                 <div id="mheader">
                     {/*---------------------------------------------------------*/}
                     {/* header */}
@@ -22,14 +23,14 @@ function Header() {
                                 <li><Link to="../MyPage">MYPAGE </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../order">ORDER </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../cart">CART </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../qna">QNA </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../Store">STORE </Link></li>
                             </ul>
                         </div>
                     </div>
                     <br />
                     <div className="search">
-                        <input type="text" name="query" defaultValue />
-                        <Link to="#"><img src="/images/btn_search.gif" alt="search"/></Link>
+                        <Link to="/"><img src="/images/btn_search.gif" alt="search"/></Link>
                     </div>
                 </div>
             </header>
@@ -76,6 +77,7 @@ function Header() {
                         </ul>
                     </li>
                 </ul>
+
             </div>
 
         </>
