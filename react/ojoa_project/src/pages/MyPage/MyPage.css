@@ -13,36 +13,14 @@ li {
     list-style-type: none;
 }
 
-<<<<<<< HEAD
 /* ====================================================== */
 /* myPage_main */
 .container {
     background-color: white;
-=======
-/* body {
-    margin: auto;
-} */
-
-.container {
-    background-color: white;
-    /* min-height: 450px; */
->>>>>>> main
     width: 1240px;
     margin: auto;
 }
 
-<<<<<<< HEAD
-=======
-/* ====================================================== */
-/* myPage_main */
-/* .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    margin-bottom: 80px;
-    /* overflow: hidden; */
-
->>>>>>> main
 /*======================================================*/
 /* thumbnail */
 .base-box {
@@ -136,10 +114,6 @@ li {
 
 /*======================================================*/
 /* orderstate */
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 .myshop_orderstate {
     margin: 20px auto;
     border: 1px solid #dedede;
