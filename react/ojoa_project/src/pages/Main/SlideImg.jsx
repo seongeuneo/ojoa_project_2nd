@@ -1,4 +1,4 @@
-import "../Main/Main.css";
+import "./Main.css";
 import React from 'react';
 
 const SlideImg = () => {

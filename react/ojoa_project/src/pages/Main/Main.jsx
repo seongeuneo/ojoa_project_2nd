@@ -1,15 +1,11 @@
 import React from 'react';
 import '../../pages/Main/Main.css';
-import SlideImg from '../../pages/Main/SlideImg';
-import FlipRoom from './FlipRoom';
-import MiniSection from './MiniSection';
+import SlideImg from './SlideImg';
 
 const Main = () => {
     return (
         <div className="Main">
             <SlideImg />
-            <FlipRoom/>
-            <MiniSection/>
         </div>
     );
 };

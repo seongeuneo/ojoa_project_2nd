@@ -1,4 +1,4 @@
-import "../MyPage/MyPage.css";
+import "./MyPage.css";
 import { Link } from 'react-router-dom';
 
 const OrderState = () => {
