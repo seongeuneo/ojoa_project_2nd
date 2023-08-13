@@ -2,10 +2,12 @@ import React from "react";
 import ProductListItem from "./ProductListItem";
 import "./ProductList.css";
 import Pagination from "../../components/Pagination/Pagination";
+import PLFilter from "./PLFilter";
 
 function ProductList() {
     return (
         <div className="ProductList">
+            <PLFilter />
             <ul className="pl_items">
                 <li><ProductListItem imgNo={"0"} productName={"빈티지페브릭 의자"} productPriceFormatted={"199,000"} productInfo={"상세페이지 있음"} productReview={"999"} productGrade={"4.8"}/></li>
                 <li><ProductListItem imgNo={"1"} productName={"보송보송 의자"} productPriceFormatted={"390,000"} productInfo={"무릉도원"} productReview={"2"} productGrade={"4.5"}/></li>

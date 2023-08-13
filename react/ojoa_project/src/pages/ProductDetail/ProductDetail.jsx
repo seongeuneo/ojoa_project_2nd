@@ -1,22 +1,47 @@
 import React from "react";
 import "./ProductDetail.css";
-import MainInfo01 from "./MainInfo01";
-import DetailInfo02 from "./DetailInfo02";
-import OrderReview03 from "./OrderReview03";
-import ProdQna04 from "./ProdQna04";
-import PurGuide05 from "./PurGuide05";
+import { NavLink, Routes, Route } from "react-router-dom"
+import DetailInfo01 from './DetailInfo01';
+import OrderReview02 from './OrderReview02';
+import ProdQna03 from './ProdQna03';
+import PurGuide04 from './PurGuide04';
+import ProdMain from './ProdMain';
+
+
 
 function ProductDetail() {
+
     return (
         <div className="ProductDetail">
-            <MainInfo01 />
-            <div>
-                <DetailInfo02 />
-                <OrderReview03 />
-                <ProdQna04 />
-                <PurGuide05 />
+            {/* <!-- main product detail --> */}
+            {/* <!-- product detail dt 로 요약 --> */}
+
+            <ProdMain />
+            <div className="PdIndex00">
+                <div class="pd_section">
+                    <a><NavLink to="./pages/ProductDetail/DetailInfo01"><strong>상품상세정보</strong></NavLink></a>
+                    <a><NavLink to="./pages/ProductDetail/orderReview02"><strong>상품구매후기</strong></NavLink></a>
+                    <a><NavLink to="./pages/ProductDetail/prodQna03"><strong>상품 Q&amp;A</strong></NavLink></a>
+                    <a><NavLink to="./pages/ProductDetail/purGuide04"><strong>상품구매안내</strong></NavLink></a>
+                </div>
             </div>
+
+            <Routes>
+                <Route path="/pages/ProductDetail/DetailInfo01" element={<DetailInfo01 />} />
+                <Route path="/pages/ProductDetail/OrderReview02" element={<OrderReview02 />} />
+                <Route path="/pages/ProductDetail/ProdQna03" element={<ProdQna03 />} />
+                <Route path="/pages/ProductDetail/PurGuide04" element={<PurGuide04 />} />
+            </Routes>
+
+
+
+
         </div>
+
+
+
+
+
     )
 };
 

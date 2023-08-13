@@ -1,25 +1,24 @@
 
 /* ==================  product_list 페이지네이션 ================== */
 
-.pl_page {
+.Pagination .pl_page {
     text-align: center;
     width: 50%;
     margin: 80px auto;
   }
   
-  .pl_pagination {
+  .Pagination .pl_pagination {
     list-style: none;
     display: inline-block;
     padding: 0;
     margin-top: 20px;
   }
   
-  .pl_pagination li {
+  .Pagination .pl_pagination li {
     display: inline;
-    text-align: center;
   }
   
-  .pl_pagination a {
+ .pl_pagination a {
     float: left;
     display: block;
     font-size: 14px;
@@ -30,33 +29,33 @@
     line-height: 1.5;
   }
   
-  .pl_first {
+  .Pagination .pl_first {
     margin-right: 15px;
   }
   
-  .pl_last {
+  .Pagination .pl_last {
     margin-left: 15px;
   }
   
-  .pl_first:hover,
-  .pl_arrow:hover,
-  .pl_last:hover,
+  .Pagination .pl_first:hover,
+  .Pagination .pl_arrow:hover,
+  .Pagination .pl_last:hover,
   pl_left:hover,
-  .pl_right:hover {
+  .Pagination .pl_right:hover {
     color: #2e9cdf;
   }
   
-  .pl_pagination a:active {
+  .Pagination .pl_pagination a:active {
     cursor: default;
     color: #ffffff;
     outline: none;
   }
   
-  .pl_pagination a:active {
+  .Pagination .pl_pagination a:active {
     outline: none;
   }
   
-  .pl_modal .pl_num {
+  .Pagination .pl_modal .pl_num {
     margin-left: 3px;
     padding: 0;
     width: 30px;
@@ -64,7 +63,7 @@
     line-height: 30px;
   }
   
-  .pl_modal .pl_num:hover {
+  .Pagination .pl_modal .pl_num:hover {
     background-color: #2e9cdf;
     cursor: pointer;
   }

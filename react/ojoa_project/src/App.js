@@ -15,6 +15,10 @@ import Title from './components/Title/Title';
 import TopButton from './components/TopButton';
 import Cart from './pages/Cart/Cart';
 import Agree from './pages/Join/Agree';
+import DetailInfo02 from './pages/ProductDetail/DetailInfo01';
+import OrderReview03 from './pages/ProductDetail/OrderReview02';
+import ProdQna04 from './pages/ProductDetail/ProdQna03';
+import PurGuide05 from './pages/ProductDetail/PurGuide04';
 // import Title from './pages/Title/Title';
 
 
@@ -40,10 +44,11 @@ function App() {
           <Route path="/qna/*" element={<Qna />} />
           <Route path="/cart/*" element={<Cart />} />
           <Route path="/login/info/agree" element={<Agree />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>
-    </div>
+    </div >
   );
 };
 

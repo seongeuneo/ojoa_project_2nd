@@ -1,4 +1,4 @@
-.pl_items{
+.ProductList .pl_items{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,7 +6,7 @@
     margin-bottom: 100px;
 }
 
-.pl_items li {
+.ProductList .pl_items li {
     width: 25%;
     height: 100%;
     margin-bottom: 10%;
