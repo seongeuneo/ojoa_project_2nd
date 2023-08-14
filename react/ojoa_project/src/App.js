@@ -13,8 +13,7 @@ import Login from './pages/Login/Login';
 import Qna from './pages/Qna/Qna';
 import Cart from './pages/Cart/Cart';
 import Agree from './pages/Join/Agree';
-import Nav from './components/Nav/Nav';
-import Title from './components/Title/Title';
+
 
 
 function App() {
@@ -22,9 +21,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Nav /> {/* Nav 컴포넌트 랜더링 - 작은경로 */}
-        <Title /> {/* Title 컴포넌트 랜더링 - 페이지별타이틀 */}
         <Routes>
+  
           <Route path="/mypage/*" element={<MyPage />} />
           <Route path="/store/*" element={<Store />} />
           <Route path="/order/*" element={<Order />} />

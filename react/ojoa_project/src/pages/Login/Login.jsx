@@ -6,6 +6,19 @@ import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <div>
+            <div class="path">
+                <span>현재 위치</span>
+                <ol>
+                    <li><Link to="/">홈</Link></li>
+                    <li title="현재 위치"> &gt; Login</li>
+                </ol>
+            </div>
+
+            <div class="main_pro_title">
+                <h2>LOGIN</h2>
+                <div class="txt_01">회원만의 혜택을 경험하세요</div>
+            </div>
+
             <main className="login_page">
                 <div className="login_container">
                     <form auction="">
