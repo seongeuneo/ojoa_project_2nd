@@ -71,7 +71,11 @@ function Header() {
                             <li><Link to="#">탈부착형</Link></li>
                         </ul>
                     </li>
+<<<<<<< HEAD
                     <li><Link to="./product_list">의자(구현)</Link>
+=======
+                    <li><Link to="ProductList">의자(구현)</Link>
+>>>>>>> main
                         <ul>
                             <li><Link to="#">탁상의자</Link></li>
                             <li><Link to="#">주방의자</Link></li>

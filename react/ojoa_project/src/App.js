@@ -15,6 +15,11 @@ import Login from './pages/Login/Login';
 import Qna from './pages/Qna/Qna';
 import Cart from './pages/Cart/Cart';
 import Agree from './pages/Join/Agree';
+import DetailInfo02 from './pages/ProductDetail/DetailInfo01';
+import OrderReview03 from './pages/ProductDetail/OrderReview02';
+import ProdQna04 from './pages/ProductDetail/ProdQna03';
+import PurGuide05 from './pages/ProductDetail/PurGuide04';
+// import Title from './pages/Title/Title';
 import Info from './pages/Join/Info';
 import Popup from './pages/Join/Popup';
 
@@ -42,12 +47,13 @@ function App() {
           <Route path="/cart/*" element={<Cart />} />
           <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />
+
           <Route path="/login/info/agree/popup" element={<Popup />} />
         </Routes>
         <Footer />
         <TopButton />
       </BrowserRouter>
-    </div>
+    </div >
   );
 };
 
