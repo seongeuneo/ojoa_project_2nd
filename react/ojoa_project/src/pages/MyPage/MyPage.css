@@ -57,7 +57,7 @@
     color: darkgray;
 }
 
-.MyPage .myshop_asyncbankbook div {
+.MyPage .myshop_asyncbankbook .sub_title {
     float: left;
     width: 370px;
     padding: 10px 0 0 30px;
@@ -93,18 +93,20 @@
 }
 
 .MyPage .btnNormal {
-    display: inline-block;
+    /* display: inline-block; */
     padding: 2px 8px;
     border: 1px solid #d1d1d1;
     border-radius: 2px;
     font-size: 12px;
     line-height: 18px;
     color: #333;
-    background-color: #fff;
+    background-color: #f0efef;
+    border-radius: 5px;
 }
 
 .MyPage .btnNormal:hover {
-    background-color: #f3f3f3;
+    background-color: black;
+    color: white;
 }
 
 /*======================================================*/

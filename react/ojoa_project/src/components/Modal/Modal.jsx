@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ModalBasic from './ModalBasic';
 
 // 모달을 노출하는 페이지
-function Modal(props) {
+function Modal() {
     // 모달창 노출 여부 state
     const [modalOpen, setModalOpen] = useState(false);
 

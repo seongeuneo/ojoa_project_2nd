@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './ModalBtn.css';
 
 function ModalBtnBasic({ setModalOpen }) {
@@ -32,12 +32,14 @@ function ModalBtnBasic({ setModalOpen }) {
         };
     }, [setModalOpen]);
 
-return (
-    // 모달창을 useRef로 잡아준다.
-    <div ref={modalRef} className="ModalBtn_container">
-        <img onClick={closeModal} className="madal_close_rotate" src="./images/search_X.png" alt="search_x" />
-        <p>[가용적립금 페이지] <br /><br /> 준비중 입니다.</p>
-    </div>
-);
+    return (
+        // 모달창을 useRef로 잡아준다.
+        <div className="Modal_background">
+            <div ref={modalRef} className="ModalBtn_container">
+                <img onClick={closeModal} className="madal_close_rotate" src="./images/search_X.png" alt="search_x" />
+                <p>[가용 적립금 / 예치금]<br /><br />페이지 준비중 입니다.</p>
+            </div>
+        </div>
+    );
 }
 export default ModalBtnBasic;

@@ -1,4 +1,4 @@
-import React, { useState ,useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ModalBasic.css';
 
 function ModalBasic({ setModalOpen }) {
@@ -20,23 +20,23 @@ function ModalBasic({ setModalOpen }) {
 
     useEffect(() => {
         // 이벤트 핸들러 함수
-        const handler = (event) => {
+        const handleClickOutside = (event) => {
             // mousedown 이벤트가 발생한 영역이 모달창이 아닐 때, 모달창 제거 처리
             if (modalRef.current && !modalRef.current.contains(event.target)) {
-                setModalOpen(false);
+                closeModal();
             }
         };
 
         // 이벤트 핸들러 등록
-        document.addEventListener('mousedown', handler);
+        document.addEventListener('mousedown', handleClickOutside);
         // document.addEventListener('touchstart', handler); // 모바일 대응
 
         return () => {
             // 이벤트 핸들러 해제
-            document.removeEventListener('mousedown', handler);
+            document.removeEventListener('mousedown', handleClickOutside);
             // document.removeEventListener('touchstart', handler); // 모바일 대응
         };
-    }, [setModalOpen]);
+    }, []);
 
     useEffect(() => {
         // inputValue가 변경될 때마다 alert 메시지를 띄움
@@ -45,19 +45,24 @@ function ModalBasic({ setModalOpen }) {
         }
     }, [inputValue]);
 
+    const handleModalClick = (event) => {
+        event.stopPropagation();
+    };
+
     return (
         // 모달창을 useRef로 잡아준다.
-        <div ref={modalRef} className="Modal_container">
-            <div className="Modal_container2">
-                <img onClick={closeModal} className="madal_close_rotate" src="./images/search_X.png" alt="search_x" />
-                <fieldset>
-                    <legend>검색</legend>
-                    <input name="keyword" className="inputTypeText" placeholder=""
-                        value={inputValue} type="text" onChange={handleInputChange} />
-                    <img src="./images/search_icon.png" alt="검색" className="search_btn" />
-                </fieldset>
+            <div ref={modalRef} className="Modal_container" onClick={closeModal}>
+                <div className="Modal_container2">
+                    <img onClick={closeModal} className="madal_close_rotate" src="./images/search_X.png" alt="search_x" />
+                    <fieldset onClick={handleModalClick}>
+                        <legend>검색</legend>
+                        <input name="keyword" className="inputTypeText" placeholder=""
+                            value={inputValue} type="text" onChange={handleInputChange}
+                            onClick={handleModalClick} />
+                        <img src="./images/search_icon.png" alt="검색" className="search_btn" />
+                    </fieldset>
+                </div>
             </div>
-        </div>
     );
 }
 

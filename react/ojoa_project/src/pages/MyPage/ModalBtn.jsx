@@ -1,5 +1,5 @@
 import React from "react";
-import './ModalBtn.css'
+import ModalBtnBasic from "./ModalBtnBasic";
 
 // 모달을 노출하는 페이지
 function ModalBtn() {
@@ -14,10 +14,9 @@ function ModalBtn() {
     return (
         <div>
             <button onClick={showModal}>모달 띄우기</button>
-            {modalOpen && <ModalBasic setModalOpen={setModalOpen} />}
+            {modalOpen && <ModalBtnBasic setModalOpen={setModalOpen} />}
         </div>
     );
 }
-
 
 export default ModalBtn;

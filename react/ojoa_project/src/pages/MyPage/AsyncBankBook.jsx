@@ -1,5 +1,5 @@
 import "../MyPage/MyPage.css";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import ModalBtnBasic from "./ModalBtnBasic";
 import './ModalBtn.css';
@@ -18,7 +18,7 @@ const AsyncBankBook = () => {
     return (
         <div className="container">
             <div className="myshop_asyncbankbook">
-                <div>
+                <div className="sub_title">
                     <h2 id="h2_p">MY <span>PAGE</span></h2>
                     <p id="h2_p">마이페이지</p>
                 </div>
@@ -26,7 +26,6 @@ const AsyncBankBook = () => {
                     <li>
                         <strong className="title">가용적립금</strong>
                         <strong className="data">10,000원</strong>
-                        {/* <button className="btnNormal">조회</button> */}
                         <button onClick={showModal} className="btnNormal" >조회</button>
                         {modalOpen && <ModalBtnBasic setModalOpen={setModalOpen} />}
                     </li>
@@ -41,7 +40,8 @@ const AsyncBankBook = () => {
                     <li>
                         <strong className="title">예치금</strong>
                         <strong className="data">300,000원</strong>
-                        <Link to="/qaweasd" className="btnNormal">조회</Link>
+                        <button onClick={showModal} className="btnNormal" >조회</button>
+                        {modalOpen && <ModalBtnBasic setModalOpen={setModalOpen} />}
                     </li>
                     <li>
                         <strong className="title">총주문</strong>

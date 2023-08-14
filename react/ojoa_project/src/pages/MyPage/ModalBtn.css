@@ -1,8 +1,8 @@
 /* 모달창을 화면 중앙. 최상단에 노출 */
 .ModalBtn_container {
     /* 모달창 크기 */
-    width: 500px;
-    height: 600px;
+    width: 400px;
+    height: 500px;
 
     /* 최상단 위치 */
     z-index: 999;
@@ -16,12 +16,18 @@
     transform: translate(-50%, -50%);
 
     /* 모달창 디자인 */
-    border: solid 1px black;
     background-color: rgba(255, 255, 255, 255);
-    /* opacity: 0.9; */
     box-shadow: 2px 2px 5px 0px gray;
     border-radius: 30px;
 }
+
+.Modal_background {
+    position: fixed;
+    top:0; left: 0; bottom: 0; right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
 
 .ModalBtn_container p {
     font-size:25px;
@@ -42,24 +48,4 @@
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-}
-
-.Modal_container fieldset {
-    width: 800px;
-    display: block;
-    margin-inline-start: 100px;
-    padding-block-start: 20em;
-    padding-inline-start: 0.75em;
-}
-
-.inputTypeText {
-    color: #222;
-    font-size: 22px;
-    float: left;
-    padding: 5px 40px;
-}
-
-.Modal_container .search_btn {
-    float: right;
-    margin-top: 17px;
 }
