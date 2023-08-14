@@ -15,7 +15,8 @@ import Title from './components/Title/Title';
 import TopButton from './components/TopButton';
 import Cart from './pages/Cart/Cart';
 import Agree from './pages/Join/Agree';
-// import Title from './pages/Title/Title';
+import Info from './pages/Join/Info';
+import Popup from './pages/Join/Popup';
 
 
 
@@ -39,7 +40,9 @@ function App() {
           <Route path="/login/*" element={<Login />} />
           <Route path="/qna/*" element={<Qna />} />
           <Route path="/cart/*" element={<Cart />} />
+          <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />
+          <Route path="/login/info/agree/popup" element={<Popup />} />
         </Routes>
         <Footer />
       </BrowserRouter>
