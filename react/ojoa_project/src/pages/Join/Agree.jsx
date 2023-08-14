@@ -1,4 +1,6 @@
 import '../../pages/Join/Agree.css';
+import {Link} from 'react-router-dom';
+
 
 const Agree = () => {
 
@@ -267,7 +269,9 @@ const Agree = () => {
                 </div>
 
                 <div className="join_btn">
-                    <input className="out_btn3" type="submit" name="finish" value="회원가입 완료" />
+                    <Link to="/login/info/agree/popup">
+                        <input className="out_btn3" type="submit" name="finish" value="회원가입 완료" />
+                    </Link>
                 </div>
             </div>
 

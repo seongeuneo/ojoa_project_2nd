@@ -1,10 +1,11 @@
 import '../../pages/Join/Info.css';
+import { Link } from 'react-router-dom';
 
 const Info = () => {
     return (
         <div className="Info">
-            <form action="../join/agree.html" name="personalInfo">
 
+            <form action="/login/info/agree" name="personalInfo">
                 <table className="personal_info">
                     <caption>
                         <h3>회원정보</h3>
@@ -120,7 +121,9 @@ const Info = () => {
 
             <div className="join_btn">
                 <input className="out_btn2" type="button" name="cancel" value="취소하기" />
-                <input className="out_btn3" type="submit" name="finish" value="작성완료" />
+                <Link to="/login/info/agree">
+                    <input className="out_btn3" type="submit" name="finish" value="작성완료" />
+                </Link>
             </div>
 
         </div>

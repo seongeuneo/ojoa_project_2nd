@@ -210,4 +210,259 @@ html {
 }
 
 /* ====================================================== */
-/* ??? */
+
+/* 워니파트 */
+
+/* FlipRoom */
+
+
+.FlipRoom {
+    width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.FlipRoom .colimg {
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Room part */
+
+
+.FlipRoom .hover_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    box-sizing: border-box;
+    /* height:100vh; */
+}
+
+.FlipRoom .hover_wrap>div {
+    max-width: 400px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.FlipRoom .hover_wrap>div img {
+    width: 100%;
+    /* border: 10px solid #F0F8FF; */
+    /* box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2); */
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.FlipRoom .hover_wrap>div .front {
+    transition: transform 1s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.FlipRoom .hover_wrap>div .back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.FlipRoom .hover_wrap>div figcaption {
+    background: rgba(0, 0, 0, 0.4);
+    color: #F8F8FF;
+    padding: 5px;
+    text-align: center;
+    line-height: 1.5;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%) translateZ(100px);
+    width: 60%;
+    backface-visibility: hidden;
+}
+
+.FlipRoom .hover_wrap>.back_text {
+    background: white;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    line-height: 1.5;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%) translateZ(100px);
+    width: 60%;
+    backface-visibility: hidden;
+}
+
+
+
+
+/* mouse hover effect */
+
+.FlipRoom .hover_leftright .front {
+    transform: rotateY(0deg);
+}
+
+.FlipRoom .hover_leftright:hover .front {
+    transform: rotateY(180deg);
+}
+
+.FlipRoom .hover_leftright .back {
+    transform: rotateY(-180deg);
+}
+
+.FlipRoom .hover_leftright:hover .back {
+    transform: rotateY(0deg);
+}
+
+
+/*============================ 마지막 6가지 세부파트 ======================== */
+
+/* MiniSection */
+
+.MiniSection {
+    width: 1240px;
+    column-count: 3;
+    margin: auto;
+}
+
+/* .colimg {
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+} */
+
+.MiniSection .mcol1,
+.MiniSection .mcol2,
+.MiniSection .mcol3 {
+    width: 400px;
+    text-align: center;
+
+}
+
+
+
+.colsection {
+    width: 400px;
+    height: 150px;
+    margin-bottom: 10px;
+    border: #cccccc solid 1px;
+    display: flex;
+    position: relative;
+    background-color: white;
+}
+
+.colsec_img {
+    width: 130px;
+    height: 120px;
+    padding: 0 10px;
+    display: flex;
+    float: left;
+    position: absolute;
+    align-content: center;
+    bottom: 0;
+}
+
+
+
+
+.colsection a,
+.hover_total a {
+    color: inherit;
+    /* display: flex; */
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+.img_top {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    width: 130px;
+    font-size: 13px;
+}
+
+
+.colsec_name {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
+
+
+.colsec_price {
+    font-size: 17px;
+    font-weight: bold;
+    right: 0;
+    position: absolute;
+}
+
+
+/*------new--------*/
+.colsec_info {
+    position: absolute;
+    left: 200px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+
+.colsec_price sup {
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+
+}
+
+.colsec_mini {
+    /* font-style: italic; */
+    font-size: 12px;
+    line-height: 20px;
+}
+
+/*---------하트부분-------*/
+
+input {
+    appearance: none;
+}
+
+input:checked~label {
+    color: red;
+}
+
+.fa-regular.fa-heart::before {
+    font-size: 20px;
+}
+
+
+.main_col label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+table.colsection tr td {
+    width: 200px;
+}
