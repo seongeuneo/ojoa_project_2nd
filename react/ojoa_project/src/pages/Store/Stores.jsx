@@ -4,7 +4,18 @@ import { Link } from 'react-router-dom';
 const Stores = () => {
 
     return (
-        <div className="container">
+        <div className="store_container">
+            <div className="path">
+                <span>현재 위치</span>
+                <ol>
+                    <li><Link to="/">홈</Link></li>
+                    <li title="현재 위치">&gt; &nbsp;&nbsp;Store</li>
+                </ol>
+            </div>
+            <div className="pageTlt">
+                <h2>STORES</h2>
+                <div className="txt_01">찾아 오시는 길</div>
+            </div>
             <div className="stores">
                 <div className="storeInfo">
                     <p className="storeTlt">Ojoa Company</p>

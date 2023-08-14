@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import ModalBasic from './ModalBasic';
+import React from "react";
+import ModalBtnBasic from "./ModalBtnBasic";
 
 // 모달을 노출하는 페이지
-function Modal() {
+function ModalBtn() {
     // 모달창 노출 여부 state
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -13,10 +13,10 @@ function Modal() {
 
     return (
         <div>
-            <img onClick={showModal} src="/images/btn_search.png" alt="search" />
-            {modalOpen && <ModalBasic setModalOpen={setModalOpen} />}
+            <button onClick={showModal}>모달 띄우기</button>
+            {modalOpen && <ModalBtnBasic setModalOpen={setModalOpen} />}
         </div>
     );
 }
 
-export default Modal;
+export default ModalBtn;

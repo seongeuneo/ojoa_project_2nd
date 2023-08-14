@@ -1,15 +1,38 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: inherit;
+/* ====================================================== */
+/* navi_bar */
+.store_container .path {
+    color: #333;
+    font-size: 12px;
+    /* margin: 20px auto; */
+    margin-right: 10px;
+    height: 30px;
+    line-height: 30px;
 }
 
-.Store .container {
+.store_container .path span {
+    position: absolute;
+    width: 0;
+    height: 0;
+    white-space: nowrap;
+    text-indent: 100%;
+    display: none;
+}
+
+.store_container .path li {
+    float: left;
+    padding-left: 12px;
+    margin: 0;
+    color: #333;
+}
+
+.store_container .path ol {
+    float: right;
+}
+
+.Store {
     background-color: white;
     width: 1240px;
     margin: auto;
-    margin-top: 60px;
     margin-bottom: 160px;
     overflow: hidden;
 }
@@ -17,6 +40,29 @@
 .stores {
     display: flex;
     justify-content: space-between;
+}
+
+.store_container .pageTlt {
+    color: #333;
+}
+
+.store_container .pageTlt h2 {
+    height: 60px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding-top: 70px;
+    padding-bottom: 0px;
+}
+
+.store_container .txt_01 {
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    font-weight: 300;
+    padding-top: 5px;
+    padding-bottom: 120px;
 }
 
 .stores .storeInfo {

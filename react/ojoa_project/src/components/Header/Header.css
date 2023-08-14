@@ -1,4 +1,4 @@
-header {
+.header {
     background-color: white;
     min-height: 80px;
     width: 1240px;
@@ -14,61 +14,61 @@ header {
     padding-top: 30px;
 }
 
-.navBar {
+.header .navBar {
     width: 1240px;
     height: 80px;
     margin: auto;
     padding-bottom: 20px;
 }
 
-.logo {
+.header .logo {
     float: left;
 }
 
-.navBar ul {
+.header .navBar ul {
     float: right;
     margin-top: 0;
 }
 
-.navBar li {
+.header .navBar li {
     float: left;
     margin-left: 10px;
 }
 
-.navBar a {
+.header .navBar a {
     color: #333;
     font-size: 15px;
     font-weight: bold;
 }
 
-.navBar a span {
+.header .navBar a span {
     color: gainsboro;
 }
 
-.search {
+.header .search {
     width: 300px;
     top: 80px;
-    right: -120px;
+    right: -130px;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.search input {
+.header .search input {
     width: 80%;
-    height: 30px;
-    font-size: 15px;
+    height: 65px;
+    font-size: 20px;
     color: #333;
     border: none;
     border-bottom: 1px solid #333;
 }
 
-input:focus {
+.header input:focus {
     outline: none;
 }
 
-input:-webkit-autofill {
+.header input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px #c6c6c6 inset;
 }
 
@@ -121,22 +121,26 @@ input:-webkit-autofill {
     transition: ease 1s;
 }
 
-.sticky {
+.header .sticky {
     position: sticky;
     top: 0;
 }
 
 /* ======================================================= */
-.mtalk {
+.header .mtalk img {
     position: fixed;
+    width: 50px;
+    height: 50px;
     right: 1%;
     bottom: 10%;
     z-index: 1;
     cursor: pointer;
 }
 
-.mchannel {
+.header .mchannel img {
     position: fixed;
+    width: 50px;
+    height: 50px;
     right: 1%;
     bottom: 2%;
     z-index: 1;
