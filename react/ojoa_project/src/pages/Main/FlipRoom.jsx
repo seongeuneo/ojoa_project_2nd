@@ -1,4 +1,5 @@
 import '../../pages/Main/Main.css';
+import React from 'react';
 
 const FlipRoom = () => {
 

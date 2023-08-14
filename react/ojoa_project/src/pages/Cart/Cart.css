@@ -1,267 +1,264 @@
- 
-    /*-------------------장바구니  시작-----------------------*/
-
-  .Cart {
-    background-color: white;
-    min-height: 450px;
-    width: 1240px;
-    margin: auto;
-  }
-  
-  
-  .Cart a {
-    color: black;
-  }
-  
-
-  .cart_list {
-    /* border-top: solid 1px gray; */
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .Cart thead,
-  .Cart tfoot {
-    border-top: solid 1.5px gray;
-    border-bottom: solid 1.5px gray;
-    font-size: 15px;
-    height: 50px;
-  }
-  
-  .Cart td {
-    border-bottom: 1px solid silver;
-  }
-  
-  
-  .Cart thead {
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .cart_total tfoot {
-    text-align: left;
-  }
-  
-  
-  
-  /*표 내부 넓이 디테일*/
-  
-  
-  /*전체선택 버튼*/
-  .Cart thead>tr>th:nth-child(2) {
-    text-align: left;
-  }
-  
-  
-  .Cart .list_detail tr>td:first-child,
-  thead>tr>th:first-child {
-    width: 3%;
-    text-align: center;
-  }
-  
-  .Cart .list_detail tr td:nth-child(2) {
-    width: 15%;
-  }
-  
-  .Cart tr td:nth-child(3) {
-    width: 25%;
-  }
-  
-  
-  .cart_list tr td:nth-child(7) {
-    width: 25%;
-  }
-  
-  
-  .Cart .list_detail :nth-child(n+4) {
-    text-align: center;
-    border-left: 2px solid whitesmoke;
-  }
-  
-  
-  
-  .cart_img {
-    background-color: #8f8f8f;
-    display: block;
-    width: 120px;
-    height: 120px;
-    margin: 15px;
-  }
-  
-  
-  .cart_mainname {
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-  }
-  
-  
-  .cart_mininame {
-    font-size: 13px;
-    display: flex;
-  }
-  
-  
-  
-  /* 옵션 숫자박스 */
-  .cart_opt>input {
-    width: 40px;
-    height: 35px;
-    border: solid silver 1px;
-    border-radius: 20%;
-    text-align: center;
-  }
-  
-  
-  
-  /* 수량 옵션에 주문하기 버튼 */
-  .opt_orderbtn {
-    background-color: silver;
-    color: black;
-    border: none;
-    border-radius: 10%;
-    padding: 5px 10px;
-    font-size: 12px;
-    margin: 10px;
-  }
-  
-  .opt_orderbtn:hover {
-    background-color: gray;
-  }
-  
-  
-  
-  /* 장바구니삭제 버튼 */
-  .favor_btn {
-    padding: 8px;
-    border-radius: 5%;
-    border: silver solid 1px;
-    display: flex;
-  }
-  
-  .favor_btn:hover {
-    background-color: silver;
-  }
-  
-  
-  /*가운데 물품 개당 판매가*/
-  
-  .cart_li_price {
-    vertical-align: middle;
-    font-size: 20px;
-    /* font-weight: bold; */
-    text-align: center;
-  }
-  
-  
-  .final_price {
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  
-  .Cart span {
-    font-size: 17px;
-    text-decoration: line-through;
-    color: red;
-  }
-  
-  .Cart sup {
-    font-size: 13px;
-  }
-  
-  
-  .total_p {
-    font-size: 20px;
-    padding: 15px;
-    text-align: left;
-  }
-  
-  
-  
-  /*---------------하단부분---------------------*/
-  
-  .cart_info {
-    background-color: lightgrey;
-    color: black;
-    padding: 30px;
-    border-radius: 5px;
-    font-size: 15px;
-    margin: 30px 0px;
-    display: flex;
-    text-align: left;
+    .Cart {
+      background-color: white;
+      min-height: 450px;
+      width: 1240px;
+      margin: auto;
+    }
     
-  }
+    
+    .Cart a {
+      color: black;
+    }
+    
   
-  
-  .cart_info ul li:first-child {
-    color: black;
-    font-weight: bold;
-  }
-  
-  
-  
-  /*마지막 최종 주문하기 버튼*/
-  
-  .final_btns {
-    text-align: center;
-    display: flex;
-  
-  }
-  
-  
-  
-  
-  /*--------------여기서부터 버튼 시작------------*/
-  .button {
-    background: black;
-    margin: 20px auto;
-    width: 200px;
-    height: 50px;
-    overflow: hidden;
-    text-align: center;
-    transition: .2s;
-    cursor: pointer;
-    border-radius: 3px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
-  }
-  
-  .btnTwo {
-    position: relative;
-    width: 200px;
-    height: 100px;
-    margin-top: -70px;
-    padding-top: 2px;
-    background: lightgrey;
-    left: -250px;
-    transition: .3s;
-    font-weight: bold;
-  }
-  
-  .btnText {
-    color: white;
-    transition: .3s;
-    padding-top: 13px;
-    font-weight: bold;
-  }
-  
-  .btnText2 {
-    margin-top: 50px;
-    margin-right: -130px;
-    color: black;
-  }
-  
-  .button:hover .btnTwo {
-    /*When hovering over .button change .btnTwo*/
-    left: -130px;
-  }
-  
-  .button:hover .btnText {
-    /*When hovering over .button change .btnText*/
-    margin-left: 65px;
-  }
-  
-  .button:active {
-    /*Clicked and held*/
-    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
-  }
+    .cart_list {
+      /* border-top: solid 1px gray; */
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    .cart_list thead,
+    .cart_list tfoot {
+      border-top: solid 1.5px gray;
+      border-bottom: solid 1.5px gray;
+      font-size: 15px;
+      height: 50px;
+    }
+    
+    .cart_list td {
+      border-bottom: 1px solid silver;
+    }
+    
+    
+    .cart_list thead {
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .cart_list tfoot {
+      text-align: left;
+    }
+    
+    
+    
+    /*표 내부 넓이 디테일*/
+    
+    
+    /*전체선택 버튼*/
+    .cart_list thead>tr>th:nth-child(2) {
+      text-align: left;
+    }
+    
+    
+    .list_detail tr>td:first-child,
+    thead>tr>th:first-child {
+      width: 3%;
+      text-align: center;
+    }
+    
+    .list_detail tr td:nth-child(2) {
+      width: 15%;
+    }
+    
+    .cart_list tr td:nth-child(3) {
+      width: 25%;
+    }
+    
+    
+    .cart_list tr td:nth-child(7) {
+      width: 25%;
+    }
+    
+    
+    .cart_list .list_detail :nth-child(n+4) {
+      text-align: center;
+      border-left: 2px solid whitesmoke;
+    }
+    
+    
+    
+    .cart_img {
+      background-color: #8f8f8f;
+      display: block;
+      width: 120px;
+      height: 120px;
+      margin: 15px;
+    }
+    
+    
+    .cart_mainname {
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+    }
+    
+    
+    .cart_mininame {
+      font-size: 13px;
+      display: flex;
+    }
+    
+    
+    
+    /* 옵션 숫자박스 */
+    .cart_opt>input {
+      width: 40px;
+      height: 35px;
+      border: solid silver 1px;
+      border-radius: 20%;
+      text-align: center;
+    }
+    
+    
+    
+    /* 수량 옵션에 주문하기 버튼 */
+    .opt_orderbtn {
+      background-color: silver;
+      color: black;
+      border: none;
+      border-radius: 10%;
+      padding: 5px 10px;
+      font-size: 12px;
+      margin: 10px;
+    }
+    
+    .opt_orderbtn:hover {
+      background-color: gray;
+    }
+    
+    
+    
+    /* 장바구니삭제 버튼 */
+    .favor_btn {
+      padding: 8px;
+      border-radius: 5%;
+      border: silver solid 1px;
+      display: flex;
+    }
+    
+    .favor_btn:hover {
+      background-color: silver;
+    }
+    
+    
+    /*가운데 물품 개당 판매가*/
+    
+    .Cart .cart_li_price {
+      vertical-align: middle;
+      font-size: 20px;
+      /* font-weight: bold; */
+      text-align: center;
+    }
+    
+    
+    .final_price {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    
+    
+    .Cart span {
+      font-size: 17px;
+      text-decoration: line-through;
+      color: red;
+    }
+    
+    .Cart sup {
+      font-size: 13px;
+    }
+    
+    
+    .Cart .total_p {
+      font-size: 20px;
+      padding: 15px;
+      text-align: left;
+    }
+    
+    
+    
+    /*---------------하단부분---------------------*/
+    
+    .cart_info {
+      background-color: lightgrey;
+      color: black;
+      padding: 30px;
+      border-radius: 5px;
+      font-size: 15px;
+      margin: 30px 0px;
+      display: flex;
+      text-align: left;
+      
+    }
+    
+    
+    .cart_info ul li:first-child {
+      color: black;
+      font-weight: bold;
+    }
+    
+    
+    
+    /*마지막 최종 주문하기 버튼*/
+    
+    .final_btns {
+      text-align: center;
+      display: flex;
+    
+    }
+    
+    
+    
+    
+    /*--------------여기서부터 버튼 시작------------*/
+    .button {
+      background: black;
+      margin: 20px auto;
+      width: 200px;
+      height: 50px;
+      overflow: hidden;
+      text-align: center;
+      transition: .2s;
+      cursor: pointer;
+      border-radius: 3px;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+    }
+    
+    .btnTwo {
+      position: relative;
+      width: 200px;
+      height: 100px;
+      margin-top: -70px;
+      padding-top: 2px;
+      background: lightgrey;
+      left: -250px;
+      transition: .3s;
+      font-weight: bold;
+    }
+    
+    .btnText {
+      color: white;
+      transition: .3s;
+      padding-top: 13px;
+      font-weight: bold;
+    }
+    
+    .btnText2 {
+      margin-top: 50px;
+      margin-right: -130px;
+      color: black;
+    }
+    
+    .button:hover .btnTwo {
+      /*When hovering over .button change .btnTwo*/
+      left: -130px;
+    }
+    
+    .button:hover .btnText {
+      /*When hovering over .button change .btnText*/
+      margin-left: 65px;
+    }
+    
+    .button:active {
+      /*Clicked and held*/
+      box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+    }
