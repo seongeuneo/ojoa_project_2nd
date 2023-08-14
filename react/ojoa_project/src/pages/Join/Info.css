@@ -1,153 +1,145 @@
-/*--------------------- 회원가입 페이지 시작---------------------- */
-
 .Info {
-    background-color: white;
-    min-height: 450px;
-    width: 1240px;
-    margin: auto;
-    text-align: left;
-  }
-  
-  /*---입력정보 칸 시작---*/
-  
-  .personal_info {
-    border-top: solid 2px black;
-    border-bottom: solid 1px black;
-    width: 80%;
-    margin: auto;
-  }
-  
-  .personal_info caption {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  
-  .personal_info span {
-    color: red;
-    font-size: 12px;
-    padding: 5px;
-  }
-  
-  .personal_info th,td {
-    border-top:solid 1px silver ;
-    border-left:solid 1px silver;
-    }
-  
-  .personal_info th:first-child{
-    border-left: none;
-  }
-  
-  .personal_info tr:first-child th,
-  .personal_info tr:first-child td {
-    border-top: none;
-  }
-  
-  .personal_info th {
-    font-size: 13px;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .personal_info td {
-    padding-left: 10px;
-  }
-  
-  .personal_info label {
-    margin-right: 20px ;
-    margin-left: 5px;
-  }
-  
-  .personal_info label input {
-    height: 25px;
-    /* vertical-align: center; */
-  }
-  
-  
-  
-  
-  
-  .personal_info input,
-  .personal_info select {
-    margin: 5px 0px;
-    box-sizing: border-box;
-    padding: 0px 5px;
-    height: 25px;
-    border: solid  1px gray;
-    border-radius: 5%;
-  }
-  
-  .personal_info input[type="text"],
-  .personal_info input[type="number"] {
-    width: 100px;
-    
-  }
-  
-  .personal_info input[type="tel"] {
-    width:50px;
-  }
-  
-  
-  .personal_info input[type="password"],
-  .personal_info input[name="address"] {
-    border:solid 1px gray;
-    border-radius: 5%;
-    width:200px;
-  }
-  
-  .input_address{
-    display: flex;
-    
-    /* margin-right: 5px; */
-  }
-  
-  .input_address input {
-    box-sizing: border-box;
-    margin: 5px;
-    margin-left: 0px;
-  }
-  
-  .inside_btn:hover {
-    background-color:silver;
-  }
-  
-  .agree_check {
-    line-height: 38px;
-  }
-  
-  input[type="radio"] {
-    height: 100%;
-    margin:  0;
-  }
-  
-  
-  .join_btn {
-    /* margin-top: 50px; */
-    display: flex;
-    justify-content: center;
-  }
-  
-  .out_btn2,
-  .out_btn3 {
-    height: 35px;
-    width: 150px;
-    font-weight: bold;
-    border:solid 1.5px black;
-    margin: 50px;
-  }
-  
-  .out_btn3 {
-    background-color: black;
-    color: white;
-  }
-  
-  .out_btn3:hover {
-    background-color: whitesmoke;
-    color: black;
-  }
-  
-  .input_warn{
-    color: red;
-    font-size: 12px;
-    margin: 10px 0 0 124px;
-  }
+  background-color: white;
+  min-height: 450px;
+  width: 1240px;
+  margin: auto;
+  text-align: left;
+}
+
+/*---입력정보 칸 시작---*/
+
+.Info .personal_info {
+  border-top: solid 2px black;
+  border-bottom: solid 1px black;
+  width: 80%;
+  margin: auto;
+}
+
+.Info .personal_info caption {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.Info .personal_info span {
+  color: red;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.Info .personal_info th,
+td {
+  border-top: solid 1px silver;
+  border-left: solid 1px silver;
+}
+
+.Info .personal_info th:first-child {
+  border-left: none;
+}
+
+.Info .personal_info tr:first-child th,
+.Info .personal_info tr:first-child td {
+  border-top: none;
+}
+
+.Info .personal_info th {
+  font-size: 13px;
+  text-align: center;
+  padding: 10px;
+}
+
+.Info .personal_info td {
+  padding-left: 10px;
+}
+
+.Info .personal_info label {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.Info .personal_info label input {
+  height: 25px;
+  /* vertical-align: center; */
+}
+
+.Info .personal_info input,
+.Info .personal_info select {
+  margin: 5px 0px;
+  box-sizing: border-box;
+  padding: 0px 5px;
+  height: 25px;
+  border: solid 1px gray;
+  border-radius: 5%;
+}
+
+.Info .personal_info input[type="text"],
+.Info .personal_info input[type="number"] {
+  width: 100px;
+
+}
+
+.Info .personal_info input[type="tel"] {
+  width: 50px;
+}
+
+
+.Info .personal_info input[type="password"],
+.Info .personal_info input[name="address"] {
+  border: solid 1px gray;
+  border-radius: 5%;
+  width: 200px;
+}
+
+.Info .input_address {
+  display: flex;
+}
+
+.Info .input_address input {
+  box-sizing: border-box;
+  margin: 5px;
+  margin-left: 0px;
+}
+
+.Info .inside_btn:hover {
+  background-color: silver;
+}
+
+.Info .agree_check {
+  line-height: 38px;
+}
+
+.Info input[type="radio"] {
+  height: 100%;
+  margin: 0;
+}
+
+
+.Info .join_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.Info .out_btn2,
+.Info .out_btn3 {
+  height: 35px;
+  width: 150px;
+  font-weight: bold;
+  border: solid 1.5px black;
+  margin: 50px;
+}
+
+.Info .out_btn3 {
+  background-color: black;
+  color: white;
+}
+
+.Info .out_btn3:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.Info .input_warn {
+  color: red;
+  font-size: 12px;
+  margin: 10px 0 0 124px;
+}

@@ -80,7 +80,7 @@ const Login = () => {
                                     "회원을 위한 다양한 혜택이 준비되어 있습니다."
                                 </div>
                                 <div className="login_join_btn">
-                                    <Link to="../join/join.html">회원가입</Link>
+                                    <Link to="/login/info">회원가입</Link>
                                 </div>
                             </div>
                         </div>
