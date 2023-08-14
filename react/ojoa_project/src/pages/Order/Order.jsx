@@ -42,10 +42,10 @@ function Order() {
                             <table id="od_productInfo">
                                 <thead>
                                     <tr>
-                                        <th>주문일자[주문번호]</th>
+                                        <th className="od_number">주문일자<br />[주문번호]</th>
                                         <th>이미지</th>
                                         <th>상품정보</th>
-                                        <th>수량</th>
+                                        <th className="od_amount">수량</th>
                                         <th>상품구매금액</th>
                                         <th>주문처리상태</th>
                                         <th>취소/교환/반품</th>
