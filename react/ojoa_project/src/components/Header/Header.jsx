@@ -19,7 +19,7 @@ function Header() {
                         {/* 상단 네비 */}
                         <div className="navBar">
                             <ul>
-                                <li><Link to="../Login">LOGIN </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="/login">LOGIN </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../MyPage">MYPAGE </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../Order">ORDER </Link>&nbsp;<span>|</span></li>
                                 <li><Link to="../Cart">CART </Link>&nbsp;<span>|</span></li>

@@ -1,18 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../Nav/Nav.css";
+import '../Nav/Nav.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Navigation = (props, context) => {
+const Nav = () => {
     return (
-        <div className="Nav">
-            <div className="inner">
-                <Link to="/">Home</Link>
-                <Link to="../Login">Login</Link>
-                <Link to="../Mypage">Mypage</Link>
-                <Link to="../Qna">Qna</Link>
-                <Link to="../Store">Store</Link>
+        <nav>
+            <div className="Nav">
+                <ul><li><Link to='/Login'>Home &gt; Login</Link></li></ul>
+                <ul><li><Link to='/Mypage'>Home &gt; Mypage</Link></li></ul>
+                <ul><li><Link to='/Order'>Home &gt; Order</Link></li></ul>
+                <ul><li><Link to='/Cart'>Home &gt; Cart</Link></li></ul>
+                <ul><li><Link to='/Qna'>Home &gt; Qna</Link></li></ul>
+                <ul><li><Link to='/Store'>Home &gt; Store</Link></li></ul>
             </div>
-        </div>
+        </nav>
     );
-};
-export default Navigation;
+}
+
+export default Nav;

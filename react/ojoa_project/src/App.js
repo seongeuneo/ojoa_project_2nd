@@ -11,43 +11,36 @@ import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound/NotFound';
 import Login from './pages/Login/Login';
 import Qna from './pages/Qna/Qna';
-import Title from './components/Title/Title';
-import TopButton from './components/TopButton';
 import Cart from './pages/Cart/Cart';
 import Agree from './pages/Join/Agree';
-// import Title from './pages/Title/Title';
-
-
-
+import Nav from './components/Nav/Nav';
+import Title from './components/Title/Title';
 
 
 function App() {
-
   return (
     <div className="App">
-
       <BrowserRouter>
         <Header />
+        <Nav /> {/* Nav 컴포넌트 랜더링 - 작은경로 */}
+        <Title /> {/* Title 컴포넌트 랜더링 - 페이지별타이틀 */}
         <Routes>
-          <Route path="/" element={<Main />} />
           <Route path="/mypage/*" element={<MyPage />} />
           <Route path="/store/*" element={<Store />} />
-          <Route path="/Order/*" element={<Order />} />
-          <Route path="/ProductList/*" element={<ProductList />} />
-          <Route path="/ProductDetail/*" element={<ProductDetail />} />
+          <Route path="/order/*" element={<Order />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/login/*" element={<Login />} />
+          <Route path="/login/" element={<Login />} />
           <Route path="/qna/*" element={<Qna />} />
           <Route path="/cart/*" element={<Cart />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/productDetail/*" element={<ProductDetail />} />
+          <Route path="/productList/*" element={<ProductList />} />
           <Route path="/login/info/agree" element={<Agree />} />
         </Routes>
         <Footer />
       </BrowserRouter>
     </div>
   );
-};
-
-
-
+}
 
 export default App;
