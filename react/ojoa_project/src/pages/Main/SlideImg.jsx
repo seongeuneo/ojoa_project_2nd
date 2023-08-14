@@ -4,9 +4,6 @@ import React from 'react';
 const SlideImg = () => {
 
     return (
-        <div>
-            {/*---------------------------------------------------------*/}
-            {/* 슬라이드 이미지 */}
             <div className="section">
                 <input type="radio" name="slide" id="slide01" defaultChecked />
                 <input type="radio" name="slide" id="slide02" />
@@ -15,31 +12,31 @@ const SlideImg = () => {
                     <ul className="slidelist">
                         {/* 슬라이드 영역 */}
                         <li className="slideitem">
-                            <a>
+                            <button>
                                 <div className="textbox">
                                     <h3>Modern</h3>
                                     <p>세련된 디자인과 네츄럴 감성의 상징</p>
                                 </div>
                                 <img src="./images/header_slide_1.jpg" alt="slide_1"/>
-                            </a>
+                            </button>
                         </li>
                         <li className="slideitem">
-                            <a>
+                            <button>
                                 <div className="textbox">
                                     <h3>Antiques</h3>
                                     <p>클래식한 아름다움을 지닌 고풍스러움의 상징</p>
                                 </div>
                                 <img src="./images/header_slide_2.jpg" alt="slide_2" />
-                            </a>
+                            </button>
                         </li>
                         <li className="slideitem">
-                            <a>
+                            <button>
                                 <div className="textbox">
                                     <h3>Mid-Century</h3>
                                     <p>현대적 감성으로 재해석한 미니멀리스트의 상징</p>
                                 </div>
                                 <img src="./images/header_slide_3.jpg" alt="slide_3" />
-                            </a>
+                            </button>
                         </li>
                         {/* 좌,우 슬라이드 버튼 */}
                         <div className="slide-control">
@@ -65,8 +62,6 @@ const SlideImg = () => {
                     </ul>
                 </div>
             </div>
-            <br />
-        </div>
     );
 };
 export default SlideImg;

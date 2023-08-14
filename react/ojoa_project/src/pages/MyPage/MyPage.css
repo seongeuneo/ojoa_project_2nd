@@ -1,21 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: inherit;
-}
 
-a {
+.MyPage a {
     text-decoration: none;
 }
 
-li {
+.MyPage li {
     list-style-type: none;
 }
 
 /* ====================================================== */
 /* myPage_main */
-.container {
+.MyPage .container {
     background-color: white;
     width: 1240px;
     margin: auto;
@@ -23,14 +17,14 @@ li {
 
 /*======================================================*/
 /* thumbnail */
-.base-box {
+.MyPage .base-box {
     padding: 20px 20px 20px 0px;
     border: 1px solid #dedede;
     border-top: 1px solid black;
     color: #333;
 }
 
-.thumbnail {
+.MyPage .thumbnail {
     display: table-cell;
     padding: 0 15px;
     width: 70px;
@@ -38,7 +32,7 @@ li {
     vertical-align: middle;
 }
 
-.description {
+.MyPage .description {
     display: table-cell;
     padding: 0 10px;
     border-left: 1px solid #e8e8e8;
@@ -47,10 +41,11 @@ li {
 
 /*======================================================*/
 /* asyncbankbook */
-#h2_p{
+.MyPage #h2_p{
     text-align: left;
 }
-.myshop_asyncbankbook {
+
+.MyPage .myshop_asyncbankbook {
     overflow: hidden;
     padding: 15px 0px 15px 0px;
     margin: 20px auto;
@@ -58,22 +53,22 @@ li {
     border-top: 1px solid black;
 }
 
-.myshop_asyncbankbook div span {
+.MyPage .myshop_asyncbankbook div span {
     color: darkgray;
 }
 
-.myshop_asyncbankbook div {
+.MyPage .myshop_asyncbankbook div {
     float: left;
     width: 370px;
     padding: 10px 0 0 30px;
 }
 
-.myshop_asyncbankbook ul {
+.MyPage .myshop_asyncbankbook ul {
     float: right;
     width: 470px;
 }
 
-.myshop_asyncbankbook ul li {
+.MyPage .myshop_asyncbankbook ul li {
     float: left;
     margin: 5px 0;
     padding: 0 45px;
@@ -83,13 +78,13 @@ li {
     box-sizing: border-box;
 }
 
-.myshop_asyncbankbook .title {
+.MyPage .myshop_asyncbankbook .title {
     float: left;
     width: 40%;
     font-weight: normal;
 }
 
-.myshop_asyncbankbook .data {
+.MyPage .myshop_asyncbankbook .data {
     float: left;
     width: 47%;
     padding: 0 10px;
@@ -97,7 +92,7 @@ li {
     box-sizing: border-box;
 }
 
-.btnNormal {
+.MyPage .btnNormal {
     display: inline-block;
     padding: 2px 8px;
     border: 1px solid #d1d1d1;
@@ -108,86 +103,86 @@ li {
     background-color: #fff;
 }
 
-.btnNormal:hover {
+.MyPage .btnNormal:hover {
     background-color: #f3f3f3;
 }
 
 /*======================================================*/
 /* orderstate */
-.myshop_orderstate {
+.MyPage .myshop_orderstate {
     margin: 20px auto;
     border: 1px solid #dedede;
     border-top: 1px solid black;
 }
 
-.myshop_orderstate .title {
+.MyPage .myshop_orderstate .title {
     padding: 10px 20px;
     margin: 0;
     border-bottom: 1px solid #e9e9e9;
     background-color: #f6f6f6;
 }
 
-.myshop_orderstate .title h3 {
+.MyPage .myshop_orderstate .title h3 {
     font-size: 14px;
     color: #333;
 }
 
-.myshop_orderstate .desc {
+.MyPage .myshop_orderstate .desc {
     padding-left: 5px;
     font-weight: normal;
     font-size: 11px;
     color: #333;
 }
 
-.myshop_orderstate .state {
+.MyPage .myshop_orderstate .state {
     padding: 19px 0;
     color: #333;
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
 
-.myshop_orderstate .order {
+.MyPage .myshop_orderstate .order {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-.myshop_orderstate .order li {
+.MyPage .myshop_orderstate .order li {
     border-right: 1px solid #c9c8ca;
     text-align: center;
     padding: 30px 0px;
 }
 
-.myshop_orderstate .order li strong {
+.MyPage .myshop_orderstate .order li strong {
     display: block;
     margin: 2px 0 7px;
     font-size: 14px;
     color: #333;
 }
 
-.myshop_orderstate .order .count {
+.MyPage .myshop_orderstate .order .count {
     font-weight: bold;
     font-size: 24px;
     color: #333;
 }
 
-.myshop_orderstate .cs {
+.MyPage .myshop_orderstate .cs {
     padding: 20px;
 }
 
-.myshop_orderstate .cs li {
+.MyPage .myshop_orderstate .cs li {
     color: #333;
     padding: 2px;
     text-align: center;
 }
 
-.myshop_orderstate .cs .count {
+.MyPage .myshop_orderstate .cs .count {
     color: #333;
     font-size: 14px;
     padding-left: 5px;
     font-weight: bold;
 }
 
-.myshop_orderstate .cs strong {
+.MyPage .myshop_orderstate .cs strong {
     font-weight: bold;
     font-size: 13px;
     color: #333;
@@ -195,11 +190,11 @@ li {
 
 /*======================================================*/
 /* myshopMain */
-.myshopMain {
+.MyPage .myshopMain {
     margin: 25px 0;
 }
 
-.myshopMain .shopMain {
+.MyPage .myshopMain .shopMain {
     float: left;
     width: 18%;
     height: 260px;
@@ -211,34 +206,34 @@ li {
 
 }
 
-.myshopMain .shopMain a {
+.MyPage .myshopMain .shopMain a {
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.myshopMain .shopMain h3 {
+.MyPage .myshopMain .shopMain h3 {
     position: relative;
     font-size: 12px;
     color: #333;
     font-weight: normal;
 }
 
-.myshopMain .shopMain h3 strong {
+.MyPage .myshopMain .shopMain h3 strong {
     font-size: 18px;
 }
 
-.myshopMain .shopMain h3 span {
+.MyPage .myshopMain .shopMain h3 span {
     display: block;
     padding: 6px 0 0;
 }
 
-.myshopMain .shopMain p {
+.MyPage .myshopMain .shopMain p {
     font-size: 11px;
     line-height: 20px;
     color: #333;
 }
 
-.myshopMain .shopMain:hover {
+.MyPage .myshopMain .shopMain:hover {
     border: 1px solid #999;
 }

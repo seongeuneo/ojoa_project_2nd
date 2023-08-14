@@ -1,79 +1,67 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: inherit;
-}
 
 html {
     scroll-behavior: smooth;
 }
 
-a {
+.Main a {
     text-decoration: none;
 }
 
-li {
+.Main li {
     list-style-type: none;
 }
 
-body {
+.Main body {
     min-width: 1240px;
     margin: auto;
     padding: auto;
 }
 
-main {
+.Main main {
     background-color: white;
     min-height: 450px;
     width: 1240px;
     margin: auto;
 }
 
-/* ====================================================== */
-/* myPage_main */
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    margin-bottom: 80px;
-    overflow: hidden;
+/* ================== 쇼룸 슬라이드 스타일 및 동작 ================== */
+.Main .section {
+    margin-top: 40px;
 }
 
-/* ================== 쇼룸 슬라이드 스타일 및 동작 ================== */
-.section input[id*="slide"] {
+.Main .section input[id*="slide"] {
     display: none;
 }
 
-.section .slidewrap {
+.Main .section .slidewrap {
     max-width: 1240px;
     margin: 0 auto;
 }
 
-.section .slidelist {
+.Main .section .slidelist {
     white-space: nowrap;
     font-size: 0;
     overflow: hidden;
     position: relative;
 }
 
-.section .slidelist>li {
+.Main .section .slidelist>li {
     display: inline-block;
     vertical-align: middle;
     width: 100%;
     transition: all .5s;
 }
 
-.section .slidelist>li>a {
+.Main .section .slidelist>li>a {
     display: block;
     position: relative;
 }
 
-.section .slidelist>li>a img {
+.Main .section .slidelist>li>a img {
     width: 100%;
 }
 
-.section .slidelist label {
+.Main .section .slidelist label {
     position: absolute;
     z-index: 10;
     top: 50%;
@@ -82,7 +70,7 @@ main {
     cursor: pointer;
 }
 
-.section .slidelist .textbox {
+.Main .section .slidelist .textbox {
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -96,7 +84,7 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.section .slidelist .textbox h3 {
+.Main .section .slidelist .textbox h3 {
     font-size: 36px;
     color: #fff;
     transform: translateY(30px);
@@ -104,7 +92,7 @@ main {
     z-index: 5;
 }
 
-.section .slidelist .textbox p {
+.Main .section .slidelist .textbox p {
     font-size: 16px;
     color: #fff;
     transform: translateY(30px);
@@ -113,94 +101,94 @@ main {
 }
 
 /* input에 체크되면 슬라이드 효과 */
-.section input[id="slide01"]:checked~.slidewrap .slidelist>li {
+.Main .section input[id="slide01"]:checked~.slidewrap .slidelist>li {
     transform: translateX(0%);
 }
 
-.section input[id="slide02"]:checked~.slidewrap .slidelist>li {
+.Main .section input[id="slide02"]:checked~.slidewrap .slidelist>li {
     transform: translateX(-100%);
 }
 
-.section input[id="slide03"]:checked~.slidewrap .slidelist>li {
+.Main .section input[id="slide03"]:checked~.slidewrap .slidelist>li {
     transform: translateX(-200%);
 }
 
 /* input에 체크되면 텍스트 효과 */
-.section input[id="slide01"]:checked~.slidewrap li:nth-child(1) .textbox h3 {
+.Main .section input[id="slide01"]:checked~.slidewrap li:nth-child(1) .textbox h3 {
     opacity: 1;
     transform: translateY(0);
     transition-delay: .2s;
 }
 
-.section input[id="slide01"]:checked~.slidewrap li:nth-child(1) .textbox p {
+.Main .section input[id="slide01"]:checked~.slidewrap li:nth-child(1) .textbox p {
     opacity: 1;
     transform: translateY(0);
     transition-delay: .4s;
 }
 
-.section input[id="slide02"]:checked~.slidewrap li:nth-child(2) .textbox h3 {
+.Main .section input[id="slide02"]:checked~.slidewrap li:nth-child(2) .textbox h3 {
     opacity: 1;
     transform: translateY(0);
     transition-delay: .2s;
 }
 
-.section input[id="slide02"]:checked~.slidewrap li:nth-child(2) .textbox p {
+.Main .section input[id="slide02"]:checked~.slidewrap li:nth-child(2) .textbox p {
     opacity: 1;
     transform: translateY(0);
     transition-delay: .4s;
 }
 
-.section input[id="slide03"]:checked~.slidewrap li:nth-child(3) .textbox h3 {
+.Main .section input[id="slide03"]:checked~.slidewrap li:nth-child(3) .textbox h3 {
     opacity: 1;
     transform: translateY(0);
     transition-delay: .2s;
 }
 
-.section input[id="slide03"]:checked~.slidewrap li:nth-child(3) .textbox p {
+.Main .section input[id="slide03"]:checked~.slidewrap li:nth-child(3) .textbox p {
     opacity: 1;
     transform: translateY(0);
     transition-delay: .4s;
 }
 
 /* 좌,우 슬라이드 버튼 */
-.slide-control>div {
+.Main .slide-control>div {
     display: none;
 }
 
-.section .left {
+.Main .section .left {
     left: 30px;
     background: url(../../../public/images/left.png) center center / 100% no-repeat;
 }
 
-.section .right {
+.Main .section .right {
     right: 30px;
     background: url(../../../public/images/right.png) center center / 100% no-repeat;
 }
 
-.section input[id="slide01"]:checked~.slidewrap .slide-control>div:nth-child(1) {
+.Main .section input[id="slide01"]:checked~.slidewrap .slide-control>div:nth-child(1) {
     display: block;
 }
 
-.section input[id="slide02"]:checked~.slidewrap .slide-control>div:nth-child(2) {
+.Main .section input[id="slide02"]:checked~.slidewrap .slide-control>div:nth-child(2) {
     display: block;
 }
 
-.section input[id="slide03"]:checked~.slidewrap .slide-control>div:nth-child(3) {
+.Main .section input[id="slide03"]:checked~.slidewrap .slide-control>div:nth-child(3) {
     display: block;
 }
 
 /* 페이징 */
-.slide-pagelist {
+.Main .slide-pagelist {
     text-align: center;
     padding: 20px;
 }
 
-.slide-pagelist>li {
+.Main .slide-pagelist>li {
     display: inline-block;
     vertical-align: middle;
 }
 
-.slide-pagelist>li>label {
+.Main .slide-pagelist>li>label {
     display: block;
     padding: 8px 8px;
     border-radius: 30px;
@@ -209,15 +197,15 @@ main {
     cursor: pointer;
 }
 
-.section input[id="slide01"]:checked~.slidewrap .slide-pagelist>li:nth-child(1)>label {
+.Main .section input[id="slide01"]:checked~.slidewrap .slide-pagelist>li:nth-child(1)>label {
     background: #8f8f8f;
 }
 
-.section input[id="slide02"]:checked~.slidewrap .slide-pagelist>li:nth-child(2)>label {
+.Main .section input[id="slide02"]:checked~.slidewrap .slide-pagelist>li:nth-child(2)>label {
     background: #999;
 }
 
-.section input[id="slide03"]:checked~.slidewrap .slide-pagelist>li:nth-child(3)>label {
+.Main .section input[id="slide03"]:checked~.slidewrap .slide-pagelist>li:nth-child(3)>label {
     background: #999;
 }
 

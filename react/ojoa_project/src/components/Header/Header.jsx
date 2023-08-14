@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../components/Header/Header.css';
+import Modal from '../Modal/Modal';
 
 function Header() {
     return (
         <>
-            <header>
-                <Link to="/Qna" className="mtalk"><img src="/images/mtalk_icon.png" alt="mtalk" /></Link>
-                <Link to="/Qna" className="mchannel"><img src="/images/mchannel_icon.png" alt="mchannel" /></Link>
+            <header className='header'>
+                <Link to="/qna" className="mtalk"><img src="/images/mtalk_icon.png" alt="mtalk" /></Link>
+                <Link to="/qna" className="mchannel"><img src="/images/mchannel_icon.png" alt="mchannel" /></Link>
                 <div id="mheader">
                     {/*---------------------------------------------------------*/}
                     {/* header */}
@@ -30,7 +31,7 @@ function Header() {
                     </div>
                     <br />
                     <div className="search">
-                        <Link to="/Search"><img src="/images/btn_search.gif" alt="search" /></Link>
+                        <Modal />
                     </div>
                 </div>
             </header>
@@ -70,13 +71,14 @@ function Header() {
                             <li><Link to="#">탈부착형</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="Product_list">의자(구현)</Link>
+                    <li><Link to="./product_list">의자(구현)</Link>
                         <ul>
                             <li><Link to="#">탁상의자</Link></li>
                             <li><Link to="#">주방의자</Link></li>
                         </ul>
                     </li>
                 </ul>
+
             </div>
 
         </>
