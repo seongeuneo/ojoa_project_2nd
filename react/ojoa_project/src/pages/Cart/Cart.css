@@ -1,15 +1,11 @@
-<<<<<<< HEAD
     /*-------------------장바구니  시작-----------------------*/
 
-=======
->>>>>>> main
     .Cart {
       background-color: white;
       min-height: 450px;
       width: 1240px;
       margin: auto;
     }
-<<<<<<< HEAD
 
 
     .Cart a {
@@ -18,35 +14,18 @@
 
 
     .Cart .cart_list {
-=======
-    
-    
-    .Cart a {
-      color: black;
-    }
-    
-  
-    .cart_list {
->>>>>>> main
       /* border-top: solid 1px gray; */
       border-collapse: collapse;
       width: 100%;
     }
-<<<<<<< HEAD
 
     .Cart thead,
     .Cart tfoot {
-=======
-    
-    .cart_list thead,
-    .cart_list tfoot {
->>>>>>> main
       border-top: solid 1.5px gray;
       border-bottom: solid 1.5px gray;
       font-size: 15px;
       height: 50px;
     }
-<<<<<<< HEAD
 
     .Cart td {
       border-bottom: 1px solid silver;
@@ -74,40 +53,10 @@
 
 
     .Cart .list_detail tr>td:first-child,
-=======
-    
-    .cart_list td {
-      border-bottom: 1px solid silver;
-    }
-    
-    
-    .cart_list thead {
-      text-align: center;
-      font-weight: bold;
-    }
-    
-    .cart_list tfoot {
-      text-align: left;
-    }
-    
-    
-    
-    /*표 내부 넓이 디테일*/
-    
-    
-    /*전체선택 버튼*/
-    .cart_list thead>tr>th:nth-child(2) {
-      text-align: left;
-    }
-    
-    
-    .list_detail tr>td:first-child,
->>>>>>> main
     thead>tr>th:first-child {
       width: 3%;
       text-align: center;
     }
-<<<<<<< HEAD
 
     .Cart .list_detail tr td:nth-child(2) {
       width: 15%;
@@ -130,52 +79,15 @@
 
 
 
-    .Cart .cart_img {
-=======
-    
-    .list_detail tr td:nth-child(2) {
-      width: 15%;
-    }
-    
-    .cart_list tr td:nth-child(3) {
-      width: 25%;
-    }
-    
-    
-    .cart_list tr td:nth-child(7) {
-      width: 25%;
-    }
-    
-    
-    .cart_list .list_detail :nth-child(n+4) {
-      text-align: center;
-      border-left: 2px solid whitesmoke;
-    }
-    
-    
-    
     .cart_img {
->>>>>>> main
       background-color: #8f8f8f;
       display: block;
       width: 120px;
       height: 120px;
       margin: 15px;
     }
-<<<<<<< HEAD
-
-
-    .Cart .cart_mainname {
-=======
     
     
-    .cart_mainname {
->>>>>>> main
-      font-size: 20px;
-      font-weight: bold;
-      display: flex;
-    }
-<<<<<<< HEAD
 
 
     .Cart .cart_mininame {
@@ -187,38 +99,17 @@
 
     /* 옵션 숫자박스 */
     .Cart .cart_opt>input {
-=======
-    
-    
-    .cart_mininame {
-      font-size: 13px;
-      display: flex;
-    }
-    
-    
-    
-    /* 옵션 숫자박스 */
-    .cart_opt>input {
->>>>>>> main
       width: 40px;
       height: 35px;
       border: solid silver 1px;
       border-radius: 20%;
       text-align: center;
     }
-<<<<<<< HEAD
 
 
 
     /* 수량 옵션에 주문하기 버튼 */
     .Cart .opt_orderbtn {
-=======
-    
-    
-    
-    /* 수량 옵션에 주문하기 버튼 */
-    .opt_orderbtn {
->>>>>>> main
       background-color: silver;
       color: black;
       border: none;
@@ -227,7 +118,6 @@
       font-size: 12px;
       margin: 10px;
     }
-<<<<<<< HEAD
 
     .Cart .opt_orderbtn:hover {
       background-color: gray;
@@ -237,23 +127,11 @@
 
     /* 장바구니삭제 버튼 */
     .Cart .favor_btn {
-=======
-    
-    .opt_orderbtn:hover {
-      background-color: gray;
-    }
-    
-    
-    
-    /* 장바구니삭제 버튼 */
-    .favor_btn {
->>>>>>> main
       padding: 8px;
       border-radius: 5%;
       border: silver solid 1px;
       display: flex;
     }
-<<<<<<< HEAD
 
     .Cart .favor_btn:hover {
       background-color: silver;
@@ -262,23 +140,12 @@
 
     /*가운데 물품 개당 판매가*/
 
-=======
-    
-    .favor_btn:hover {
-      background-color: silver;
-    }
-    
-    
-    /*가운데 물품 개당 판매가*/
-    
->>>>>>> main
     .Cart .cart_li_price {
       vertical-align: middle;
       font-size: 20px;
       /* font-weight: bold; */
       text-align: center;
     }
-<<<<<<< HEAD
 
 
     .Cart .final_price {
@@ -287,56 +154,28 @@
     }
 
 
-=======
-    
-    
-    .final_price {
-      font-weight: bold;
-      font-size: 20px;
-    }
-    
-    
->>>>>>> main
     .Cart span {
       font-size: 17px;
       text-decoration: line-through;
       color: red;
     }
-<<<<<<< HEAD
 
     .Cart sup {
       font-size: 13px;
     }
 
 
-=======
-    
-    .Cart sup {
-      font-size: 13px;
-    }
-    
-    
->>>>>>> main
     .Cart .total_p {
       font-size: 20px;
       padding: 15px;
       text-align: left;
     }
-<<<<<<< HEAD
 
 
 
     /*---------------하단부분---------------------*/
 
     .Cart .cart_info {
-=======
-    
-    
-    
-    /*---------------하단부분---------------------*/
-    
-    .cart_info {
->>>>>>> main
       background-color: lightgrey;
       color: black;
       padding: 30px;
@@ -345,7 +184,6 @@
       margin: 30px 0px;
       display: flex;
       text-align: left;
-<<<<<<< HEAD
 
     }
 
@@ -370,32 +208,6 @@
 
     /*--------------여기서부터 버튼 시작------------*/
     .Cart .button {
-=======
-      
-    }
-    
-    
-    .cart_info ul li:first-child {
-      color: black;
-      font-weight: bold;
-    }
-    
-    
-    
-    /*마지막 최종 주문하기 버튼*/
-    
-    .final_btns {
-      text-align: center;
-      display: flex;
-    
-    }
-    
-    
-    
-    
-    /*--------------여기서부터 버튼 시작------------*/
-    .button {
->>>>>>> main
       background: black;
       margin: 20px auto;
       width: 200px;
@@ -407,13 +219,8 @@
       border-radius: 3px;
       box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
     }
-<<<<<<< HEAD
 
     .Cart .btnTwo {
-=======
-    
-    .btnTwo {
->>>>>>> main
       position: relative;
       width: 200px;
       height: 100px;
@@ -424,30 +231,19 @@
       transition: .3s;
       font-weight: bold;
     }
-<<<<<<< HEAD
 
     .Cart .btnText {
-=======
-    
-    .btnText {
->>>>>>> main
       color: white;
       transition: .3s;
       padding-top: 13px;
       font-weight: bold;
     }
-<<<<<<< HEAD
 
     .Cart .btnText2 {
-=======
-    
-    .btnText2 {
->>>>>>> main
       margin-top: 50px;
       margin-right: -130px;
       color: black;
     }
-<<<<<<< HEAD
 
     .Cart .button:hover .btnTwo {
       /*When hovering over .button change .btnTwo*/
@@ -460,20 +256,6 @@
     }
 
     .Cart .button:active {
-=======
-    
-    .button:hover .btnTwo {
-      /*When hovering over .button change .btnTwo*/
-      left: -130px;
-    }
-    
-    .button:hover .btnText {
-      /*When hovering over .button change .btnText*/
-      margin-left: 65px;
-    }
-    
-    .button:active {
->>>>>>> main
       /*Clicked and held*/
       box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
     }
