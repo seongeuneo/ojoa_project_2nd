@@ -1,11 +1,15 @@
 import React from "react";
 import "./PLFilter.css";
 
-function PLFilter() {
+function PLFilter({numOfList}) {
+
+    
+
+
     return (
         <div className="PLFilter">
             <div class="product_function">
-                <p class="product_count">등록제품 : 102개</p>
+                <p class="product_count">등록제품 : {numOfList} 개</p>
                 <ul class="product_compare">
                     <li><a href="#">신상품</a></li>
                     <li><a href="#">상품명</a></li>

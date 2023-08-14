@@ -32,6 +32,13 @@ main {
 
 /* ==================  product_list 시작 ================== */
 
+.ProductList {
+  padding-top: 50px;
+  width: 1240px;
+  text-align: center;
+  background-color: #fff;
+  margin: auto;
+}
 
 .ProductList .pl_section {
   display: flex;
