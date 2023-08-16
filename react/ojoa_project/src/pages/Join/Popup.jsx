@@ -1,9 +1,9 @@
 import '../../pages/Join/Popup.css';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Popup = () => {
 
-    //  dimmed -> Popup 으로 바꿔줌 / popup을 dimmed 로 바꿔줌
+//  dimmed -> Popup 으로 바꿔줌 / popup을 dimmed 로 바꿔줌
 
     return (
 
@@ -27,7 +27,7 @@ const Popup = () => {
                     <div className="cmd">
                         {/* <!-- <input type="button" name="btnclose" className="button" value="닫기"> --> */}
                         <Link to="/">
-                            <input className="pop_btn" type="submit" name="mainpage" value="HOME" />
+                        <input className="pop_btn" type="submit" name="mainpage" value="HOME" />
                         </Link>
                     </div>
                 </div>
