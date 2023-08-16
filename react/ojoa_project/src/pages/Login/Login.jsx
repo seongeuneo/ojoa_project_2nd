@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <div>
-            <div className="login_path">
+            <div class="login_path">
                 <span>현재 위치</span>
                 <ol>
                     <li><Link to="/">홈</Link></li>
-                    <li title="현재 위치"> &gt; &nbsp; Login</li>
+                    <li title="현재 위치"> &gt; Login</li>
                 </ol>
             </div>
-            <div className="login_title">
+            <div class="login_title">
                 <h2>LOGIN</h2>
-                <div className="txt_01">회원만의 혜택을 경험하세요</div>
+                <div class="txt_01">회원만의 혜택을 경험하세요</div>
             </div>
             <main className="login_page">
                 <div className="login_container">
