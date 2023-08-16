@@ -1,9 +1,20 @@
-import '../../pages/Join/Info.css';
+import './Info.css';
 import { Link } from 'react-router-dom';
 
 const Info = () => {
     return (
         <div className="Info">
+            <div className="path">
+                <span>현재 위치</span>
+                <ol>
+                    <li><Link to="/">홈</Link></li>
+                    <li title="현재 위치"> &gt; &nbsp; Join</li>
+                </ol>
+            </div>
+            <div className="title">
+                <h2>JOIN</h2>
+                <div className="txt_01">회원가입</div>
+            </div>
 
             <form action="/login/info/agree" name="personalInfo">
                 <table className="personal_info">

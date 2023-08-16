@@ -32,14 +32,16 @@
 .product_compare li {
     display: inline;
     padding: 0 6px 0 10px;
+    color: #777;
+    font-size: 12px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.product_compare li:hover {
+    font-weight: bold;
 }
 
 .product_compare li:first-child {
     background: none;
-}
-
-.product_compare li a {
-    color: #777;
-    font-size: 12px;
-    line-height: 40px;
 }

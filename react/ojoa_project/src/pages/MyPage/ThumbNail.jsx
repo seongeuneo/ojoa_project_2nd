@@ -1,10 +1,22 @@
 import "../MyPage/MyPage.css";
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ThumbNail = () => {
 
     return (
         <div className="container">
+            <div className="path">
+                <span>현재 위치</span>
+                <ol>
+                    <li><Link to="/">홈</Link></li>
+                    <li title="현재 위치">&gt; &nbsp;&nbsp;My Page</li>
+                </ol>
+            </div>
+            <div className="pageTlt">
+                <h2>MY PAGE</h2>
+                <div className="txt_01">포인트적립 및 배송확인 등</div>
+            </div>
             <div className="base-box">
                 <p className="thumbnail">
                     <img src="../images/img_member_default.gif" alt="썸네일" /></p>

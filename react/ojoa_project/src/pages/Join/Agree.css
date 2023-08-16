@@ -1,3 +1,58 @@
+/* ================ */
+.path {
+    width: 1240px;
+    padding: 0;
+    display: flex;
+    color: #333;
+    font-size: 12px;
+    margin: 20px auto;
+    height: 30px;
+    line-height: 30px;
+    justify-content: end;
+}
+
+.path span {
+    position: absolute;
+    width: 0;
+    height: 0;
+    white-space: nowrap;
+    text-indent: 100%;
+    display: none;
+}
+
+.path li {
+    float: left;
+    padding-left: 12px;
+    color: #333;
+}
+
+.path li a {
+    color: #333;
+}
+
+.title {
+    padding-top: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.title h2 {
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.title .txt_01 {
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    font-weight: 300;
+    padding-top: 7px;
+    padding-bottom: 20px;
+}
+
+
+
+
 /*------ 회원가입 페이지 시작------ */
 
 .Agree {

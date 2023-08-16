@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Qna = () => {
     return (
         <div>
-            <div className="path">
+            <div className="qna_path">
                 <span>현재 위치</span>
                 <ol>
                     <li><Link to="/">홈</Link></li>
@@ -16,12 +16,12 @@ const Qna = () => {
                 <div className="qna_wrap">
                     <div className="qna_content">
                         <div className="qna_title">
-                            <div class="txt_01">QnA</div>
-                            <div class="txt_02">Ojoa 문의게시판입니다.</div>
+                            <h2>QnA</h2>
+                            <div class="qna_txt_01">Ojoa 문의게시판입니다.</div>
                         </div>
                         {/* <!-- 검색하기 --> */}
                         <div className="qna_board_sort">
-                            <select name="board_category">
+                            <select name="qna_board_category">
                                 <option value="1">전체</option>
                                 <option value="2">상품문의</option>
                                 <option value="3">배송문의</option>
@@ -35,14 +35,14 @@ const Qna = () => {
                             <form className="qna_board_find">
                                 <fieldset>
                                     <legend>게시물 검색</legend>
-                                    <select name="search_date" id="search_date">
+                                    <select name="search_date" id="qna_search_date">
                                         <option value="period">기간</option>
                                         <option value="all">전체</option>
                                         <option value="week">일주일</option>
                                         <option value="month">한달</option>
                                         <option value="month3">세달</option>
                                     </select>
-                                    <select name="search_key" id="search_key">
+                                    <select name="search_key" id="qna_search_key">
                                         <option value="subject">제목</option>
                                         <option value="content">내용</option>
                                         <option value="writer_name">글쓴이</option>
@@ -50,7 +50,7 @@ const Qna = () => {
                                         <option value="nick_name">별명</option>
                                         <option value="product">상품정보</option>
                                     </select>
-                                    <input type="text" />
+                                    <input type="qna_text" />
                                     <Link to="#" className="qna_board_find_btn">찾기</Link>
                                 </fieldset>
                             </form>
@@ -61,8 +61,8 @@ const Qna = () => {
 
                             <div className="qna_borar_list1">
                                 <div class="qna_board_name">번호</div>
-                                <div class="board_st">공지</div>
-                                <div class="board_st">공지</div>
+                                <div class="qna_board_st">공지</div>
+                                <div class="qna_board_st">공지</div>
                                 <div>5023</div>
                                 <div>5022</div>
                                 <div>5021</div>
@@ -109,50 +109,50 @@ const Qna = () => {
 
                             <div className="qna_board_list4">
                                 <div className="qna_board_name">제목</div>
-                                <div className="board_st"><Link to="#">리뷰작성 포인트 적립안내</Link>
+                                <div className="qna_board_st"><Link to="#">리뷰작성 포인트 적립안내</Link>
                                     <img src="../images/new_icon.png" alt="new" />
-                                    <span className="txtnum">[16]</span>
+                                    <span className="qna_txtnum">[16]</span>
                                 </div>
-                                <div class="board_st"><a href="#">오조아 온라인몰 배송관련 안내</a>
+                                <div class="qna_board_st"><a href="#">오조아 온라인몰 배송관련 안내</a>
                                     <img src="../images/hit_icon.png" />
-                                    <span className="txtnum">[10]</span>
+                                    <span className="qna_txtnum">[10]</span>
                                 </div>
                                 <div><Link to="#">정말 이끼가 자랐는데요...</Link>
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                                 <div><Link to="#">앉아도 안찔리나요?</Link>
                                     <img src="../images/lock_icon.png" />
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                                 <div><Link to="#">재입고 예정 문의드립니다.</Link>
                                     <img src="../images/lock_icon.png" />
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                                 <div><Link to="#">손가락은 꺾이나요?</Link>
                                     <img src="../images/lock_icon.png" />
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                                 <div><Link to="#">아무리봐도 바게트같은데....</Link>
                                     <img src="../images/lock_icon.png" />
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                                 <div><Link to="#">현금영수증 관련 문의</Link>
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                                 <div><Link to="#">언제 배송되나요??</Link>
                                     <img src="../images/lock_icon.png" />
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                                 <div><Link to="#">재입고 일정은 어떻게 되나요?</Link>
                                     <img src="../images/lock_icon.png" />
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                                 <div><Link to="#">푸바오 한마리 개별 구매 가능한가요?</Link>
                                     <img src="../images/lock_icon.png" />
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                                 <div><Link to="#">해외배송가능?</Link>
-                                    <span className="txtnum">[1]</span>
+                                    <span className="qna_txtnum">[1]</span>
                                 </div>
                             </div>
 

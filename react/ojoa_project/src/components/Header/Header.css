@@ -5,6 +5,16 @@
     margin: auto;
 }
 
+.header li {
+    list-style: none;
+}
+
+.header a {
+    text-decoration: none;
+
+}
+
+
 /*======================================================*/
 /* header */
 #mheader {
@@ -46,13 +56,12 @@
 }
 
 .header .search {
-    width: 300px;
-    top: 80px;
-    right: -130px;
-    position: absolute;
+    top: -75px;
+    /* position: absolute; */
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    /* align-items: center; */
 }
 
 .header .search input {

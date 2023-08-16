@@ -38,8 +38,8 @@ const MiniSection = () => {
                             <div className="colsec_price">123,456 원<sup>5%</sup></div>
                         </div>
                     </a>
-                    <input type="checkbox" id="heart2" />
-                    <label for="heart2"><i className="fa-regular fa-heart"></i></label>
+                    {/* <input type="checkbox" id="heart2" />
+                    <label for="heart2"><i className="fa-regular fa-heart"></i></label> */}
                 </div>
             </div>
 
@@ -58,8 +58,8 @@ const MiniSection = () => {
                             <div className="colsec_price">123,456 원 <sup>10%</sup></div>
                         </div>
                     </a>
-                    <input type="checkbox" id="heart3" />
-                    <label for="heart3"><i className="fa-regular fa-heart"></i></label>
+                    {/* <input type="checkbox" id="heart3" />
+                    <label for="heart3"><i className="fa-regular fa-heart"></i></label> */}
                 </div>
 
                 {/* <-- 네번째 항목  --> */}
@@ -76,8 +76,8 @@ const MiniSection = () => {
                             <div className="colsec_price">123,456 원<sup>7%</sup></div>
                         </div>
                     </a>
-                    <input type="checkbox" id="heart4" />
-                    <label for="heart4"><i className="fa-regular fa-heart"></i></label>
+                    {/* <input type="checkbox" id="heart4" />
+                    <label for="heart4"><i className="fa-regular fa-heart"></i></label> */}
                 </div>
             </div>
 
@@ -97,8 +97,8 @@ const MiniSection = () => {
                             <div className="colsec_price">123,456 원<sup>20%</sup></div>
                         </div>
                     </a>
-                    <input type="checkbox" id="heart5" />
-                    <label for="heart5"><i className="fa-regular fa-heart"></i></label>
+                    {/* <input type="checkbox" id="heart5" />
+                    <label for="heart5"><i className="fa-regular fa-heart"></i></label> */}
                 </div>
 
                 {/* <-- 여섯번째 항목  --> */}
@@ -115,8 +115,8 @@ const MiniSection = () => {
                             <div className="colsec_price">123,456 원<sup>10%</sup></div>
                         </div>
                     </a>
-                    <input type="checkbox" id="heart6" />
-                    <label for="heart6"><i className="fa-regular fa-heart"></i></label>
+                    {/* <input type="checkbox" id="heart6" />
+                    <label for="heart6"><i className="fa-regular fa-heart"></i></label> */}
                 </div>
             </div>
         </div>

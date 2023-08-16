@@ -1,11 +1,24 @@
 import '../../pages/Join/Agree.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Agree = () => {
 
     return (
         <div className="Agree">
+            <div className="path">
+                <span>현재 위치</span>
+                <ol>
+                    <li><Link to="/">홈</Link></li>
+                    <li> &gt; &nbsp; Join</li>
+                    <li> &gt; &nbsp; Info</li>
+                    <li title="현재 위치"> &gt; &nbsp; Agree</li>
+                </ol>
+            </div>
+            <div className="title">
+                <h2>JOIN</h2>
+                <div className="txt_01">회원가입</div>
+            </div>
             <div className="agree_total">
                 {/* <!-- <h3 className="gree_mini">약관의 동의</h3> --> */}
                 {/* <!----------------------약관사항 넣기----------------------> */}

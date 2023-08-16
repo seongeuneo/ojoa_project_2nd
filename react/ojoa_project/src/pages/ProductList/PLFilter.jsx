@@ -1,22 +1,24 @@
 import React from "react";
 import "./PLFilter.css";
 
-function PLFilter({numOfList}) {
+function PLFilter({ numOfList, setSortKey }) {
+    const handleSortClick = (sortKey) => {
+        setSortKey(sortKey);
+    };
 
-    
 
 
     return (
         <div className="PLFilter">
-            <div class="product_function">
-                <p class="product_count">등록제품 : {numOfList} 개</p>
-                <ul class="product_compare">
-                    <li><a href="#">신상품</a></li>
-                    <li><a href="#">상품명</a></li>
-                    <li><a href="#">낮은가격</a></li>
-                    <li><a href="#">높은가격</a></li>
-                    <li><a href="#">제조사</a></li>
-                    <li><a href="#">사용후기</a></li>
+            <div className="product_function">
+                <p className="product_count">등록제품 : {numOfList} 개</p>
+                <ul className="product_compare">
+                    <li onClick={() => handleSortClick("신상품")}>신상품</li>
+                    <li onClick={() => handleSortClick("상품명")}>상품명</li>
+                    <li onClick={() => handleSortClick("낮은가격")}>낮은가격</li>
+                    <li onClick={() => handleSortClick("높은가격")}>높은가격</li>
+                    <li onClick={() => handleSortClick("제조사")}>제조사</li>
+                    <li onClick={() => handleSortClick("사용후기")}>사용후기</li>
                 </ul>
             </div>
         </div>

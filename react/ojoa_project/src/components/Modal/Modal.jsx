@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ModalBasic from './ModalBasic';
+import './ModalBasic.css';
 
 // 모달을 노출하는 페이지
 function Modal() {
@@ -12,7 +13,7 @@ function Modal() {
     };
 
     return (
-        <div>
+        <div className='SearchModal_container'>
             <img onClick={showModal} src="/images/btn_search.png" alt="search" />
             {modalOpen && <ModalBasic setModalOpen={setModalOpen} />}
         </div>

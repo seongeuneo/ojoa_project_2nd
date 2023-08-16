@@ -53,4 +53,3 @@ const AsyncBankBook = () => {
     );
 };
 export default AsyncBankBook;
-

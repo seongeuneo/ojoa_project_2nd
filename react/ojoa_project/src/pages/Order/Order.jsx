@@ -1,9 +1,22 @@
 import React from "react";
 import "./Order.css";
+import { Link } from "react-router-dom"
+
 
 function Order() {
     return (
         <div className="Order">
+            <div className="path">
+                <span>현재 위치</span>
+                <ol>
+                    <li><Link to="/">홈</Link></li>
+                    <li title="현재 위치">&gt; &nbsp;&nbsp;Order</li>
+                </ol>
+            </div>
+            <div className="pageTlt">
+                <h2>ORDER</h2>
+                <div className="txt_01">주문내역조회</div>
+            </div>
             {/*  주문조회페이지/order페이지  */}
             <div class="container">
                 {/*  order = od로 요약  */}

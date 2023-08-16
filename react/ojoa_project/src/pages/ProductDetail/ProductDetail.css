@@ -1,33 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
 
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-body {
-  min-width: 1240px;
-  margin: auto;
-  padding: auto;
-}
-
-main {
-  background-color: white;
-  min-height: 450px;
-  width: 1240px;
-  margin: auto;
-}
 
 /*======================================================*/
 /* main product detail page */
@@ -347,4 +318,45 @@ input[type="number"]::-webkit-inner-spin-button {
 .ProductDetail .pd_orderInfo2 p,
 .ProductDetail .pd_orderInfo3 p {
   white-space: pre-line;
+}
+
+/* ====================================================== */
+/* navi_bar */
+.ProductDetail .path {
+  color: #333;
+  font-size: 12px;
+  /* margin: 20px auto; */
+  margin-right: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.ProductDetail .path span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  white-space: nowrap;
+  text-indent: 100%;
+  display: none;
+}
+
+.ProductDetail .path li {
+  float: left;
+  padding-left: 12px;
+  margin: 0;
+  color: #333;
+}
+
+.ProductDetail .path ol {
+  float: right;
+}
+
+
+.ProductDetail .txt_01 {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  font-weight: 300;
+  padding-top: 5px;
+  padding-bottom: 120px;
 }

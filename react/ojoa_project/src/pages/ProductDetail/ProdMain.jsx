@@ -1,5 +1,7 @@
-import { useState, useRef } from "react";
+import { useState, useParams, useEffect } from "react";
 import './ProductDetail.css'
+//import axios from "axios"
+
 
 
 function ProdMain() {
@@ -23,17 +25,27 @@ function ProdMain() {
 
     const sum = count * 199000;
 
-    const result = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    const result = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
     //======================================
     // 대표 썸네일 이미지 클릭시 변경
 
-    const [mainImg, setMainImg] = useState("images/vintagefabricC1.jpg");
+    const [mainImg, setMainImg] = useState("/images/vintagefabricC1.jpg");
 
     const imgChange = (e) => {
         setMainImg(e)
     };
     //======================================
+
+    // const {id} = useParams();
+    // const [product, setProduct] = useState({});
+
+    // useEffect(() => {
+    //     axios.get("./data/products.json").then((data) => {
+    //         console.log(data)
+    //         setProduct(data.products.find((product) => product.id === parseInt(id)));
+    //     })
+    // }, []);
 
 
 return (
@@ -101,10 +113,10 @@ return (
     <div class="pd_img">
         <img src={mainImg} alt="" id="mainImg" />
         <ul>
-            <li><img onClick={() => imgChange("images/vintagefabricC1.jpg")} src="images/vintagefabricC1.jpg" alt="" id="thumb1" /></li>
-            <li><img onClick={() => imgChange("images/vintagefabricC2.jpg")} src="images/vintagefabricC2.jpg" alt="" id="thumb2" /></li>
-            <li><img onClick={() => imgChange("images/vintagefabricC3.jpg")} src="images/vintagefabricC3.jpg" alt="" id="thumb3" /></li>
-            <li><img onClick={() => imgChange("images/vintagefabricC4.jpg")} src="images/vintagefabricC4.jpg" alt="" id="thumb4" /></li>
+            <li><img onClick={() => imgChange("/images/vintagefabricC1.jpg")} src="/images/vintagefabricC1.jpg" alt="" id="thumb1" /></li>
+            <li><img onClick={() => imgChange("/images/vintagefabricC2.jpg")} src="/images/vintagefabricC2.jpg" alt="" id="thumb2" /></li>
+            <li><img onClick={() => imgChange("/images/vintagefabricC3.jpg")} src="/images/vintagefabricC3.jpg" alt="" id="thumb3" /></li>
+            <li><img onClick={() => imgChange("/images/vintagefabricC4.jpg")} src="/images/vintagefabricC4.jpg" alt="" id="thumb4" /></li>
         </ul>
     </div>
 

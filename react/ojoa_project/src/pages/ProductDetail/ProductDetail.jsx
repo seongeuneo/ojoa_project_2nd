@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductDetail.css";
-import { NavLink, Routes, Route } from "react-router-dom"
+import { NavLink, Routes, Route, useParams } from "react-router-dom"
 import DetailInfo01 from './DetailInfo01';
 import OrderReview02 from './OrderReview02';
 import ProdQna03 from './ProdQna03';
@@ -11,8 +11,18 @@ import ProdMain from './ProdMain';
 
 function ProductDetail() {
 
+
+
     return (
         <div className="ProductDetail">
+            <div className="path">
+                <span>현재 위치</span>
+                <ol>
+                    <li><NavLink to="/">홈</NavLink></li>
+                    <li><NavLink to="/ProductList">&gt; &nbsp;&nbsp;의자</NavLink></li>
+                    <li title="현재 위치">&gt; &nbsp;&nbsp;현재 위치</li>
+                </ol>
+            </div>
             {/* <!-- main product detail --> */}
             {/* <!-- product detail dt 로 요약 --> */}
 
@@ -36,7 +46,7 @@ function ProductDetail() {
 
 
 
-        </div>
+        </div >
 
 
 

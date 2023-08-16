@@ -20,12 +20,12 @@ function Header() {
                         {/* 상단 네비 */}
                         <div className="navBar">
                             <ul>
-                                <li><Link to="/login">LOGIN </Link>&nbsp;<span>|</span></li>
-                                <li><Link to="/MyPage">MYPAGE </Link>&nbsp;<span>|</span></li>
-                                <li><Link to="/Order">ORDER </Link>&nbsp;<span>|</span></li>
-                                <li><Link to="/Cart">CART </Link>&nbsp;<span>|</span></li>
-                                <li><Link to="/Qna">QNA </Link>&nbsp;<span>|</span></li>
-                                <li><Link to="/Store">STORE </Link></li>
+                                <li><Link to="../Login">LOGIN </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../MyPage">MYPAGE </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../Order">ORDER </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../Cart">CART </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../Qna">QNA </Link>&nbsp;<span>|</span></li>
+                                <li><Link to="../Store">STORE </Link></li>
                             </ul>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ function Header() {
                             <li><Link to="#">탈부착형</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="ProductList">의자(구현)</Link>
+                    <li><Link to="./productList">의자(구현)</Link>
                         <ul>
                             <li><Link to="#">탁상의자</Link></li>
                             <li><Link to="#">주방의자</Link></li>

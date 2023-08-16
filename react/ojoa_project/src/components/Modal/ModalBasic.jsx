@@ -49,6 +49,10 @@ function ModalBasic({ setModalOpen }) {
         event.stopPropagation();
     };
 
+    const handleSearchButtonClick = () => {
+        alert('\n [상품 검색] 기능은 현재 준비중 입니다.');
+    };
+
     return (
         // 모달창을 useRef로 잡아준다.
             <div ref={modalRef} className="Modal_container" onClick={closeModal}>
@@ -59,7 +63,7 @@ function ModalBasic({ setModalOpen }) {
                         <input name="keyword" className="inputTypeText" placeholder=""
                             value={inputValue} type="text" onChange={handleInputChange}
                             onClick={handleModalClick} />
-                        <img src="./images/search_icon.png" alt="검색" className="search_btn" />
+                    <img src="./images/search_icon.png" alt="검색" className="search_btn" onClick={handleSearchButtonClick} />
                     </fieldset>
                 </div>
             </div>

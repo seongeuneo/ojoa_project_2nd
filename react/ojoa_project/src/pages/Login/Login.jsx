@@ -6,19 +6,17 @@ import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <div>
-            <div class="path">
+            <div className="login_path">
                 <span>현재 위치</span>
                 <ol>
                     <li><Link to="/">홈</Link></li>
-                    <li title="현재 위치"> &gt; Login</li>
+                    <li title="현재 위치"> &gt; &nbsp; Login</li>
                 </ol>
             </div>
-
-            <div class="main_pro_title">
+            <div className="login_title">
                 <h2>LOGIN</h2>
-                <div class="txt_01">회원만의 혜택을 경험하세요</div>
+                <div className="txt_01">회원만의 혜택을 경험하세요</div>
             </div>
-
             <main className="login_page">
                 <div className="login_container">
                     <form auction="">
@@ -26,18 +24,18 @@ const Login = () => {
                             <div className="login">
                                 <fieldset className="login_fieldset">
                                     <legend>회원로그인</legend>
-                                    <label className="id">
+                                    <label className="login_id">
                                         <span><img src="../images/account.png" alt="아이디" /></span>
                                         <input type="text" name="userID" placeholder="아이디" minLength="3" />
                                     </label>
-                                    <label className="password">
+                                    <label className="login_password">
                                         <span><img src="../images/password.png" alt="비밀번호" /></span>
                                         <input type="password" name="userPSW" placeholder="비밀번호" minLength="3" />
                                     </label>
                                     <div className="login_btn">
                                         <Link to="../my_page/my_page.html">로그인</Link>
                                     </div>
-                                    <div className="security">
+                                    <div className="login_security">
                                         <img src="../images/ico_access.gif" alt="보안접속" />
                                         "보안접속"
                                     </div>
@@ -57,7 +55,7 @@ const Login = () => {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="cboth"></div>
+                                    <div className="login_cboth"></div>
                                     <div className="login_sns">
                                         <p className="sns">
                                             <Link to="#" target="_blank"><img src="../images/btn_naver_login.gif" alt='네이버로그인' /></Link>
@@ -69,7 +67,7 @@ const Login = () => {
                                             <Link to="#" target="_blank"><img src="../images/btn_kakao_login.gif" alt='카카오톡로그인' /></Link>
                                         </p>
                                     </div>
-                                    <div className="cboth"></div>
+                                    <div className="login_cboth"></div>
                                 </fieldset>
                             </div>
                             <div className="login_join">
