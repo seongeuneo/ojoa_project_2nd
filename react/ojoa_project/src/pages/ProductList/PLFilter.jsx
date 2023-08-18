@@ -6,8 +6,6 @@ function PLFilter({ numOfList, setSortKey }) {
         setSortKey(sortKey);
     };
 
-
-
     return (
         <div className="PLFilter">
             <div className="product_function">

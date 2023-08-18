@@ -5,9 +5,9 @@ function ProdQna03() {
     return (
         <div className="ProdQna03">
             {/* <!-- main product detail --> */}
-            <div class="container">
+            <div className="container">
                 {/* <!-- product detail dt 로 요약 --> */}
-                <table class="pd_qna">
+                <table className="pd_qna">
 
                     <tbody>
                         <tr>

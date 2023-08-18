@@ -1,41 +1,48 @@
 import React from "react";
 import "./ProductListItem.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import mockList from '../../Chairs'
 
-const ProductListItem = ({id, imgNo, productName, productPriceFormatted, productPromotion, productInfo, productReview, productGrade}) => {
-    
-    const productPrice = productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+const ProductListItem = ({content, onSelect }) => {
 
+    const productPrice = content.productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+   
 
-        return (
-            <div className="ProductListItem">
-                <section className="pl_section">
-                    <ul className="prodItems">
-                        <li className="pl_thumb_img">
-                            <a><NavLink to={`/ProductDetail/${id}`}><img src={`../images/chair${imgNo}.jpg`} /></NavLink>
+    return (
+        <div className="ProductListItem" onClick={onSelect}>
+            <section className="pl_section">
+                <ul className="prodItems">
+                    <li className="pl_thumb_img">
+                        <a>
+                            <Link to={{
+                                key: content.id,
+                                pathname: `/ProductDetail/${content.id}`,
+                                state: { productData: content } // 선택한 상품 정보를 state로 전달
+                            }}>
+                                <img src={`../images/chair${content.imgNo}.jpg`}  alt={`Product ${content.productName}`} />
+                            </Link>
+                            <div className="pl_icon">
+                                <a className="pd_cart" href="#a">
+                                    <img src={"../images/cart_icon.png"} alt="장바구니" />
+                                </a>
+                                <a className="pd_heart" href="#../public/a">
+                                    <img src={"../images/heart_icon.png"} alt="관심상품" />
+                                </a>
+                            </div>
+                        </a>
+                    </li>
 
-                                <div className="pl_icon">
-                                    <a className="pd_cart" href="#a">
-                                        <img src={"../images/cart_icon.png"} alt="장바구니" />
-                                    </a>
-                                    <a className="pd_heart" href="#../public/a">
-                                        <img src={"../images/heart_icon.png"} alt="관심상품" />
-                                    </a>
-                                </div>
-                            </a>
-                        </li>
+                    <li className="pl_a"><a><Link to="/ProductDetail">{content.productName}</Link></a></li>
+                    <li className="pl_b"><a><Link to="/ProductDetail">{productPrice}원
+                        <span> {content.productPromotion}%</span></Link></a></li>
+                    <li className="pl_c"><a><Link to="/ProductDetail">{content.productInfo}</Link></a></li>
+                    <li className="pl_d"><a><Link to="/ProductDetail">리뷰 <span>{content.productReview}</span> 평점 *
+                        <span>{content.productGrade}/5</span></Link></a></li>
+                </ul>
+            </section>
+        </div >
+    )
 
-                        <li className="pl_a"><a><NavLink to="/ProductDetail">{productName}</NavLink></a></li>
-                        <li className="pl_b"><a><NavLink to="/ProductDetail">{productPrice}원
-                            <span> {productPromotion}%</span></NavLink></a></li> 
-                        <li className="pl_c"><a><NavLink to="/ProductDetail">{productInfo}</NavLink></a></li>
-                        <li className="pl_d"><a><NavLink to="/ProductDetail">리뷰 <span>{productReview}</span> 평점 *
-                            <span>{productGrade}/5</span></NavLink></a></li>
-                    </ul>
-                </section>
-            </div>
-        )
-    
 
 }; //ProductList
 
