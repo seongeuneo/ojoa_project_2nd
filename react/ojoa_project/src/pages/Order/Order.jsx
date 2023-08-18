@@ -18,7 +18,7 @@ function Order() {
                 <div className="txt_01">주문내역조회</div>
             </div>
             {/*  주문조회페이지/order페이지  */}
-            <div class="container">
+            <div className="container">
                 {/*  order = od로 요약  */}
                 <div id="od_backbody">
                     <div id="od_frame">
