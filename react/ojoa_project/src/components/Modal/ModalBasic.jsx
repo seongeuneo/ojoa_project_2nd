@@ -59,7 +59,7 @@ function ModalBasic({ setModalOpen }) {
                 <div className="Modal_container2">
                     <img onClick={closeModal} className="madal_close_rotate" src="./images/search_X.png" alt="search_x" />
                     <fieldset onClick={handleModalClick}>
-                        <legend>검색</legend>
+                        <legend></legend>
                         <input name="keyword" className="inputTypeText" placeholder=""
                             value={inputValue} type="text" onChange={handleInputChange}
                             onClick={handleModalClick} />

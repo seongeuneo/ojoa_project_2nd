@@ -20,6 +20,7 @@ import Popup from './pages/Join/Popup';
 import Qna from './pages/Qna/Qna';
 =======
 import mockList from './Chairs'
+import Mileage from './pages/MyPage/MyShop/Mileage';
 
 
 
@@ -37,10 +38,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/mypage/*" element={<MyPage />} />
+          <Route path="/mypage/Mileage*" element={<Mileage />} />
           <Route path="/store/*" element={<Store />} />
           <Route path="/order/*" element={<Order />} />
-          <Route path="/productList/*" element={<ProductList />} />
-          <Route path="/productDetail/*" element={<ProductDetail />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/login/" element={<Login />} />
           <Route path="/cart/*" element={<Cart />} />

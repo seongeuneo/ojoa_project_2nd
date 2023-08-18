@@ -66,6 +66,7 @@ function OrderReview02() {
 
     
 
+
     // 리뷰 내용 자식모달 컴포넌트에서 값 받아오기
     // 리뷰 값 받아온 것을 mockList에 추가하기
     const [reviews, setReviews] = useState([]);
@@ -80,6 +81,8 @@ function OrderReview02() {
         };
         setReviews([...reviews, newReview]); // 리뷰 목록에 새 리뷰 추가
     };
+
+
 
     return (
         <div className="OrderReview02">

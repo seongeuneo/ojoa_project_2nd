@@ -24,7 +24,7 @@ function TopButton() {
     return (
         showButton && (
             <div>
-                <button className="scroll" onClick={scrollToTop}><img className="btn_top" src="/images/btn_top.png" alt="TopBtn"/></button>
+                <button className="Top_Btn_scroll" onClick={scrollToTop}><img className="btn_top" src="/images/btn_top.png" alt="TopBtn"/></button>
             </div>
         )
     );
