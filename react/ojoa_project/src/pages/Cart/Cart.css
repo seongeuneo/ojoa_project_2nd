@@ -257,14 +257,11 @@ thead>tr>th:first-child {
 
 
 /* 항목별 세일 가격 */
-.CartList .cart_saleprice span {
-  font-size: 17px;
-  text-decoration: line-through;
-  color: red;
-}
 
 .CartList .cart_saleprice sup {
   font-size: 13px;
+  color: red;
+  font-weight: bold;
 }
 
 
