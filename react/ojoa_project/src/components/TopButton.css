@@ -1,9 +1,9 @@
-.scroll {
+.Top_Btn_scroll {
     position: fixed;
     right: 1%;
     bottom: 40%;
     cursor: pointer;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .btn_top {

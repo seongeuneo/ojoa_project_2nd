@@ -1,18 +1,12 @@
 import "../MyPage/MyPage.css";
-// import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import ModalBtnBasic from "./ModalBtnBasic";
-import './ModalBtn.css';
+import { Link } from 'react-router-dom';
+// import { useState } from 'react';
 import React from "react";
 
 const AsyncBankBook = () => {
 
-    // 모달창 노출 여부 state
-    const [modalOpen, setModalOpen] = useState(false);
-
-    // 모달창 노출
-    const showModal = () => {
-        setModalOpen(true);
+    const handleLinkClick = () => {
+        alert('해당 페이지는 현재 준비중 입니다.');
     };
 
     return (
@@ -26,8 +20,7 @@ const AsyncBankBook = () => {
                     <li>
                         <strong className="title">가용적립금</strong>
                         <strong className="data">10,000원</strong>
-                        <button onClick={showModal} className="btnNormal" >조회</button>
-                        {modalOpen && <ModalBtnBasic setModalOpen={setModalOpen} />}
+                        <Link to='/MyPAge/Mileage'><button className="btnNormal">조회</button></Link>
                     </li>
                     <li>
                         <strong className="title">총적립금</strong>
@@ -40,8 +33,7 @@ const AsyncBankBook = () => {
                     <li>
                         <strong className="title">예치금</strong>
                         <strong className="data">300,000원</strong>
-                        <button onClick={showModal} className="btnNormal" >조회</button>
-                        {modalOpen && <ModalBtnBasic setModalOpen={setModalOpen} />}
+                        <button onClick={handleLinkClick} className="btnNormal" >조회</button>
                     </li>
                     <li>
                         <strong className="title">총주문</strong>

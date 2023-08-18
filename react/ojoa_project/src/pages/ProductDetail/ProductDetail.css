@@ -408,7 +408,8 @@ input[type="number"]::-webkit-inner-spin-button {
   /* 모달 너비 */
   min-height: 400px;
 
-  height: 100vm; /* 화면 높이의 100% */
+  height: 100vm;
+  /* 화면 높이의 100% */
 
   position: fixed;
   top: 50%;

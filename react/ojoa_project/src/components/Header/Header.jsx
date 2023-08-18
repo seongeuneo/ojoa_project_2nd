@@ -4,6 +4,12 @@ import '../../components/Header/Header.css';
 import Modal from '../Modal/Modal';
 
 function Header() {
+
+    const handleLinkClick = () => {
+        alert('해당 페이지는 현재 준비중 입니다.');
+    };
+
+
     return (
         <>
             <header className='header'>
@@ -39,42 +45,42 @@ function Header() {
             {/* category_navi_drop_bar */}
             <div className="sticky" id="category_nav">
                 <ul>
-                    <li><Link to="#">BEST</Link></li>
-                    <li><Link to="#">NEW</Link></li>
-                    <li><Link to="#">침대</Link>
+                    <li><Link to="#" onClick={handleLinkClick}>BEST</Link></li>
+                    <li><Link to="#" onClick={handleLinkClick}>NEW</Link></li>
+                    <li><Link to="#" onClick={handleLinkClick}>침대</Link>
                         <ul>
-                            <li><Link to="#">싱글</Link></li>
-                            <li><Link to="#">더블</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>싱글</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>더블</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="#">소파</Link>
+                    <li><Link to="#" onClick={handleLinkClick}>소파</Link>
                         <ul>
-                            <li><Link to="#">2인</Link></li>
-                            <li><Link to="#">3인</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>2인</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>3인</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="#">책장</Link>
+                    <li><Link to="#" onClick={handleLinkClick}>책장</Link>
                         <ul>
-                            <li><Link to="#">2단</Link></li>
-                            <li><Link to="#">3단</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>2단</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>3단</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="#">옷장</Link>
+                    <li><Link to="#" onClick={handleLinkClick}>옷장</Link>
                         <ul>
-                            <li><Link to="#">2칸</Link></li>
-                            <li><Link to="#">3칸</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>2칸</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>3칸</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="#">조명</Link>
+                    <li><Link to="#" onClick={handleLinkClick}>조명</Link>
                         <ul>
-                            <li><Link to="#">스탠드형</Link></li>
-                            <li><Link to="#">탈부착형</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>스탠드형</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>탈부착형</Link></li>
                         </ul>
                     </li>
                     <li><Link to="./productList">의자(구현)</Link>
                         <ul>
-                            <li><Link to="#">탁상의자</Link></li>
-                            <li><Link to="#">주방의자</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>탁상의자</Link></li>
+                            <li><Link to="#" onClick={handleLinkClick}>주방의자</Link></li>
                         </ul>
                     </li>
                 </ul>

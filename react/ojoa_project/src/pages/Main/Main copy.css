@@ -249,6 +249,8 @@
 
 .FlipRoom .hover_wrap>div img {
     width: 100%;
+    /* border: 10px solid #F0F8FF; */
+    /* box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2); */
     box-sizing: border-box;
     vertical-align: top;
 }
@@ -329,7 +331,17 @@
 }
 
 
-.MiniItems .colsection {
+.MiniSection .mcol1,
+.MiniSection .mcol2,
+.MiniSection .mcol3 {
+    width: 400px;
+    text-align: center;
+
+}
+
+
+
+.MiniSection .colsection {
     width: 400px;
     height: 150px;
     margin-bottom: 10px;
@@ -339,9 +351,7 @@
     background-color: white;
 }
 
-
-
-.MiniItems .colsection .colsec_img {
+.MiniSection .colsec_img {
     width: 130px;
     height: 120px;
     padding: 0 10px;
@@ -355,8 +365,19 @@
 
 
 
+.MiniSection .colsection a,
+.MiniSection .hover_total a {
+    color: inherit;
+    /* display: flex; */
+    display: block;
+    width: 100%;
+}
 
-.MiniItems .img_top {
+
+
+
+
+.MiniSection .img_top {
     content: "";
     position: absolute;
     top: 0;
@@ -367,11 +388,10 @@
     font-weight: bold;
     width: 130px;
     font-size: 13px;
-    text-align: center;
 }
 
 
-.MiniItems .colsection .colsec_name {
+.MiniSection .colsec_name {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -379,7 +399,7 @@
 }
 
 
-.MiniItems .colsection .colsec_price {
+.MiniSection .colsec_price {
     font-size: 17px;
     font-weight: bold;
     right: 0;
@@ -388,7 +408,7 @@
 
 
 /*------new--------*/
-.MiniItems .colsection .colsec_info {
+.MiniSection .colsec_info {
     position: absolute;
     left: 200px;
     margin-top: 10px;
@@ -396,26 +416,41 @@
 }
 
 
-.MiniItems .colsection .colsec_price sup {
+.MiniSection .colsec_price sup {
     color: red;
     font-weight: bold;
     padding: 5px;
 
 }
 
-.MiniItems .colsection .colsec_mini {
+.MiniSection .colsec_mini {
+    /* font-style: italic; */
     font-size: 12px;
     line-height: 20px;
-    text-align: center;
 }
 
 /*---------하트부분-------*/
+/* 
+input {
+    appearance: none;
+}
+
+input:checked~label {
+    color: red;
+}
+
+.fa-regular.fa-heart::before {
+    font-size: 20px;
+}
 
 
-.MiniItems .colsection .heartbtn {
+.main_col label {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    width: 20px;
-    height: 20px;
 }
+
+
+table.colsection tr td {
+    width: 200px;
+} */

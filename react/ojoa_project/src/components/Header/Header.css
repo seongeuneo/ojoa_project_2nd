@@ -5,16 +5,6 @@
     margin: auto;
 }
 
-.header li {
-    list-style: none;
-}
-
-.header a {
-    text-decoration: none;
-
-}
-
-
 /*======================================================*/
 /* header */
 #mheader {
@@ -119,6 +109,7 @@
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    padding: 0 20px;
 }
 
 #category_nav>ul>li:hover>ul {
@@ -130,10 +121,10 @@
     transition: ease 1s;
 }
 
-.header .sticky {
+/* .sticky {
     position: sticky;
     top: 0;
-}
+} */
 
 /* ======================================================= */
 .header .mtalk img {

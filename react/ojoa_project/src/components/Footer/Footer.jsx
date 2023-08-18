@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import '../../components/Footer/Footer.css';
 
 function Footer() {
+
+    const handleLinkClick = () => {
+        alert('해당 페이지는 현재 준비중 입니다.');
+    };
+
     return (
         <>
             <footer>
@@ -52,10 +57,10 @@ function Footer() {
                         {/* 회사소개 */}
                         <div className="ft_menu">
                             <ul>
-                                <li><Link to="#">회사소개</Link></li>
-                                <li><Link to="#">이용약관</Link></li>
-                                <li><Link to="#">개인정보처리방침</Link></li>
-                                <li><Link to="#">이용안내</Link></li>
+                                <li><Link to="#" onClick={handleLinkClick}>회사소개</Link></li>
+                                <li><Link to="#" onClick={handleLinkClick}>이용약관</Link></li>
+                                <li><Link to="#" onClick={handleLinkClick}>개인정보처리방침</Link></li>
+                                <li><Link to="#" onClick={handleLinkClick}>이용안내</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -63,11 +68,11 @@ function Footer() {
                         <div className="ft_comm">
                             <ul>
                                 <li><b>Community</b></li>
-                                <li><Link to="#">NOTICE</Link></li>
-                                <li><Link to="#">REVIEW</Link></li>
+                                <li><Link to="#" onClick={handleLinkClick}>NOTICE</Link></li>
+                                <li><Link to="#" onClick={handleLinkClick}>REVIEW</Link></li>
                                 <li><Link to="./qna">QNA</Link></li>
                                 <li><Link to="./store">OFFLINE STORE</Link></li>
-                                <li><Link to="#">MEMBERSHIP</Link></li>
+                                <li><Link to="#" onClick={handleLinkClick}>MEMBERSHIP</Link></li>
                             </ul>
                         </div>
                         <div className="ft_quick">
@@ -75,7 +80,7 @@ function Footer() {
                                 <li><b>Shopping Quick</b></li>
                                 <li><Link to="./MyPage">MY PAGE</Link></li>
                                 <li><Link to="./order">ORDER</Link></li>
-                                <li><Link to="#">WISH LIST</Link></li>
+                                <li><Link to="#" onClick={handleLinkClick}>WISH LIST</Link></li>
                             </ul>
                         </div>
                         <div className="ft_sns">

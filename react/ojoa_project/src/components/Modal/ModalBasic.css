@@ -33,7 +33,7 @@
 .Modal_container fieldset {
     width: 800px;
     position: fixed;
-    top: 50%;
+    top: 45%;
 }
 
 /* 모달창 내부 X버튼 */
