@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useRef } from "react";
 import "./ProductDetail.css";
-import ModalBtnBasic from "./Modal/ModalBtnBasic";
+import Modal from 'react-modal';
+import RModal from './Modal/RModal';
 
 const mockReviewList = [
     {
@@ -45,11 +46,12 @@ const lastName = (fullName) => {
 function OrderReview02() {
 
     // // 모달창 띄우기
-    // const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    // const openModal = () => setIsModalOpen(true);
-    // const closeModal = () => setIsModalOpen(false);
+    const openModal = () => setModalIsOpen(true);
+    const closeModal = () => setModalIsOpen(false);
 
+    // 리뷰리스트 mock 리스트 맵핑
     const singleReviewLi = mockReviewList.map((content) => {
         return (
             <tr>
@@ -62,22 +64,30 @@ function OrderReview02() {
         );
     });
 
+    
 
-    const [modalOpen, setModalOpen] = useState(false);
+    // 리뷰 내용 자식모달 컴포넌트에서 값 받아오기
+    // 리뷰 값 받아온 것을 mockList에 추가하기
+    const [reviews, setReviews] = useState([]);
 
-    // 모달창 노출
-    const showModal = () => {
-        setModalOpen(true);
+    const handleReviewTextChange = (reviewText) => {
+        const newReview = {
+            title: '새 리뷰', // 필요한 속성 추가
+            writer: '사용자', // 필요한 속성 추가
+            createDate: new Date().toLocaleDateString(), // 필요한 속성 추가
+            check: 0, // 필요한 속성 추가
+            content: reviewText // 사용자 리뷰 내용 추가
+        };
+        setReviews([...reviews, newReview]); // 리뷰 목록에 새 리뷰 추가
     };
 
     return (
         <div className="OrderReview02">
             {/* <!-- main product detail --> */}
-            <div class="container">
+            <div className="container">
                 {/* <!-- product detail dt 로 요약 --> */}
 
-                <table class="review">
-
+                <table className="review">
                     <tbody>
                         <tr>
                             <th>번호</th>
@@ -89,10 +99,10 @@ function OrderReview02() {
                         {singleReviewLi}
                         <tr>
                             <th colspan="5">
-                                <a onClick={showModal}>상품후기쓰기 </a>
-                                {modalOpen && <ModalBtnBasic setModalOpen={setModalOpen} />}
-                                {/* <a onClick={openModal}>상품후기쓰기  */}
-                                {/* <ReviewModal Open={isModalOpen} onClose={closeModal} /></a> */}
+                                <a onClick={openModal}>상품후기쓰기 </a>
+                                <Modal className="ModalContent" isOpen={modalIsOpen} onRequestClose={closeModal}>
+                                    <RModal closeModal={closeModal} onReviewTextChange={handleReviewTextChange} />
+                                </Modal>
                                 <a> 내가쓴글조회하기</a>
                             </th>
                         </tr>

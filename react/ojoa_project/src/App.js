@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, { useState } from "react";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import TopButton from './components/TopButton';
@@ -15,10 +16,21 @@ import Cart from './pages/Cart/Cart';
 import Info from './pages/Join/Info';
 import Agree from './pages/Join/Agree';
 import Popup from './pages/Join/Popup';
+<<<<<<< HEAD
 import Qna from './pages/Qna/Qna';
+=======
+import mockList from './Chairs'
+
+
+
+
+>>>>>>> main
 
 
 function App() {
+   //장바구니
+   const [cart, setCart] = useState([]);
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -33,7 +45,7 @@ function App() {
           <Route path="/login/" element={<Login />} />
           <Route path="/cart/*" element={<Cart />} />
           <Route path="/" element={<Main />} />
-          <Route path="/productDetail/*" element={<ProductDetail />} />
+          <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart}/>} />
           <Route path="/productList/*" element={<ProductList />} />
           <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />

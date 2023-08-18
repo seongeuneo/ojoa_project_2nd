@@ -5,9 +5,9 @@ function PurGuide04() {
     return (
         <div className="PurGuide04">
             {/* <!-- main product detail --> */}
-            <div class="container">
+            <div className="container">
                 {/* <!-- product detail dt 로 요약 --> */}
-                <div class="pd_orderInfo pd_orderInfo1">
+                <div className="pd_orderInfo pd_orderInfo1">
                     <h2>PAYMENT INFO</h2>
                     <h3>상품결제정보</h3>
                     <p>
@@ -17,7 +17,7 @@ function PurGuide04() {
                         주문시 입력한 입금자명과 실제입금자의 성명이 반드시 일치하여야 하며&#44; 7일 이내로 입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다&#46;
                     </p>
                 </div>
-                <div class="pd_orderInfo pd_orderInfo2">
+                <div className="pd_orderInfo pd_orderInfo2">
                     <h2>DELIVERY INFO</h2>
                     <h3>배송정보</h3>
                     <div>
@@ -45,7 +45,7 @@ function PurGuide04() {
 
 
 
-                <div class="pd_orderInfo pd_orderInfo3">
+                <div className="pd_orderInfo pd_orderInfo3">
                     <h2>EXCHANGE INFO</h2>
                     <h3>교환 및 반품정보</h3>
                     <div>
@@ -65,7 +65,7 @@ function PurGuide04() {
                         </p>
                     </div>
                 </div>
-                <div class="pd_orderInfo pd_orderInfo4">
+                <div className="pd_orderInfo pd_orderInfo4">
                     <h2>SERVICE INFO</h2>
                     <h3>서비스문의</h3>
                     <div></div>
