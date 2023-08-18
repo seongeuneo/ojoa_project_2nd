@@ -16,16 +16,13 @@ import Cart from './pages/Cart/Cart';
 import Info from './pages/Join/Info';
 import Agree from './pages/Join/Agree';
 import Popup from './pages/Join/Popup';
-<<<<<<< HEAD
 import Qna from './pages/Qna/Qna';
-=======
 import mockList from './Chairs'
 import Mileage from './pages/MyPage/MyShop/Mileage';
 
 
 
 
->>>>>>> main
 
 
 function App() {
