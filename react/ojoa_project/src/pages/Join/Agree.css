@@ -1,5 +1,5 @@
 /* ================ */
-.path {
+.Agree .path {
     width: 1240px;
     padding: 0;
     display: flex;
@@ -11,7 +11,7 @@
     justify-content: end;
 }
 
-.path span {
+.Agree .path span {
     position: absolute;
     width: 0;
     height: 0;
@@ -20,29 +20,29 @@
     display: none;
 }
 
-.path li {
+.Agree .path li {
     float: left;
     padding-left: 12px;
     color: #333;
 }
 
-.path li a {
+.Agree .path li a {
     color: #333;
 }
 
-.title {
+.Agree .title {
     padding-top: 100px;
     text-align: center;
     color: #333;
 }
 
-.title h2 {
+.Agree .title h2 {
     font-size: 30px;
     line-height: 1;
     letter-spacing: 3px;
 }
 
-.title .txt_01 {
+.Agree .title .txt_01 {
     font-size: 14px;
     letter-spacing: -0.2px;
     font-weight: 300;

@@ -9,13 +9,7 @@ const CartList = () => {
             <table className="list_detail">
 
                 <tr>
-                    <td><input type="checkbox"
-                        // id={cart.id}
-                        // onChange={(e) => {
-                        //     handleCheckList(e.currentTarget.checked, `${cart.id}`);
-                        // }}
-                        // checked={checkLists.includes(`${cart.id}`) ? true : false}
-                    /></td>
+                    <td><input type="checkbox" /></td>
                     <td><img class="cart_img" src={"../images/sofa.jpg"} alt="이미지1" /></td>
 
                     <td>
@@ -25,8 +19,8 @@ const CartList = () => {
                     </td>
 
                     <td class="cart_saleprice">
-                        <sup>15%&#8595;</sup><span>116,62원</span>
-                        <div class="cart_li_price">상품개당가격</div>
+                        <sup>'할인율'&#8595;</sup>
+                        <div class="cart_li_price">'상품개당가격'</div>
                     </td>
 
                     <td>
@@ -34,11 +28,7 @@ const CartList = () => {
                         <div className="cart_product_count">
                             <img className="minus"
                                 src={"../images/minus.png"}
-                                alt="minus"
-                                // onClick={() => {
-                                //     handleQuantity("minus", cart.id, cart.quantity - 1);
-                                // }}
-                            />
+                                alt="minus" />
 
                             <div className="count">
                                 <span>5</span>
@@ -46,18 +36,16 @@ const CartList = () => {
 
                             <img className="plus"
                                 src={"../images/cartplus.png"}
-                                alt="plus"
-                                // onClick={() => handleQuantity("plus", cart.id, cart.quantity + 1)}
-                            />
-                        </div>
+                                alt="plus" />
 
+                        </div>
 
                     </td>
 
                     <td>무료배송</td>
                     <td class="final_price">여기엔 갯수별가격
                         <div className="product_remove">
-                            <img src={"/images/cancel.png"} alt="delete"/>
+                            <img src={"/images/cancel.png"} alt="delete" />
                         </div>
                     </td>
                 </tr>
