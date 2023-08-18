@@ -25,7 +25,9 @@ const Login = () => {
                                 <fieldset className="login_fieldset">
                                     <legend>회원로그인</legend>
                                     <label className="login_id">
-                                        <span><img src="../images/account.png" alt="아이디" /></span>
+                                        <span><img src="../images/account.png" alt="아이디" />
+                                            <Link to="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/"> </Link>
+                                        </span>
                                         <input type="text" name="userID" placeholder="아이디" minLength="3" />
                                     </label>
                                     <label className="login_password">

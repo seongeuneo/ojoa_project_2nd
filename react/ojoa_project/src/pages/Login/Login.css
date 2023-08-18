@@ -1,3 +1,5 @@
+/* ================================== */
+/* 경로 및 타이틀 */
 .login_path {
     width: 1240px;
     padding: 0;
@@ -49,7 +51,8 @@
     padding-bottom: 20px;
 }
 
-
+/* ======================================= */
+/* 로그인창 */
 .login_page {
     display: flex;
     justify-content: center;
@@ -92,7 +95,8 @@
     line-height: 16px;
 }
 
-/* ----------로그인---------- */
+/* ======================================= */
+/* 로그인 아이디 및 비밀번호 입력 */
 .login_fieldset {
     position: relative;
     width: 675px;
@@ -151,7 +155,9 @@
     position: relative;
 }
 
-/* ----------로그인버튼---------- */
+/* ======================================= */
+/* 로그인 버튼 */
+
 /* .login_fieldset .login_btn {
     float: right;
 } */
