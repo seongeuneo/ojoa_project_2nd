@@ -17,13 +17,8 @@ import Cart from './pages/Cart/Cart';
 import Info from './pages/Join/Info';
 import Agree from './pages/Join/Agree';
 import Popup from './pages/Join/Popup';
-<<<<<<< HEAD
-import Mileage from './pages/MyPage/MyShop/Mileage';
-
-function App() {
-  
-=======
 import mockList from './Chairs'
+import Mileage from './pages/MyPage/MyShop/Mileage';
 
 
 
@@ -34,7 +29,6 @@ function App() {
    //장바구니
    const [cart, setCart] = useState([]);
 
->>>>>>> main
   return (
     <div className="App">
       <BrowserRouter>
@@ -44,8 +38,6 @@ function App() {
           <Route path="/mypage/Mileage*" element={<Mileage />} />
           <Route path="/store/*" element={<Store />} />
           <Route path="/order/*" element={<Order />} />
-          <Route path="/productList/*" element={<ProductList />} />
-          <Route path="/productDetail/*" element={<ProductDetail />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/login/" element={<Login />} />
           <Route path="/qna/*" element={<Qna />} />

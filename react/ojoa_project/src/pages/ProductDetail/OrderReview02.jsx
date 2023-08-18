@@ -51,11 +51,6 @@ function OrderReview02() {
     const openModal = () => setModalIsOpen(true);
     const closeModal = () => setModalIsOpen(false);
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> main
     // 리뷰리스트 mock 리스트 맵핑
     const singleReviewLi = mockReviewList.map((content) => {
         return (
@@ -71,18 +66,11 @@ function OrderReview02() {
 
     
 
-<<<<<<< HEAD
 
     // 리뷰 내용 자식모달 컴포넌트에서 값 받아오기
     // 리뷰 값 받아온 것을 mockList에 추가하기
     const [reviews, setReviews] = useState([]);
 
-=======
-    // 리뷰 내용 자식모달 컴포넌트에서 값 받아오기
-    // 리뷰 값 받아온 것을 mockList에 추가하기
-    const [reviews, setReviews] = useState([]);
-
->>>>>>> main
     const handleReviewTextChange = (reviewText) => {
         const newReview = {
             title: '새 리뷰', // 필요한 속성 추가
@@ -91,10 +79,6 @@ function OrderReview02() {
             check: 0, // 필요한 속성 추가
             content: reviewText // 사용자 리뷰 내용 추가
         };
-<<<<<<< HEAD
-
-=======
->>>>>>> main
         setReviews([...reviews, newReview]); // 리뷰 목록에 새 리뷰 추가
     };
 
