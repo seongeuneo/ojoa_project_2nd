@@ -254,8 +254,6 @@ html {
 
 .FlipRoom .hover_wrap>div img {
     width: 100%;
-    /* border: 10px solid #F0F8FF; */
-    /* box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2); */
     box-sizing: border-box;
     vertical-align: top;
 }
@@ -336,17 +334,7 @@ html {
 }
 
 
-.MiniSection .mcol1,
-.MiniSection .mcol2,
-.MiniSection .mcol3 {
-    width: 400px;
-    text-align: center;
-
-}
-
-
-
-.MiniSection .colsection {
+.MiniItems .colsection {
     width: 400px;
     height: 150px;
     margin-bottom: 10px;
@@ -356,7 +344,9 @@ html {
     background-color: white;
 }
 
-.MiniSection .colsec_img {
+
+
+.MiniItems .colsection .colsec_img {
     width: 130px;
     height: 120px;
     padding: 0 10px;
@@ -370,19 +360,8 @@ html {
 
 
 
-.MiniSection .colsection a,
-.MiniSection .hover_total a {
-    color: inherit;
-    /* display: flex; */
-    display: block;
-    width: 100%;
-}
 
-
-
-
-
-.MiniSection .img_top {
+.MiniItems .img_top {
     content: "";
     position: absolute;
     top: 0;
@@ -393,10 +372,11 @@ html {
     font-weight: bold;
     width: 130px;
     font-size: 13px;
+    text-align: center;
 }
 
 
-.MiniSection .colsec_name {
+.MiniItems .colsection .colsec_name {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -404,7 +384,7 @@ html {
 }
 
 
-.MiniSection .colsec_price {
+.MiniItems .colsection .colsec_price {
     font-size: 17px;
     font-weight: bold;
     right: 0;
@@ -413,7 +393,7 @@ html {
 
 
 /*------new--------*/
-.MiniSection .colsec_info {
+.MiniItems .colsection .colsec_info {
     position: absolute;
     left: 200px;
     margin-top: 10px;
@@ -421,41 +401,26 @@ html {
 }
 
 
-.MiniSection .colsec_price sup {
+.MiniItems .colsection .colsec_price sup {
     color: red;
     font-weight: bold;
     padding: 5px;
 
 }
 
-.MiniSection .colsec_mini {
-    /* font-style: italic; */
+.MiniItems .colsection .colsec_mini {
     font-size: 12px;
     line-height: 20px;
+    text-align: center;
 }
 
 /*---------하트부분-------*/
-/* 
-input {
-    appearance: none;
-}
-
-input:checked~label {
-    color: red;
-}
-
-.fa-regular.fa-heart::before {
-    font-size: 20px;
-}
 
 
-.main_col label {
+.MiniItems .colsection .heartbtn {
     position: absolute;
     bottom: 10px;
     right: 10px;
+    width: 20px;
+    height: 20px;
 }
-
-
-table.colsection tr td {
-    width: 200px;
-} */
