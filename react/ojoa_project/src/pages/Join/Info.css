@@ -7,7 +7,7 @@
 }
 
 /* ================ */
-.path {
+.Info .path {
   width: 1240px;
   padding: 0;
   display: flex;
@@ -19,7 +19,7 @@
   justify-content: end;
 }
 
-.path span {
+.Info .path span {
   position: absolute;
   width: 0;
   height: 0;
@@ -28,29 +28,29 @@
   display: none;
 }
 
-.path li {
+.Info .path li {
   float: left;
   padding-left: 12px;
   color: #333;
 }
 
-.path li a {
+.Info .path li a {
   color: #333;
 }
 
-.title {
+.Info .title {
   padding-top: 100px;
   text-align: center;
   color: #333;
 }
 
-.title h2 {
+.Info .title h2 {
   font-size: 30px;
   line-height: 1;
   letter-spacing: 3px;
 }
 
-.title .txt_01 {
+.Info .title .txt_01 {
   font-size: 14px;
   letter-spacing: -0.2px;
   font-weight: 300;

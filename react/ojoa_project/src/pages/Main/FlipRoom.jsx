@@ -1,5 +1,6 @@
 import '../../pages/Main/Main.css';
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 const FlipRoom = () => {
 
@@ -18,10 +19,12 @@ const FlipRoom = () => {
                         </figcaption>
                     </figure>
                     <figure className="back">
+                        <NavLink to="/ProductList">
                         <img className="colimg" src={"./images/l_bg.png"} alt="마우스 내리면 to Left" />
                         <figcaption>
-                            <h3><a href="./product_list/product_list.html">지금 보러가기 &rarr;</a></h3>
+                            <h3>지금 보러가기 &rarr;</h3>
                         </figcaption>
+                        </NavLink>
                     </figure>
                 </div>
             </div>
@@ -37,10 +40,12 @@ const FlipRoom = () => {
                         </figcaption>
                     </figure>
                     <figure className="back">
+                        <NavLink to="/ProductList">
                         <img className="colimg" src={"./images/b_bg.png"} alt="마우스 내리면 to Left" />
                         <figcaption>
-                            <h3><a href="./product_list/product_list.html">지금 보러가기 &rarr;</a></h3>
+                        <h3>지금 보러가기 &rarr;</h3>
                         </figcaption>
+                        </NavLink>
                     </figure>
                 </div>
             </div>
@@ -56,10 +61,12 @@ const FlipRoom = () => {
                         </figcaption>
                     </figure>
                     <figure className="back">
+                        <NavLink to="/ProductList">
                         <img className="colimg" src={"./images/k_bg.png"} alt="마우스 내리면 to Left" />
                         <figcaption>
-                            <h3><a href="./product_list/product_list.html">지금 보러가기 &rarr;</a></h3>
+                            <h3>지금 보러가기 &rarr;</h3>
                         </figcaption>
+                        </NavLink>
                     </figure>
                 </div>
             </div>
