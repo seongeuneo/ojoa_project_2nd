@@ -1,6 +1,6 @@
 import { useState, useParams, useEffect } from "react";
 import './ProductDetail.css'
-import axios from "axios"
+// import axios from "axios"
 
 
 

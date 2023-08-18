@@ -6,7 +6,7 @@ const MyshopMain = () => {
     return (
         <div className="container">
             <div className="myshopMain">
-                <Link to="../order/order.html">
+                <Link to="../order">
                     <div className="shopMain">
                         <h3><img src="../images/img_oder.png" alt="주문내역조회" /><br /><strong>Order</strong><span>주문내역 조회</span></h3>
                         <br />
@@ -29,7 +29,7 @@ const MyshopMain = () => {
                         <p>관심상품으로 등록하신<br />상품의 목록을 보여드립니다.</p>
                     </div>
                 </Link>
-                <Link to="#">
+                <Link to='/MyPAge/Mileage'>
                     <div className="shopMain">
                         <h3><img src="../images/img_mileage.png" alt="적립금" /><br /><strong>Mileage</strong><span>적립금</span>
                         </h3>
@@ -45,7 +45,7 @@ const MyshopMain = () => {
                         <p>예치금은 현금과 동일하게<br />상품 구매시 사용하실 수 있습니다.</p>
                     </div>
                 </Link>
-                <Link to="../qna/qna.html">
+                <Link to="../qna">
                     <div className="shopMain">
                         <h3><img src="../images/img_board.png" alt="게시물 관리" /><br /><strong>Board</strong><span>게시물 관리</span></h3>
                         <br />
