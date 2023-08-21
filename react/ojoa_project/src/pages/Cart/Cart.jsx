@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../pages/Cart/Cart.css';
 import CartHeader from '../../pages/Cart/CartHeader';
-import CartList from '../../pages/Cart/CartList';
+import CartList from '../../data/ItemsData';
 import CartTotal from '../../pages/Cart/CartTotal';
 import { Link } from 'react-router-dom';
 

@@ -1,6 +1,53 @@
+<<<<<<< HEAD
 /*======================================================*/
 /* main product detail page */
 
+=======
+/* ====================================================== */
+/* navi_bar */
+.ProductList .path {
+  color: #333;
+  font-size: 12px;
+  margin: 0px auto;
+  margin-right: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.ProductList .path span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  white-space: nowrap;
+  text-indent: 100%;
+  display: none;
+}
+
+.ProductList .path li {
+  float: left;
+  padding-left: 12px;
+  margin: 0;
+  color: #333;
+}
+
+.ProductList .path ol {
+  float: right;
+}
+
+
+
+
+
+
+/*======================================================*/
+/* main product detail page */
+
+.ProductDetail {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 50px 0 0;
+}
+>>>>>>> main
 
 .ProductDetail .product_view {
   margin: 70px auto;
@@ -31,7 +78,15 @@
   position: absolute;
   width: 380px;
 
-  left: calc(100%*0.15)
+  left: calc(100%*0.15);
+}
+
+.ProductDetail .product_view .pd_img ul {
+  cursor: pointer;
+}
+
+.ProductDetail .product_view ul img.active {
+  border: 1px solid rgb(43, 148, 205);
 }
 
 .ProductDetail .product_view .pd_img>img {
@@ -183,6 +238,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #c6c6c6;
   border: 1px solid #c6c6c6;
   margin: 10px;
+  cursor: pointer;
 }
 
 .ProductDetail .product_view>.pd_btns>a.pd_btn1:hover {
@@ -199,6 +255,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border: 2px solid black;
   color: black;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .ProductDetail .pd_length button:hover,
@@ -208,6 +265,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: bold;
 
   transition-duration: 1s;
+  cursor: pointer;
 }
 
 
@@ -238,8 +296,16 @@ input[type="number"]::-webkit-inner-spin-button {
   color: inherit;
 }
 
-.ProductDetail .pd_section .active {
-  color: rgb(96, 120, 176);
+.pd_section a {
+  text-decoration: none;
+  color: #000000;
+  /* 기본 폰트 컬러 */
+}
+
+/* 클릭된 링크 스타일 */
+.pd_section a.active {
+  color: #bcbcbc;
+  /* 클릭 시 폰트 컬러 변경 */
 }
 
 .ProductDetail .pd_part1 {
@@ -274,6 +340,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .ProductDetail .review a,
 .ProductDetail .pd_qna a {
   color: inherit;
+  cursor: pointer;
 }
 
 .ProductDetail .review tr:first-of-type {
@@ -286,6 +353,10 @@ input[type="number"]::-webkit-inner-spin-button {
 .ProductDetail .pd_qna th {
   text-align: end;
   padding: 10px;
+}
+
+.pd_qna a {
+  cursor: pointer;
 }
 
 /* =================================================== */

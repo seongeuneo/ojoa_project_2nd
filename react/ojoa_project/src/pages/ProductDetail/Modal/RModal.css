@@ -115,7 +115,7 @@
 .close_pannel .title {
     font-size: 1.4rem;
     position: absolute;
-    top: -100px;
+    top: 3px;
     right: calc(600px/2 - 50px);
     color: white;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useRef, useContext, useEffect } from "react";
 import "./QnaModal.css";
-import mockList from "../../../components/MockList/Chairs";
+import mockList from "../../../data/ItemsData";
 import { TodoDispatchContext } from "../Qna";
 
 function QnaModal({ setModalOpe }) {
