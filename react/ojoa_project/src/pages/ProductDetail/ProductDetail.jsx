@@ -5,107 +5,75 @@ import DetailInfo01 from './DetailInfo01';
 import OrderReview02 from './OrderReview02';
 import ProdQna03 from './ProdQna03';
 import PurGuide04 from './PurGuide04';
-import mockList from '../../components/MockList/Chairs';
+import mockList from '../../components/MockList/Chairs'
 import Modal from 'react-modal';
 import AddCart from './Modal/AddCart';
 
 
-function ProductDetail({ cart, setCart }) {
+
+
+function ProductDetail({ handleCart }) {
 
     // 상품목록리스트에서 id 값에 따라 상품 상세 반영하기
     const { mockList_id } = useParams();
-    const test = mockList.filter((content) => content.id === parseInt(mockList_id))
+    const test = mockList.filter((content) => content.id === parseInt(mockList_id));
     const { id, imgNo, productName, productPriceFormatted, productPromotion, productInfo, productReview, productGrade } = test[0]
     //======================================
     // 수량 변경한 만큼 가격에 계산
+    // const [count, setCount] = useState(1);
+
+
+
     const [count, setCount] = useState(1);
-
-    // 장바구니 기능
-    // 장바구니 물건 중복된 물건
-    const setQuantity = (id, quantity) => {
-        const found = mockList.filter((el) => el.id === parseInt(id))[0];
-        const idx = mockList.indexOf(found);
-        const cartItem = {
-            id: id,
-            imgNo: imgNo,
-            productName: productName,
-            productPriceFormatted: productPriceFormatted,
-            productPromotion: productPromotion,
-            productInfo: productInfo,
-            productReview: productReview,
-            productGrade: productGrade,
-            quantity: quantity
-        };
-        setCart([...mockList.slice(0, idx), cartItem, ...mockList.slice(idx + 1)])
-    }
-
-    // 장바구니에 물건
-    const handleCart = () => {
-        const cartItem = {
-            id: id,
-            imgNo: imgNo,
-            productName: productName,
-            productPriceFormatted: productPriceFormatted,
-            productPromotion: productPromotion,
-            productInfo: productInfo,
-            productReview: productReview,
-            productGrade: productGrade,
-            quantity: count
-        };
-        const found = mockList.find((el) => el.id === parseInt(cartItem.id));
-        if (found) setQuantity(cartItem.id, found.quantity + count)
-        else setCart([...mockList, cartItem]);
-    };
-
-    console.log(cart);
-
-    function handleCartAndOpenModal() {
-        openModal();
-        handleCart();
-    }
-
-    // if (test.length > 0) {
-    //     return "상품 있음"
-    // } else {
-    //     return "상품 없음"
-    // }
-    //======================================
-    // 대표 썸네일 이미지 클릭시 변경
     const [mainImg, setMainImg] = useState(`../images/chair${imgNo}.jpg`);
 
-
-    //======================================
-    // 수량 변경한 만큼 가격에 계산
     const onDecrease = () => {
         if (count >= 2) {
             setCount(count - 1);
         }
-    }
+    };
+
     const onIncrease = () => {
         if (count >= 1) {
-
             setCount(count + 1);
         }
-    }
+    };
 
     const sellPrice = productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
     const sum = count * productPriceFormatted;
-
     const result = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-    //======================================
-    // 대표 썸네일 이미지 클릭시 변경
     const imgChange = (e) => {
-        setMainImg(e)
+        setMainImg(e);
     };
-    //======================================
+
+    const handleAddToCart = () => {
+        const cartItem = {
+            id: id,
+            imgNo: imgNo,
+            productName: productName,
+            productPriceFormatted: productPriceFormatted,
+            productPromotion: productPromotion,
+            productInfo: productInfo,
+            productReview: productReview,
+            productGrade: productGrade,
+            quantity: count,
+        };
+        handleCart(cartItem);
+    };
+
 
     // // 장바구니 추가 모달창 띄우기
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const openModal = () => setModalIsOpen(true);
     const closeModal = () => setModalIsOpen(false);
+
+
+    function handleCartAndOpenModal() {
+        handleAddToCart();
+        openModal();
+    }
 
     return (
         <div className="ProductDetail">
@@ -196,7 +164,7 @@ function ProductDetail({ cart, setCart }) {
                     <Modal className="ModalContent" handleCart={handleCart} isOpen={modalIsOpen} onRequestClose={closeModal}>
                         <AddCart closeModal={closeModal} />
                     </Modal>
-                    <Link to='../Cart/Cart' className="pd_btn2" onClick={() => handleCart}>구매하기</Link>
+                    <Link to='../Cart/Cart' className="pd_btn2" onClick={() => handleAddToCart()}>구매하기</Link>
                 </div>
             </div>
             <div className="PdIndex00">
@@ -219,5 +187,6 @@ function ProductDetail({ cart, setCart }) {
 
     )
 };
+
 
 export default ProductDetail;

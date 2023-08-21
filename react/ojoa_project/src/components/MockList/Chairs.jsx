@@ -1,6 +1,5 @@
 import { createContext } from "react";
 
-
 const mockList = [
     {
         id: 1,
@@ -28,7 +27,7 @@ const mockList = [
         id: 3,
         imgNo: 2,
         productName: "노란 의자",
-        productPriceFormatted: "1200000",
+        productPriceFormatted: "720000",
         productPromotion: "11",
         productInfo: "머슥터드",
         productReview: "6",
@@ -50,7 +49,7 @@ const mockList = [
         id: 5,
         imgNo: 4,
         productName: "이끼 의자",
-        productPriceFormatted: "690000",
+        productPriceFormatted: "69000",
         productPromotion: "13",
         productInfo: "녹즙 녹즙",
         productReview: "3",
@@ -61,7 +60,7 @@ const mockList = [
         id: 6,
         imgNo: 5,
         productName: "브라운 의자",
-        productPriceFormatted: "1200000",
+        productPriceFormatted: "125400",
         productPromotion: "26",
         productInfo: "구름 위에 앉은 듯한 착석감",
         productReview: "9",
@@ -72,7 +71,7 @@ const mockList = [
         id: 7,
         imgNo: 6,
         productName: "핑크 의자",
-        productPriceFormatted: "90000",
+        productPriceFormatted: "975000",
         productPromotion: "95",
         productInfo: "마감세일 합니다",
         productReview: "99",
@@ -139,7 +138,7 @@ const mockList = [
         imgNo: 12,
         productName: "진기의 철의 왕좌",
         productPriceFormatted: "999999999",
-        productPromotion: "",
+        productPromotion: "7",
         productInfo: "MD 소장품",
         productReview: "1",
         productGrade: "3.6"
@@ -161,7 +160,7 @@ const mockList = [
         imgNo: 14,
         productName: "원희 의자",
         productPriceFormatted: "120000",
-        productPromotion: "",
+        productPromotion: "20",
         productInfo: "마미손",
         productReview: "29",
         productGrade: "2.8"
@@ -171,13 +170,13 @@ const mockList = [
         imgNo: 15,
         productName: "성은 의자",
         productPriceFormatted: "139000",
-        productPromotion: "",
+        productPromotion: "5",
         productInfo: "바게트 함냐함냐함",
         productReview: "19",
         productGrade: "3.9"
 
     },
-
+ 
 ]; //mockList
 
 export default mockList;
