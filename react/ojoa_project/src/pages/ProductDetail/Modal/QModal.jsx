@@ -2,7 +2,7 @@ import React from "react";
 import "./QModal.css";
 import { useState } from "react";
 import { useParams } from "react-router-dom"
-import mockList from '../../../data/Chairs'
+import mockList from '../../../data/ItemsData'
 
 
 
@@ -29,21 +29,21 @@ function QModal({ closeModal, onReviewTextChange }) {
     };
 
     // 리뷰 내용 자식모달 컴포넌트에서 값 받아오기
-   // 리뷰 값 받아온 것을 mockList에 추가하기
-   const [questss, setQuests] = useState([]);
+    // 리뷰 값 받아온 것을 mockList에 추가하기
+    const [questss, setQuests] = useState([]);
 
-   const handleQuestTextChange = (questText) => {
-       const newQuest = {
-           title: '새 리뷰', // 필요한 속성 추가
-           writer: '사용자', // 필요한 속성 추가
-           createDate: new Date().toLocaleDateString(), // 필요한 속성 추가
-           check: 0, // 필요한 속성 추가
-           content: questText // 사용자 리뷰 내용 추가
-       };
-       setQuests([...questss, newQuest]); // 리뷰 목록에 새 리뷰 추가
-   };
+    const handleQuestTextChange = (questText) => {
+        const newQuest = {
+            title: '새 리뷰', // 필요한 속성 추가
+            writer: '사용자', // 필요한 속성 추가
+            createDate: new Date().toLocaleDateString(), // 필요한 속성 추가
+            check: 0, // 필요한 속성 추가
+            content: questText // 사용자 리뷰 내용 추가
+        };
+        setQuests([...questss, newQuest]); // 리뷰 목록에 새 리뷰 추가
+    };
 
-   
+
     const handleAddQuest = () => {
         handleQuestTextChange(localQuestText); // 리뷰 내용을 부모 컴포넌트로 전달
         closeModal();

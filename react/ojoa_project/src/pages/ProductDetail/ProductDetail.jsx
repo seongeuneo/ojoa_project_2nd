@@ -5,7 +5,7 @@ import DetailInfo01 from './DetailInfo01';
 import OrderReview02 from './OrderReview02';
 import ProdQna03 from './ProdQna03';
 import PurGuide04 from './PurGuide04';
-import mockList from '../../data/Chairs'
+import mockList from '../../data/ItemsData'
 import Modal from 'react-modal';
 import AddCart from './Modal/AddCart';
 
@@ -194,7 +194,7 @@ function ProductDetail({ cart, setCart }) {
             </div>
             <div className="PdIndex00">
                 <div className="pd_section">
-                    <a><NavLink to="./DetailInfo01" activeClassName="active"exact>
+                    <a><NavLink to="./DetailInfo01" activeClassName="active" exact>
                         <strong>상품상세정보</strong></NavLink></a>
                     <a><NavLink to="./OrderReview02" activeClassName="active" >
                         <strong>상품구매후기</strong></NavLink></a>

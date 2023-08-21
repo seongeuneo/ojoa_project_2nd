@@ -2,7 +2,7 @@ import React from "react";
 import "./RModal.css";
 import { useState } from "react";
 import { useParams } from "react-router-dom"
-import mockList from '../../../data/Chairs'
+import mockList from '../../../data/ItemsData'
 
 
 

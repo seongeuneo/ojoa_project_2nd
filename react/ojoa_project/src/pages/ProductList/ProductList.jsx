@@ -4,7 +4,7 @@ import "./ProductList.css";
 import Pagination from "../../components/Pagination/Pagination";
 import PLFilter from "./PLFilter";
 import { Link } from "react-router-dom";
-import mockList from '../../data/Chairs'
+import mockList from '../../data/ItemsData'
 // import CategoryIndex from './CategoryIndex'
 
 
@@ -44,7 +44,7 @@ function Chair({ cart, setCart }) {
         <li key={content.id}>
             <ProductListItem content={content} cart={cart} setCart={setCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
-                {content.productName}
+                    {content.productName}
                 </Link>
             </ProductListItem>
             {/* <CategoryIndex content={content} cart={cart} setCart={setCart} >
@@ -92,7 +92,7 @@ const Bed = ({ cart, setCart }) => {
         <li key={content.id}>
             <ProductListItem content={content} cart={cart} setCart={setCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
-                {content.productName}
+                    {content.productName}
                 </Link>
             </ProductListItem>
             {/* <CategoryIndex content={content} cart={cart} setCart={setCart} >
@@ -139,7 +139,7 @@ const Sofa = ({ cart, setCart }) => {
         <li key={content.id}>
             <ProductListItem content={content} cart={cart} setCart={setCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
-                {content.productName}
+                    {content.productName}
                 </Link>
             </ProductListItem>
             {/* <CategoryIndex content={content} cart={cart} setCart={setCart} >
@@ -186,7 +186,7 @@ const Bookshelf = ({ cart, setCart }) => {
         <li key={content.id}>
             <ProductListItem content={content} cart={cart} setCart={setCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
-                {content.productName}
+                    {content.productName}
                 </Link>
             </ProductListItem>
             {/* <CategoryIndex content={content} cart={cart} setCart={setCart} >
@@ -233,7 +233,7 @@ const Closet = ({ cart, setCart }) => {
         <li key={content.id}>
             <ProductListItem content={content} cart={cart} setCart={setCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
-                {content.productName}
+                    {content.productName}
                 </Link>
             </ProductListItem>
             {/* <CategoryIndex content={content} cart={cart} setCart={setCart} >
@@ -280,7 +280,7 @@ const Lighting = ({ cart, setCart }) => {
         <li key={content.id}>
             <ProductListItem content={content} cart={cart} setCart={setCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
-                {content.productName}
+                    {content.productName}
                 </Link>
             </ProductListItem>
             {/* <CategoryIndex content={content} cart={cart} setCart={setCart} >

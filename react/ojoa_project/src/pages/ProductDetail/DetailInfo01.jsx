@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProductDetail.css";
-import mockList from '../../data/Chairs'
+import mockList from '../../data/ItemsData'
 import { useParams } from "react-router-dom"
 
 
@@ -9,7 +9,7 @@ function DetailInfo01() {
     const { mockList_id } = useParams();
     const indiItem = mockList.filter((content) => content.id === parseInt(mockList_id))
     const { imgNo } = indiItem[0]
-  
+
 
     return (
         <div className="DetailInfo01">
