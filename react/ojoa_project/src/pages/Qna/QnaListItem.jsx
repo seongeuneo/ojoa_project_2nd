@@ -25,7 +25,8 @@ const mockTodoList02 = [
         titleIcon: '[1]',
         writer: '어성은',
         date: '2023.08.05'
-    }, {
+    },
+    {
         id: 2,
         num: 3,
         imgNo: 13,
@@ -86,8 +87,7 @@ function QnaListItem() {
                         <td className='qna_board_st4'>
                             <td
                                 className='title_button'
-                                onClick={() => handleTitleClick(item.id)}
-                            >
+                                onClick={() => handleTitleClick(item.id)}>
                                 {item.title}
                             </td>
                         </td>
