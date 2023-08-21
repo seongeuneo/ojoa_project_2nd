@@ -32,9 +32,7 @@ const QnaFilter = () => {
                         <select name="search_key" id="search_key">
                             <option value="subject">제목</option>
                             <option value="content">내용</option>
-                            <option value="writer_name">글쓴이</option>
-                            <option value="mamber_id">아이디</option>
-                            <option value="nick_name">별명</option>
+                            <option value="writer_name">작성자</option>
                             <option value="product">상품정보</option>
                         </select>
                         <input type="text" /><Link to="#" class="qna_board_find_btn">찾기</Link>

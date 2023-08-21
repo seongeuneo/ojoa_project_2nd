@@ -17,17 +17,12 @@ import Info from './pages/Join/Info';
 import Agree from './pages/Join/Agree';
 import Popup from './pages/Join/Popup';
 import Qna from './pages/Qna/Qna';
-import mockList from './Chairs'
-import Mileage from './pages/MyPage/MyShop/Mileage';
-
-
-
-
+import mockList from './components/MockList/Chairs';
 
 
 function App() {
-   //장바구니
-   const [cart, setCart] = useState([]);
+  //장바구니
+  const [cart, setCart] = useState([]);
 
   return (
     <div className="App">
@@ -35,20 +30,20 @@ function App() {
         <Header />
         <Routes>
           <Route path="/mypage/*" element={<MyPage />} />
-          <Route path="/mypage/Mileage*" element={<Mileage />} />
           <Route path="/store/*" element={<Store />} />
           <Route path="/order/*" element={<Order />} />
+          <Route path="/productList/*" element={<ProductList />} />
+          <Route path="/productDetail/*" element={<ProductDetail />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/login/" element={<Login />} />
           <Route path="/cart/*" element={<Cart />} />
           <Route path="/" element={<Main />} />
-          <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart}/>} />
+          <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart} />} />
           <Route path="/productList/*" element={<ProductList />} />
           <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />
           <Route path="/login/info/agree/popup" element={<Popup />} />
           <Route path="/qna" element={<Qna />} />
-
         </Routes>
         <Footer />
         <TopButton />

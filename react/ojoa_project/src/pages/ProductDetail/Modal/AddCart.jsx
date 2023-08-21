@@ -3,6 +3,8 @@ import "./AddCart.css";
 import { Link } from "react-router-dom";
 
 
+
+
 function AddCart({ closeModal }) {
 
     return (

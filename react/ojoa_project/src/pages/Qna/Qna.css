@@ -116,20 +116,13 @@
 }
 
 /* ============================== */
-/* QnaTitleList & QnaListItem */
-.qna_listitem_container,
-.qna_titlelist_container {
+/*TitleList & ListItem */
+.qna_ListItem_container,
+.qna_TitleList_container {
     position: relative;
     width: 1240px;
     margin: 0 auto;
-}
-
-.qna_board {
-    width: 100%;
-    display: grid;
-    grid-template: 1fr / 1fr repeat(2, 2fr) 5fr repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .qna_board_name {
@@ -138,34 +131,14 @@
     text-align: center;
 }
 
-.board_st {
+.qna_Tboard_st {
     font-weight: bold;
 }
 
+.qna_Lboard_st {
 
-.qna_board_list1,
-.qna_board_list3,
-.qna_board_list5,
-.qna_board_list6 {
-    text-align: center;
-}
-
-.qna_board_list2>div>img {
-    width: 50px;
-    vertical-align: middle;
-    align-content: left;
-}
-
-.qna_board_list2>div>span {
-    width: 80px;
-    padding: 0 0 0 8px;
-    text-align: left;
-}
-
-.qna_board>div>div {
     border: 1px solid #f3f3f3;
     height: 60px;
-    display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
@@ -173,12 +146,42 @@
     font-size: 12px;
 }
 
-.qna_board_list4 a,
-.qna_borad_list4 span {
+.qna_board_st2 {
+    width: 50px;
+    /* vertical-align: middle; */
+    /* align-content: left; */
+    display: inline-flex;
+    flex-direction: row;
+}
+
+
+.qna_board_st1,
+.qna_board_st3,
+.qna_board_st5,
+.qna_board_st6 {
+    text-align: center;
+}
+
+.qna_board_st2 img {
+    width: 50px;
+    vertical-align: middle;
+    align-content: left;
+}
+
+.qna_board_st2 div span {
+    width: 80px;
+    padding: 0 0 0 8px;
+    text-align: left;
+}
+
+
+
+.qna_board_st4 a,
+.qna_borad_st4 span {
     color: #000;
 }
 
-.qna_board_list4 .board_st img {
+.qna_board_st4 .qna_board_st img {
     margin: 5px;
     width: 18px;
     height: 13px;
@@ -187,51 +190,19 @@
 /* ============================== */
 /* QnaWriteBtn */
 .qna_write_btn {
-    width: 1240px;
-    border: 1px solid transparent;
-    border-top: 0 none;
-    color: #2e2e2e;
+    background-color: #a3a1a1;
+    color: white;
     display: inline-block;
-    justify-content: flex-end;
     margin-top: 10px;
     font-size: 12px;
-
-}
-
-
-/* ============================== */
-/* QnaPageNation */
-.qna_pagenation_btn {
-    margin: 20px 0 50px;
-    text-align: center;
-    font-size: 0;
-    line-height: 0;
-}
-
-.qna_pagenation_btn ul {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.qna_pagenation_btn li {
-    display: inline-block;
-    margin: 0 0 0 -1px;
-    border: 1px solid #d5d5d7;
-    font-size: 12px;
-}
-
-.qna_pagenation_btn li a {
-    display: block;
-    width: 35px;
-    padding: 9px 0;
-    font-weight: bold;
-    color: #939393;
-    line-height: 14px;
-    background: #fff;
-}
-
-.qna_pagenation_btn li:hover a {
-    background-color: #d8d8d8;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    font-weight: 600;
+    transition: 0.25s;
+    margin-left: -1px;
+    cursor: pointer;
 }
 
 /* ============================== */
