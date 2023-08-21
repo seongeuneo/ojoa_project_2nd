@@ -1,15 +1,29 @@
 import '../../pages/Cart/Cart.css';
+import { useEffect, useState } from "react";
 
-const CartTotal = () => {
-    
+const CartTotal = ({ cart, convertPrice, selectedItemsTotal  }) => {
+
+    const [selectedTotal, setSelectedTotal] = useState(0); // 선택된 항목의 가격 합 상태 추가
+
+    // 선택된 아이템의 가격 합 계산
+    const calculateTotalPrice = () => {
+        return cart.reduce((total, item) => {
+            const itemPrice = item.productPriceFormatted * item.quantity;
+            return total + itemPrice;
+        }, 0);
+    }; //얘는 수량 올리면 합계는 올라가는데 선택이 안됨
+
+    const totalPayment = selectedItemsTotal; // 선택된 아이템 가격 합을 추가(근데 수량 올리면 합계반영안됨)
+
+
     return (
         <div className="CartTotal">
 
             <div className="PriceBox">
-                
+
                 <div className="total_price">
                     <p className="cart_product_total_price">상품금액</p>
-                    <p className="cart_product_price">총가격</p>
+                    <p className="cart_product_price">{convertPrice(totalPayment)}원</p>
                 </div>
 
 
@@ -28,7 +42,8 @@ const CartTotal = () => {
 
                 <div className="payment">
                     <p className="cart_prouct_payment">총 합계</p>
-                    <p className="cart_prouct_payment_price">총가격</p>
+                    {/* <p className="cart_prouct_payment_price">{convertPrice(totalPayment)}원</p> */}
+                    <p className="cart_prouct_payment_price">{convertPrice(totalPayment)}원</p> {/* 선택된 아이템 가격 합을 추가 */}
                 </div>
             </div>
 
