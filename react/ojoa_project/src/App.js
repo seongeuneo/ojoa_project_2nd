@@ -17,16 +17,37 @@ import Info from './pages/Join/Info';
 import Agree from './pages/Join/Agree';
 import Popup from './pages/Join/Popup';
 import Qna from './pages/Qna/Qna';
+import mockList from './data/ItemsData';
 import Mileage from './pages/MyPage/MyShop/Mileage';
-
-
-
+// import ProductList from './pages/ProductList'
 
 
 
 function App() {
-   //장바구니
-   const [cart, setCart] = useState([]);
+  //장바구니
+  const [cart, setCart] = useState([]);
+  const [isAllChecked, setIsAllChecked] = useState(true); 
+
+
+  const handleCart = (cartItem) => {
+    setCart((prevCart) => [...prevCart, cartItem]);
+  };
+
+
+  const convertPrice = (productPriceFormatted) => {
+    return productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
+  const handleRemoveFromCart = (itemId) => {
+    // itemId에 해당하는 아이템을 장바구니에서 제거하는 로직
+    const updatedCart = cart.filter((item) => item.id !== itemId);
+    setCart(updatedCart);
+  };
+
+  const handleCheckAll = () => {
+    setIsAllChecked(!isAllChecked);
+  };
+
 
   return (
     <div className="App">
@@ -39,7 +60,6 @@ function App() {
           <Route path="/order/*" element={<Order />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/login/" element={<Login />} />
-          <Route path="/cart/*" element={<Cart />} />
           <Route path="/" element={<Main />} />
           <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart}/>} />
           <Route path="/productList/Chair/*" element={<Chair cart={cart} setCart={setCart}/> } />
@@ -48,6 +68,10 @@ function App() {
           <Route path="/productList/Bookshelf/*" element={<Bookshelf cart={cart} setCart={setCart}/> } />
           <Route path="/productList/Closet/*" element={<Closet cart={cart} setCart={setCart}/> } />
           <Route path="/productList/Lighting/*" element={<Lighting cart={cart} setCart={setCart}/> } />
+          <Route path="/cart/*" element={<Cart cart={cart} handleCart={handleCart} convertPrice={convertPrice}
+                                              handleRemove={handleRemoveFromCart} isAllChecked={isAllChecked} 
+                                              handleCheckAll={handleCheckAll}/>} />
+          {/* <Route path="/productList/*" element={<ProductList />} /> */}
           <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />
           <Route path="/login/info/agree/popup" element={<Popup />} />
