@@ -23,11 +23,6 @@ export const mileageInfoList = [
 
 function Mileage() {
 
-    useEffect(() => {
-        // 페이지 이동 시 스크롤을 상위로 올리기
-        window.scrollTo({ top: 0, behavior: 'instant' });
-    }, []);
-
     return (
         <div className='Mileage'>
             <div id='wrap'>
@@ -57,7 +52,6 @@ function Mileage() {
                                     ))}
                                 </ul>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -75,7 +69,6 @@ function Mileage() {
                 <Route path="/pages/mypage/myshop/mileagehistorylist" element={<MileageHistoryList />} />
                 <Route path="/pages/mypage/myshop/mileageunavaillist" element={<MileageUnavailList />} />
                 <Route path="/pages/mypage/myshop/mileagecouponlist" element={<MileageCouponList />} />
-
             </Routes>
 
             <MileageHelp />

@@ -1,13 +1,9 @@
 import '../MyShop/Mileage.css';
 import React, { useEffect } from 'react';
+import Pagination from '../../../components/Pagination/Pagination';
 
 function MileageUnavailList() {
     
-    useEffect(() => {
-        // 페이지 이동 시 스크롤을 상위로 올리기
-        window.scrollTo({ top: 0, behavior: 'instant' });
-    }, []);
-
     return (
         <div className='MileageUnavailList'>
             <div id='wrap'>
@@ -38,14 +34,15 @@ function MileageUnavailList() {
                             </div>
                         </div>
                     </div>
-                    <div className="ec-base-paginate"><a className="first"><img src="/images/btn_page_first.gif" alt="첫 페이지" /></a>
+                    <Pagination />
+                    {/* <div className="ec-base-paginate"><a className="first"><img src="/images/btn_page_first.gif" alt="첫 페이지" /></a>
                         <a><img src="/images/btn_page_prev.gif" alt="이전 페이지" /></a>
                         <ol>
                             <li className="record"><p href="" className="this">1</p></li>
                         </ol>
                         <a><img src="/images/btn_page_next.gif" alt="다음 페이지" /></a>
                         <a className="last"><img src="/images/btn_page_last.gif" alt="마지막 페이지" /></a>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

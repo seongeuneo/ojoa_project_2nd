@@ -18,11 +18,6 @@ export const depositsInfoList = [
 
 function DepositsHistoryList() {
 
-    useEffect(() => {
-        // 페이지 이동 시 스크롤을 상위로 올리기
-        window.scrollTo({ top: 0, behavior: 'instant' });
-    }, []);
-
     return (
         <div className='DepositsHistoryList'>
             <div id='wrap'>

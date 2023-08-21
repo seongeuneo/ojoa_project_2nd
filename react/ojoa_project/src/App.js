@@ -18,6 +18,7 @@ import Agree from './pages/Join/Agree';
 import Popup from './pages/Join/Popup';
 import Qna from './pages/Qna/Qna';
 import Mileage from './pages/MyPage/MyShop/Mileage';
+import ScrollTop from './components/ScrollToTop';
 
 
 
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollTop/>
         <Header />
         <Routes>
           <Route path="/mypage/*" element={<MyPage />} />

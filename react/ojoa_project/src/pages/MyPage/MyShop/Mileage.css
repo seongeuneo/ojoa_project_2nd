@@ -88,15 +88,20 @@
 }
 
 .ec-base-tab .menu {
-    margin: 0 0 10px;
-    border: 1px solid #cbcdce;
-    border-bottom-color: #202020;
-    background: #f2f2f2;
+    display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 0 10px;
+        border: 1px solid #cbcdce;
+        border-bottom-color: #202020;
+        background: #f2f2f2;
+        padding: 0;
+        list-style: none;
 }
 
 .ec-base-tab .menu li a {
     display: block;
-    padding: 12px 5px 11px;
+    /* padding: 12px 5px; */
     color: #707070;
     text-decoration: none;
     outline: 0;
@@ -105,19 +110,23 @@
 }
 
 .ec-base-tab .menu li {
-    float: left;
-    border-left: 1px solid #cbcdce;
-    background: #f2f2f2;
-    font-size: 12px;
-    text-decoration: none;
-    color: inherit;
+    flex: 1;
+        padding: 12px 5px 11px;
+        border-right: 1px solid #cbcdce;
+        background: #f2f2f2;
+        font-size: 12px;
+        text-align: center;
+}
+
+.ec-base-tab .menu li:last-child {
+    border-right: none;
 }
 
 .ec-base-tab .menu li .active {
     /* border: 1px solid #202020; */
     /* background: #4a5164; */
     border-bottom: 0;
-    color: blue;
+    color: black;
     font-weight: bold;
     cursor: pointer;
 }
