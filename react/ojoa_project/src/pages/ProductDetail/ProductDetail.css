@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-/*======================================================*/
-/* main product detail page */
-
-=======
 /* ====================================================== */
 /* navi_bar */
 .ProductList .path {
@@ -47,7 +42,6 @@
   margin: 0 auto;
   padding: 50px 0 0;
 }
->>>>>>> main
 
 .ProductDetail .product_view {
   margin: 70px auto;
@@ -428,4 +422,22 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 300;
   padding-top: 5px;
   padding-bottom: 120px;
+}
+
+/* ===모달창=== */
+.ModalContent {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 600px;
+  /* 모달 너비 */
+  min-height: 400px;
+
+  height: 100vm;
+  /* 화면 높이의 100% */
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

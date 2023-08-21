@@ -10,8 +10,6 @@ import Modal from 'react-modal';
 import AddCart from './Modal/AddCart';
 
 
-
-
 function ProductDetail({ cart, setCart }) {
 
     // 상품목록리스트에서 id 값에 따라 상품 상세 반영하기
@@ -20,10 +18,6 @@ function ProductDetail({ cart, setCart }) {
     const { id, imgNo, productName, productPriceFormatted, productPromotion, productInfo, productReview, productGrade } = indiItem[0]
     //======================================
     // 수량 변경한 만큼 가격에 계산
-    // const [count, setCount] = useState(1);
-
-
-
     const [count, setCount] = useState(1);
 
     // 장바구니 기능
@@ -54,24 +48,32 @@ function ProductDetail({ cart, setCart }) {
     //     return "상품 없음"
     // }
 
+
+    //======================================
+    // 수량 변경한 만큼 가격에 계산
     const onDecrease = () => {
         if (count >= 2) {
             setCount(count - 1);
         }
-    };
+    }
 
     const onIncrease = () => {
         if (count >= 1) {
+
             setCount(count + 1);
         }
-    };
+    }
 
     const sellPrice = productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
     const sum = count * productPriceFormatted;
+
     const result = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
+    //======================================
+    // 대표 썸네일 이미지 클릭시 변경
     const imgChange = (e) => {
-        setMainImg(e);
+        setMainImg(e)
     };
 
     //======================================
@@ -88,21 +90,6 @@ function ProductDetail({ cart, setCart }) {
 
 
     //======================================
-    const handleAddToCart = () => {
-        const cartItem = {
-            id: id,
-            imgNo: imgNo,
-            productName: productName,
-            productPriceFormatted: productPriceFormatted,
-            productPromotion: productPromotion,
-            productInfo: productInfo,
-            productReview: productReview,
-            productGrade: productGrade,
-            quantity: count,
-        };
-        handleCart(cartItem);
-    };
-
 
     // // 장바구니 추가 모달창 띄우기
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -112,11 +99,6 @@ function ProductDetail({ cart, setCart }) {
 
     // 상품 상세페이지 4가지 섹션으로 나뉘어지는 갈래
     const location = useLocation();
-
-    function handleCartAndOpenModal() {
-        handleAddToCart();
-        openModal();
-    }
 
     return (
         <div className="ProductDetail">
@@ -207,12 +189,12 @@ function ProductDetail({ cart, setCart }) {
                     <Modal className="ModalContent" handleCart={handleCart} isOpen={modalIsOpen} onRequestClose={closeModal}>
                         <AddCart closeModal={closeModal} />
                     </Modal>
-                    <Link to='../Cart/Cart' className="pd_btn2" onClick={() => handleAddToCart()}>구매하기</Link>
+                    <Link to='../Cart/Cart' className="pd_btn2" onClick={() => handleCart}>구매하기</Link>
                 </div>
             </div>
             <div className="PdIndex00">
                 <div className="pd_section">
-                    <a><NavLink to="./DetailInfo01" activeClassName="active" exact>
+                    <a><NavLink to="./DetailInfo01" activeClassName="active"exact>
                         <strong>상품상세정보</strong></NavLink></a>
                     <a><NavLink to="./OrderReview02" activeClassName="active" >
                         <strong>상품구매후기</strong></NavLink></a>
@@ -233,6 +215,5 @@ function ProductDetail({ cart, setCart }) {
 
     )
 };
-
 
 export default ProductDetail;

@@ -9,7 +9,7 @@ function DetailInfo01() {
     const { mockList_id } = useParams();
     const indiItem = mockList.filter((content) => content.id === parseInt(mockList_id))
     const { imgNo } = indiItem[0]
-
+  
 
     return (
         <div className="DetailInfo01">
