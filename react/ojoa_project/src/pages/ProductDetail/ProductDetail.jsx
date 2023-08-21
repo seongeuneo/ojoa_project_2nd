@@ -10,7 +10,7 @@ import Modal from 'react-modal';
 import AddCart from './Modal/AddCart';
 
 
-function ProductDetail({ cart, setCart }) {
+function ProductDetail({ handleCart }) {
 
     // 상품목록리스트에서 id 값에 따라 상품 상세 반영하기
     const { mockList_id } = useParams();
@@ -20,9 +20,11 @@ function ProductDetail({ cart, setCart }) {
     // 수량 변경한 만큼 가격에 계산
     const [count, setCount] = useState(1);
 
+
+
     // 장바구니 기능
     // 장바구니에 물건
-    const handleCart = () => {
+    const handleAddToCart = () => {
         const cartItem = {
             id: id,
             imgNo: imgNo,
@@ -32,16 +34,23 @@ function ProductDetail({ cart, setCart }) {
             productInfo: productInfo,
             productReview: productReview,
             productGrade: productGrade,
-            quantity: count
+            quantity: count,
         };
-        setCart([...cart, cartItem]);
+        handleCart(cartItem);
     };
 
+
+    // // 장바구니 추가 모달창 띄우기
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const openModal = () => setModalIsOpen(true);
+    const closeModal = () => setModalIsOpen(false);
+
+
     function handleCartAndOpenModal() {
-        handleCart();
+        handleAddToCart();
         openModal();
     }
-
     // if (indiItem.length > 0) {
     //     return "상품 있음"
     // } else {
@@ -90,12 +99,6 @@ function ProductDetail({ cart, setCart }) {
 
 
     //======================================
-
-    // // 장바구니 추가 모달창 띄우기
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-
-    const openModal = () => setModalIsOpen(true);
-    const closeModal = () => setModalIsOpen(false);
 
     // 상품 상세페이지 4가지 섹션으로 나뉘어지는 갈래
     const location = useLocation();
