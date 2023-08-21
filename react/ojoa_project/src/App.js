@@ -9,7 +9,7 @@ import MyPage from './pages/MyPage/MyPage';
 import Store from './pages/Store/Store';
 import Order from './pages/Order/Order';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
-import ProductList from './pages/ProductList/ProductList';
+import {Chair, Bed, Sofa, Closet, Bookshelf, Lighting} from './pages/ProductList/ProductList';
 import NotFound from './pages/NotFound/NotFound';
 import Login from './pages/Login/Login';
 import Cart from './pages/Cart/Cart';
@@ -42,7 +42,12 @@ function App() {
           <Route path="/cart/*" element={<Cart />} />
           <Route path="/" element={<Main />} />
           <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart}/>} />
-          <Route path="/productList/*" element={<ProductList cart={cart} setCart={setCart}/>} />
+          <Route path="/productList/Chair/*" element={<Chair cart={cart} setCart={setCart}/> } />
+          <Route path="/productList/Sofa/*" element={<Sofa cart={cart} setCart={setCart}/> } />
+          <Route path="/productList/Bed/*" element={<Bed cart={cart} setCart={setCart}/> } />
+          <Route path="/productList/Bookshelf/*" element={<Bookshelf cart={cart} setCart={setCart}/> } />
+          <Route path="/productList/Closet/*" element={<Closet cart={cart} setCart={setCart}/> } />
+          <Route path="/productList/Lighting/*" element={<Lighting cart={cart} setCart={setCart}/> } />
           <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />
           <Route path="/login/info/agree/popup" element={<Popup />} />

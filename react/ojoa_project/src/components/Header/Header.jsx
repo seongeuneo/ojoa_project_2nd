@@ -9,6 +9,19 @@ function Header() {
         alert('해당 페이지는 현재 준비중 입니다.');
     };
 
+    const generateToLink = (category) => {
+        const CATEGORY_PATHS = {
+            '침대': '/ProductList/Bed',
+            '소파': '/ProductList/Sofa',
+            '책장': '/ProductList/Bookshelf',
+            '옷장': '/ProductList/Closet',
+            '조명': '/ProductList/Lighting',
+            '의자': '/ProductList/Chair',
+            // 나머지 카테고리에 대한 경로도 추가해주세요
+        };
+        return CATEGORY_PATHS[category] || '#';
+    };
+
 
     return (
         <>
@@ -47,37 +60,37 @@ function Header() {
                 <ul>
                     <li><Link to="#" onClick={handleLinkClick}>BEST</Link></li>
                     <li><Link to="#" onClick={handleLinkClick}>NEW</Link></li>
-                    <li><Link to="#" onClick={handleLinkClick}>침대</Link>
+                    <li><Link to='/ProductList/Bed'>침대</Link>
                         <ul>
                             <li><Link to="#" onClick={handleLinkClick}>싱글</Link></li>
                             <li><Link to="#" onClick={handleLinkClick}>더블</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="#" onClick={handleLinkClick}>소파</Link>
+                    <li><Link to={generateToLink("소파")}>소파</Link>
                         <ul>
                             <li><Link to="#" onClick={handleLinkClick}>2인</Link></li>
                             <li><Link to="#" onClick={handleLinkClick}>3인</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="#" onClick={handleLinkClick}>책장</Link>
+                    <li><Link to={generateToLink("책장")}>책장</Link>
                         <ul>
                             <li><Link to="#" onClick={handleLinkClick}>2단</Link></li>
                             <li><Link to="#" onClick={handleLinkClick}>3단</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="#" onClick={handleLinkClick}>옷장</Link>
+                    <li><Link to={generateToLink("옷장")}>옷장</Link>
                         <ul>
                             <li><Link to="#" onClick={handleLinkClick}>2칸</Link></li>
                             <li><Link to="#" onClick={handleLinkClick}>3칸</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="#" onClick={handleLinkClick}>조명</Link>
+                    <li><Link to={generateToLink("조명")}>조명</Link>
                         <ul>
                             <li><Link to="#" onClick={handleLinkClick}>스탠드형</Link></li>
                             <li><Link to="#" onClick={handleLinkClick}>탈부착형</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="./productList">의자(구현)</Link>
+                    <li><Link to={generateToLink("의자")}>의자</Link>
                         <ul>
                             <li><Link to="#" onClick={handleLinkClick}>탁상의자</Link></li>
                             <li><Link to="#" onClick={handleLinkClick}>주방의자</Link></li>

@@ -7,6 +7,7 @@ const ProductListItem = ({ content, onSelect }) => {
     const productPrice = content.productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 
+
     return (
         <div className="ProductListItem" onClick={onSelect}>
             <section className="pl_section">
