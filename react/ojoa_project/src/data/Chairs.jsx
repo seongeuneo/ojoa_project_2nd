@@ -1,10 +1,10 @@
-import { createContext } from "react";
+
 
 
 const mockList = [
     {
         id: 1,
-        imgNo: 0,
+        imgNo: 1,
         productName: "빈티지페브릭 의자",
         productPriceFormatted: "199000",
         productPromotion: "24",
@@ -15,7 +15,7 @@ const mockList = [
     },
     {
         id: 2,
-        imgNo: 1,
+        imgNo: 2,
         productName: "보송보송 의자",
         productPriceFormatted: "399000",
         productPromotion: "24",
@@ -26,7 +26,7 @@ const mockList = [
     },
     {
         id: 3,
-        imgNo: 2,
+        imgNo: 3,
         productName: "노란 의자",
         productPriceFormatted: "1200000",
         productPromotion: "11",
@@ -37,7 +37,7 @@ const mockList = [
     },
     {
         id: 4,
-        imgNo: 3,
+        imgNo: 4,
         productName: "입술 의자",
         productPriceFormatted: "120000",
         productPromotion: "8",
@@ -48,7 +48,7 @@ const mockList = [
     },
     {
         id: 5,
-        imgNo: 4,
+        imgNo: 5,
         productName: "이끼 의자",
         productPriceFormatted: "690000",
         productPromotion: "13",
@@ -59,7 +59,7 @@ const mockList = [
     },
     {
         id: 6,
-        imgNo: 5,
+        imgNo: 6,
         productName: "브라운 의자",
         productPriceFormatted: "1200000",
         productPromotion: "26",
@@ -70,7 +70,7 @@ const mockList = [
     },
     {
         id: 7,
-        imgNo: 6,
+        imgNo: 7,
         productName: "핑크 의자",
         productPriceFormatted: "90000",
         productPromotion: "95",
@@ -81,7 +81,7 @@ const mockList = [
     },
     {
         id: 8,
-        imgNo: 7,
+        imgNo: 8,
         productName: "편한 의자",
         productPriceFormatted: "120000",
         productPromotion: "5",
@@ -92,7 +92,7 @@ const mockList = [
     },
     {
         id: 9,
-        imgNo: 8,
+        imgNo: 9,
         productName: "오 의자",
         productPriceFormatted: "20000",
         productPromotion: "95",
@@ -103,7 +103,7 @@ const mockList = [
     },
     {
         id: 10,
-        imgNo: 9,
+        imgNo: 10,
         productName: "조 의자",
         productPriceFormatted: "389000",
         productPromotion: "12",
@@ -114,7 +114,7 @@ const mockList = [
     },
     {
         id: 11,
-        imgNo: 10,
+        imgNo: 11,
         productName: "아 의자",
         productPriceFormatted: "99000",
         productPromotion: "11",
@@ -125,7 +125,7 @@ const mockList = [
     },
     {
         id: 12,
-        imgNo: 11,
+        imgNo: 12,
         productName: "푸바오 의자",
         productPriceFormatted: "90000",
         productPromotion: "14",
@@ -136,7 +136,7 @@ const mockList = [
     },
     {
         id: 13,
-        imgNo: 12,
+        imgNo: 13,
         productName: "진기의 철의 왕좌",
         productPriceFormatted: "999999999",
         productPromotion: "",
@@ -147,7 +147,7 @@ const mockList = [
     },
     {
         id: 14,
-        imgNo: 13,
+        imgNo: 14,
         productName: "희상 의자",
         productPriceFormatted: "550000",
         productPromotion: "3",
@@ -158,7 +158,7 @@ const mockList = [
     },
     {
         id: 15,
-        imgNo: 14,
+        imgNo: 15,
         productName: "원희 의자",
         productPriceFormatted: "120000",
         productPromotion: "",
@@ -168,7 +168,7 @@ const mockList = [
     },
     {
         id: 16,
-        imgNo: 15,
+        imgNo: 16,
         productName: "성은 의자",
         productPriceFormatted: "139000",
         productPromotion: "",

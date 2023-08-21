@@ -1,8 +1,39 @@
 import React from "react";
 import "./RModal.css";
 import { useState } from "react";
+import { useParams } from "react-router-dom"
+import mockList from '../../../data/Chairs'
+
+
+
 
 function RModal({ closeModal, onReviewTextChange }) {
+
+    // 상품목록리스트에서 id 값에 따라 상품 상세 반영하기
+    const { mockList_id } = useParams();
+    const indiItem = mockList.filter((content) => content.id === parseInt(mockList_id))
+    const { id, imgNo, productName, productPriceFormatted, productPromotion, productInfo, productReview, productGrade } = indiItem[0]
+
+
+    // 권한 동의 내용 unfolded
+    const [isPrivacyTextVisible, setIsPrivacyTextVisible] = useState(false);
+    const handleMoreButtonClick = () => {
+        setIsPrivacyTextVisible(!isPrivacyTextVisible);
+    };
+    // 권한 동의 체크 상태
+    const [isPrivacyAgreed, setIsPrivacyAgreed] = useState(false);
+
+
+    // 권한 동의 체크가 안 되었을 때 처리 (예: 경고창 띄우기 등)
+    const handleAddReview = () => {
+        if (isPrivacyAgreed) {
+            onReviewTextChange(localReviewText); // 리뷰 내용을 부모 컴포넌트로 전달
+            closeModal();
+        } else {
+            alert('리뷰 수집 및 사용 권한에 동의해주세요.');
+        }
+    };
+
 
     // 별점 기능
     const [selectedRating, setSelectedRating] = useState(5); // 초기 값으로 5 설정
@@ -38,10 +69,7 @@ function RModal({ closeModal, onReviewTextChange }) {
         setLocalReviewText(text);
     };
 
-    const handleAddReview = () => {
-        onReviewTextChange(localReviewText); // 리뷰 내용을 부모 컴포넌트로 전달
-        closeModal();
-    };
+
 
 
     return (
@@ -58,15 +86,15 @@ function RModal({ closeModal, onReviewTextChange }) {
                     <div className="sf_order_list_wrap">
                         <span className="owl-carousel-nav prev"></span>
                         <div className="sf_order_item">
-                            <div className="thumbnail"> <img src="/images/vintagefabricC1.jpg" className="" />
+                            <div className="thumbnail"> <img src={`/thumbs/${imgNo}_1.jpg`} className="" />
                             </div>
                             <div className="sf_buy_option">
-                                <div className="sf_review_item_name sf_one_line">상품제목영역</div>
+                                <div className="sf_review_item_name sf_one_line">{productName}</div>
                                 <div className="sf_review_user_useally_selected_option sf_one_line">
                                     <div id="" className="option">
                                         <span className="size_wrap">
-                                            <span className="key">COLOR</span><span className="separ"> : </span>
-                                            <span className="value">브라운</span>
+                                            <span className="key">상품코드</span><span className="separ"> : </span>
+                                            <span className="value">0000{id}</span>
                                         </span>
                                         <span className="unit"></span>
                                     </div>
@@ -135,16 +163,21 @@ function RModal({ closeModal, onReviewTextChange }) {
                         </div>
 
                         <div className="sub_score_wrap sf_displaynone"> <div className="sub_score"></div> </div>
-                        <div className="sf_agree_privacy_wrap folded"> <div className="sf_agree_privacy_head"> <input type="checkbox" className="sf_check_agree_privacy" /> <p className="title">리뷰 수집 및 사용 권한 동의</p> <button type="button" className="btn more view_right"></button> </div> <div className="sf_agree_privacy_detail sf_displaynone"> <p className="sf_agree_privacy_text">
-                            리뷰의 저작권은 이를 작성한 회원에게 있으며,해당 리뷰가 타인의 저작권 을 침해하는 경우 그에 대한 책임은 회원 본인이 부담합니다.
-                            <br /> <br />
-                            회원은 당사에게 자신이 작성한 리뷰를 이용할 수 있는 권리 (license)를 부여합니다. 이에 따라 회사는 회원이 작성한 리뷰를 검색, 노출, 판촉, 홍보, 연구, 기타의 자료로
-                            무상으로이용할 수 있으며, 본질적인 내용 에 변경을 가하지 않는 범위 내에서 리뷰의 일부를 수정, 복제, 편집할 수 있습니다.
-                            <br /> <br />
-                            또한, 당사가 제휴한 타사에 복제, 배포, 전송 또는 전시될 수 있습니다.
-                            <br /> <br />
-                            다만, 후기와 관련 없는 글, 상품에 내용이 적합하지 않은 글, 판매글, 광고글, 비방글 등은 관리자에 의해 통보없이 삭제할수 있습니다.
-                        </p> </div> </div>
+                        <div className="sf_agree_privacy_wrap folded"> <div className="sf_agree_privacy_head">
+                            <input type="checkbox"
+                                className="sf_check_agree_privacy"
+                                checked={isPrivacyAgreed}
+                                onChange={() => setIsPrivacyAgreed(!isPrivacyAgreed)} />
+                            <p className="title">리뷰 수집 및 사용 권한 동의</p> <button type="button" className="btn more view_right" onClick={handleMoreButtonClick}></button> </div> <div className="sf_agree_privacy_detail"> <p className={`sf_agree_privacy_detail ${isPrivacyTextVisible ? '' : 'sf_displaynone'}`}>
+                                리뷰의 저작권은 이를 작성한 회원에게 있으며,해당 리뷰가 타인의 저작권 을 침해하는 경우 그에 대한 책임은 회원 본인이 부담합니다.
+                                <br /> <br />
+                                회원은 당사에게 자신이 작성한 리뷰를 이용할 수 있는 권리 (license)를 부여합니다. 이에 따라 회사는 회원이 작성한 리뷰를 검색, 노출, 판촉, 홍보, 연구, 기타의 자료로
+                                무상으로이용할 수 있으며, 본질적인 내용 에 변경을 가하지 않는 범위 내에서 리뷰의 일부를 수정, 복제, 편집할 수 있습니다.
+                                <br /> <br />
+                                또한, 당사가 제휴한 타사에 복제, 배포, 전송 또는 전시될 수 있습니다.
+                                <br /> <br />
+                                다만, 후기와 관련 없는 글, 상품에 내용이 적합하지 않은 글, 판매글, 광고글, 비방글 등은 관리자에 의해 통보없이 삭제할수 있습니다.
+                            </p> </div> </div>
                         <div className="sf_popup_bottom">
                             <button type="button" className="btn later" onClick={closeModal}>나중에 하기</button>
                             <button type="button" className="btn write" onClick={handleAddReview}>등록</button>

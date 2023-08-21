@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductDetail.css";
+import Modal from 'react-modal';
+import QModal from './Modal/QModal';
 
 function ProdQna03() {
+    // // 모달창 띄우기
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const openModal = () => setModalIsOpen(true);
+    const closeModal = () => setModalIsOpen(false);
+
     return (
         <div className="ProdQna03">
             {/* <!-- main product detail --> */}
@@ -15,8 +23,11 @@ function ProdQna03() {
                         </tr>
                         <tr>
                             <th>
-                                <a href="#a">상품문의하기</a>
-                                <a href="#a">모두보기</a>
+                                <a onClick={openModal}>상품문의하기 </a>
+                                <Modal className="ModalContent" isOpen={modalIsOpen} onRequestClose={closeModal}>
+                                    <QModal closeModal={closeModal} />
+                                </Modal>
+                                <a>모두보기</a>
                             </th>
                         </tr>
 

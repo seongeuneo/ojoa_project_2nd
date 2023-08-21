@@ -17,7 +17,6 @@ import Info from './pages/Join/Info';
 import Agree from './pages/Join/Agree';
 import Popup from './pages/Join/Popup';
 import Qna from './pages/Qna/Qna';
-import mockList from './Chairs'
 import Mileage from './pages/MyPage/MyShop/Mileage';
 
 
@@ -43,7 +42,7 @@ function App() {
           <Route path="/cart/*" element={<Cart />} />
           <Route path="/" element={<Main />} />
           <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart}/>} />
-          <Route path="/productList/*" element={<ProductList />} />
+          <Route path="/productList/*" element={<ProductList cart={cart} setCart={setCart}/>} />
           <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />
           <Route path="/login/info/agree/popup" element={<Popup />} />

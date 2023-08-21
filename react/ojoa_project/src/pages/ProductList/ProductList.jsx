@@ -4,7 +4,7 @@ import "./ProductList.css";
 import Pagination from "../../components/Pagination/Pagination";
 import PLFilter from "./PLFilter";
 import { Link } from "react-router-dom";
-import mockList from '../../Chairs'
+import mockList from '../../data/Chairs'
 
 
 
@@ -29,7 +29,7 @@ function sortProducts(products, sortKey) {
 }
 
 
-function ProductList() {
+function ProductList({ cart, setCart }) {
 
     const [sortKey, setSortKey] = useState(""); // 초기 정렬 기준: 신상품
 
@@ -41,13 +41,13 @@ function ProductList() {
 
         return (
             <li key={content.id}>
-                <ProductListItem content={content}>
+                <ProductListItem content={content} cart={cart} setCart={setCart}>
                     <Link
                         className="productLink"
                         to={`/products/detail/${content.id}`}
                         key={content.id}></Link>
                 </ProductListItem>
-                </li>
+            </li>
         );
     });
 
