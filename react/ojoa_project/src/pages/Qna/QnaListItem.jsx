@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Qna.css';
-import mockList from '../../MockList/Chairs';
+import mockList from '../../data/ItemsData';
 // import QnaPost from "./QnaPost";
 
 const mockListQna = [

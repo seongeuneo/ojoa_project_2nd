@@ -1,12 +1,13 @@
 import React from "react";
 import "./ProductListItem.css";
 import { Link } from "react-router-dom";
-import mockList from '../../components/MockList/Chairs'
+import { Chair, Bed, Sofa, Closet, Bookshelf, Lighting } from '../../data/ItemsData'
 
-const ProductListItem = ({content, onSelect }) => {
+const ProductListItem = ({ content, onSelect }) => {
 
     const productPrice = content.productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-   
+
+
 
     return (
         <div className="ProductListItem" onClick={onSelect}>
@@ -19,13 +20,13 @@ const ProductListItem = ({content, onSelect }) => {
                                 pathname: `/ProductDetail/${content.id}`,
                                 state: { productData: content } // 선택한 상품 정보를 state로 전달
                             }}>
-                                <img src={`../images/chair${content.imgNo}.jpg`}  alt={`Product ${content.productName}`} />
+                                <img src={`/thumbs/${content.imgNo}_1.jpg`} alt={`Product ${content.productName}`} />
                             </Link>
                             <div className="pl_icon">
-                                <a className="pd_cart" href="#a">
+                                <a className="pd_cart">
                                     <img src={"../images/cart_icon.png"} alt="장바구니" />
                                 </a>
-                                <a className="pd_heart" href="#../public/a">
+                                <a className="pd_heart">
                                     <img src={"../images/heart_icon.png"} alt="관심상품" />
                                 </a>
                             </div>

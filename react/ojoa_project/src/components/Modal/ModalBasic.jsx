@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ModalBasic.css';
-import mockList from '../../MockList/Chairs';
+import mockList from '../../data/ItemsData';
 
 function ModalBasic({ setModalOpen }) {
 

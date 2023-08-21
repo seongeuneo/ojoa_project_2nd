@@ -61,6 +61,7 @@
 
 .Order #od_search select {
   border: silver 1px solid;
+  cursor: pointer;
 }
 
 .Order #od_search div:nth-of-type(1) {
@@ -72,6 +73,7 @@
   border: silver 1px solid;
   border-radius: 5px;
   padding: 3px;
+  cursor: pointer;
 }
 
 .Order #od_search ol {
@@ -84,6 +86,7 @@
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding: 3px;
+  cursor: pointer;
 }
 
 .Order #od_frame br+span:nth-last-child(3) {

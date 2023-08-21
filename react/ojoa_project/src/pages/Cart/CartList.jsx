@@ -1,6 +1,6 @@
 import '../../pages/Cart/Cart.css';
 import React, { useState, useEffect } from "react";
-import mockList from '../../components/MockList/Chairs';
+// import mockList from '../../data/ItemsData';
 // import { NavLink, Routes, Route, useParams, Link } from "react-router-dom"
 
 

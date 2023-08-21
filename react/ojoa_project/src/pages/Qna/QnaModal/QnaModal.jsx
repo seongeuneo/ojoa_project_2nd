@@ -1,6 +1,6 @@
 import React from "react";
 import "./QnaModal.css";
-import mockList from "../../../MockList/Chairs";
+import mockList from "../../../data/ItemsData";
 
 function QnaModal({ closeModal }) {
 
