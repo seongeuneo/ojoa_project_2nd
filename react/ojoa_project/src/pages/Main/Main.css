@@ -21,7 +21,7 @@
 
 /* ================== 쇼룸 슬라이드 스타일 및 동작 ================== */
 .Main .section {
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .Main .section input[id*="slide"] {

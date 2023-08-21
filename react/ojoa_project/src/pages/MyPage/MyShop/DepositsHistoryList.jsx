@@ -1,16 +1,25 @@
-import '../MyShop/Mileage.css';
+import '../MyShop/Deposits.css';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function HistoryList() {
+class DepositsInfo {
+    constructor(title, bank) {  //생성자
+        this.title = title;
+        this.bank = bank;
+    }
+}
 
-    useEffect(() => {
-        // 페이지 이동 시 스크롤을 상위로 올리기
-        window.scrollTo(0, 0);
-    }, []);
+export const depositsInfoList = [
+    new DepositsInfo("누적예치금 : ", "800,000원"),
+    new DepositsInfo("사용가능 예치금 : ", "300,000원"),
+    new DepositsInfo("사용된 예치금 : ", "500,000원"),
+    new DepositsInfo("현금환불요청 예치금 : ", "0원"),
+];
+
+function DepositsHistoryList() {
 
     return (
-        <div className='HistoryList'>
+        <div className='DepositsHistoryList'>
             <div id='wrap'>
                 <div id='container'>
                     <div id='contents'>
@@ -25,40 +34,17 @@ function HistoryList() {
                         <div>
                             <div className='headTltleArea'>
                                 <h2>적립금</h2>
-                                {/* <p>고객님의 사용가능 적립금 금액 입니다.</p> */}
                             </div>
                             <div className='BaseBox'>
                                 <ul>
-                                    <li>
-                                        <strong className='title'>총 적립금 : </strong>
-                                        <span className='data'>
-                                            <span>&nbsp;35,640원</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <strong className='title'>사용가능 적립금 : </strong>
-                                        <span className='data'>
-                                            <span>&nbsp;10,000원</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <strong className='title'>사용된 적립금 : </strong>
-                                        <span className='data'>
-                                            <span>&nbsp;25,640원</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <strong className='title'>미가용 적립금 : </strong>
-                                        <span className='data'>
-                                            <span>&nbsp;300,000원</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <strong className='title'>환불예정 적립금 : </strong>
-                                        <span className='data'>
-                                            <span>&nbsp;0원</span>
-                                        </span>
-                                    </li>
+                                    {mileageInfoList.map((mileageInfo, index) => (
+                                        <li key={index}>
+                                            <strong className='title'>{mileageInfo.title}</strong>
+                                            <span className='data'>
+                                                <span>&nbsp;{mileageInfo.bank}</span>
+                                            </span>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                             <div className='ec-base-tab'>
@@ -71,13 +57,6 @@ function HistoryList() {
                             <div className='HistoryList_inside'>
                                 <div className='Base_Table_TypeList'>
                                     <table border="1" summary>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col />
-                                            <col />
-                                            <col />
-                                            <col />
-                                        </colgroup>
                                         <thead><tr>
                                             <th scope="col">주문날짜</th>
                                             <th scope="col">적립금</th>
@@ -94,17 +73,16 @@ function HistoryList() {
                                             </tr>
                                         </tbody>
                                     </table>
-                                    {/* <p className="message displaynone">적립금 내역이 없습니다.</p> */}
                                 </div>
                             </div>
                         </div>
-                        <div className="ec-base-paginate"><a href="/myshop/mileage/historyList.html?page=1" className="first"><img src="../../../images/btn_page_first.gif" alt="첫 페이지" /></a>
-                            <a href="/myshop/mileage/historyList.html?page=1"><img src="../../../images/btn_page_prev.gif" alt="이전 페이지" /></a>
+                        <div className="ec-base-paginate"><a className="first"><img src="../../../images/btn_page_first.gif" alt="첫 페이지" /></a>
+                            <a><img src="../../../images/btn_page_prev.gif" alt="이전 페이지" /></a>
                             <ol>
                                 <li className="record"><p href="" className="this">1</p></li>
                             </ol>
-                            <a href="/myshop/mileage/historyList.html?page=1"><img src="../../../images/btn_page_next.gif" alt="다음 페이지" /></a>
-                            <a href="/myshop/mileage/historyList.html?page=1" className="last"><img src="../../../images/btn_page_last.gif" alt="마지막 페이지" /></a>
+                            <a><img src="../../../images/btn_page_next.gif" alt="다음 페이지" /></a>
+                            <a className="last"><img src="../../../images/btn_page_last.gif" alt="마지막 페이지" /></a>
                         </div>
                         <div className="ec-base-help "><h3>적립금 안내</h3>
                             <div className="inner">
@@ -121,4 +99,4 @@ function HistoryList() {
     );
 };
 
-export default HistoryList;
+export default DepositsHistoryList;

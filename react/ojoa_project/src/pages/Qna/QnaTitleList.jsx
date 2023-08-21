@@ -2,7 +2,7 @@
 import './Qna.css';
 import React, { useState } from "react";
 
-const mockTodoList01 = [
+const mockListQnaTop = [
     {
         id: 0,
         num: '공지',
@@ -25,7 +25,7 @@ const mockTodoList01 = [
         writer: 'ojoa',
         date: '2023.07.23'
     },
-]; // mockTodoList
+]; // mockListQnaTop
 
 function QnaTitleList() {
 
@@ -41,43 +41,45 @@ function QnaTitleList() {
 
     return (
         <table className='qna_TitleList_container'>
-            <tr className='qna_Tboard_st'>
-                <td className='qna_board_name'>번호</td>
-                <td className='qna_board_name'>상품정보</td>
-                <td className='qna_board_name'>카테고리</td>
-                <td className='qna_board_name'>제목</td>
-                <td className='qna_board_name'>작성자</td>
-                <td className='qna_board_name'>작성일</td>
-            </tr>
+            <tbody>
 
-            {mockTodoList01.map((item) => (
-                <React.Fragment key={item.id}>
-                    <tr className='qna_Tboard_st'>
-                        <td className='qna_board_st1'>{item.num}</td>
-                        <td className='qna_board_st2'>{item.itemInfo}</td>
-                        <td className='qna_board_st3'>{item.category}</td>
-                        <td className='qna_board_st4'>
-                            <td
-                                className='title_button'
-                                onClick={() => handleTitleClick(item.id)}
-                            >
-                                {item.title}
+                <tr className='qna_Tboard_st'>
+                    <td className='qna_board_name'>번호</td>
+                    <td className='qna_board_name'>상품정보</td>
+                    <td className='qna_board_name'>카테고리</td>
+                    <td className='qna_board_name'>제목</td>
+                    <td className='qna_board_name'>작성자</td>
+                    <td className='qna_board_name'>작성일</td>
+                </tr>
+
+                {mockListQnaTop.map((item) => (
+                    <React.Fragment key={item.id}>
+                        <tr className='qna_Tboard_st'>
+                            <td className='qna_board_st1'>{item.num}</td>
+                            <td className='qna_board_st2'>{item.itemInfo}</td>
+                            <td className='qna_board_st3'>{item.category}</td>
+                            <td className='qna_board_st4'>
+                                <div
+                                    className='title_button'
+                                    onClick={() => handleTitleClick(item.id)}
+                                >
+                                    {item.title}
+                                </div>
                             </td>
-                        </td>
-                        <td className='qna_board_st5'>{item.writer}</td>
-                        <td className='qna_board_st6'>{item.date}</td>
-                    </tr>
-                    {expandedId === item.id && (
-                        <tr className='qna_board_st7'>
-                            <td colSpan="6" className='notification_row'>
-                                {item.notification}
-                            </td>
+                            <td className='qna_board_st5'>{item.writer}</td>
+                            <td className='qna_board_st6'>{item.date}</td>
                         </tr>
-                    )}
-                </React.Fragment>
-            ))
-            }
+                        {expandedId === item.id && (
+                            <tr className='qna_board_st7'>
+                                <td colSpan="6" className='notification_row'>
+                                    {item.notification}
+                                </td>
+                            </tr>
+                        )}
+                    </React.Fragment>
+                ))}
 
+            </tbody>
         </table >
     )
 }

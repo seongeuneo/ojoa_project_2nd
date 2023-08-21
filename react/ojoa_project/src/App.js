@@ -17,9 +17,9 @@ import Info from './pages/Join/Info';
 import Agree from './pages/Join/Agree';
 import Popup from './pages/Join/Popup';
 import Qna from './pages/Qna/Qna';
-import mockList from './data/ItemsData';
 import Mileage from './pages/MyPage/MyShop/Mileage';
 import productList from './pages/ProductList/ProductList';
+import ScrollTop from './components/ScrollToTop';
 // import ProductList from './pages/ProductList'
 
 
@@ -53,9 +53,11 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollTop />
         <Header />
         <Routes>
           <Route path="/mypage/*" element={<MyPage />} />
+          <Route path="/mypage/mileage/*" element={<Mileage />} />
           <Route path="/store/*" element={<Store />} />
           <Route path="/order/*" element={<Order />} />
           {/* <Route path="/productList/*" element={<ProductList />} /> */}

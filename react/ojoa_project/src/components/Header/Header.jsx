@@ -34,7 +34,10 @@ function Header() {
                     <div>
                         {/* 상단 로고 */}
                         <div>
-                            <Link to="/"><img className="logo" src="/images/ojoa_logo_b.png" alt="logo" height="80px" /></Link>
+                            <Link to="/"><img className="logo" src="/images/ojoa_logo_b.png" alt="logo" height="100px" /></Link>
+                        </div>
+                        <div className="search">
+                            <Modal />
                         </div>
                         {/* 상단 네비 */}
                         <div className="navBar">
@@ -49,9 +52,6 @@ function Header() {
                         </div>
                     </div>
                     <br />
-                    <div className="search">
-                        <Modal />
-                    </div>
                 </div>
             </header>
             {/*---------------------------------------------------------*/}

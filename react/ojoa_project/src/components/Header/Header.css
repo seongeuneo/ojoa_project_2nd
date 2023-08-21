@@ -15,10 +15,14 @@
 }
 
 .header .navBar {
-    width: 1240px;
-    height: 80px;
+    /* width: 1240px; */
+    height: 30px;
     margin: auto;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+            position: relative;
+                display: flex;
+                justify-content: flex-end;
+                    top: -25px;
 }
 
 .header .logo {
@@ -46,12 +50,12 @@
 }
 
 .header .search {
-    top: -75px;
-    /* position: absolute; */
-    position: relative;
-    display: flex;
-    justify-content: right;
-    /* align-items: center; */
+    top: 50px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        /* 서치를 헤더 오른쪽 끝에 배치 */
+        align-items: center;
 }
 
 .header .search input {

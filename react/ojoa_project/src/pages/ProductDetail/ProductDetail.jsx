@@ -12,7 +12,7 @@ import AddCart from './Modal/AddCart';
 
 
 
-function ProductDetail({cart, setCart}) {
+function ProductDetail({ cart, setCart }) {
 
     // 상품목록리스트에서 id 값에 따라 상품 상세 반영하기
     const { mockList_id } = useParams();

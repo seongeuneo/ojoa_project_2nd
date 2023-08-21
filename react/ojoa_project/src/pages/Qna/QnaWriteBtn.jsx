@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useRef } from "react";
+import React, { useState } from "react";
 import "../Qna/Qna.css";
 import Modal from 'react-modal';
 import QnaModal from './QnaModal/QnaModal';

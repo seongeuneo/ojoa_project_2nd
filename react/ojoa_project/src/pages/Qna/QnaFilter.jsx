@@ -35,7 +35,7 @@ const QnaFilter = () => {
                             <option value="writer_name">작성자</option>
                             <option value="product">상품정보</option>
                         </select>
-                        <input type="text" /><Link to="#" class="qna_board_find_btn">찾기</Link>
+                        <input type="text" /><Link to="#" className="qna_board_find_btn">찾기</Link>
                     </fieldset>
                 </form>
             </div>
