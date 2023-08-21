@@ -4,7 +4,11 @@ import "./ProductList.css";
 import Pagination from "../../components/Pagination/Pagination";
 import PLFilter from "./PLFilter";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import mockList from '../../MockList/Chairs'
+=======
+import mockList from "../../components/MockList/Chairs";
+>>>>>>> main
 
 
 

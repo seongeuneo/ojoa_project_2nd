@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProductListItem.css";
 import { Link } from "react-router-dom";
-import mockList from '../../MockList/Chairs'
+import mockList from '../../components/MockList/Chairs'
 
 const ProductListItem = ({content, onSelect }) => {
 
