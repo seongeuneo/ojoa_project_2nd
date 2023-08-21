@@ -10,9 +10,7 @@ import Modal from 'react-modal';
 import AddCart from './Modal/AddCart';
 
 
-
-
-function ProductDetail({ cart, setCart }) {
+function ProductDetail({ handleCart }) {
 
     // 상품목록리스트에서 id 값에 따라 상품 상세 반영하기
     const { mockList_id } = useParams();
@@ -20,74 +18,12 @@ function ProductDetail({ cart, setCart }) {
     const { id, imgNo, productName, productPriceFormatted, productPromotion, productInfo, productReview, productGrade } = indiItem[0]
     //======================================
     // 수량 변경한 만큼 가격에 계산
-    // const [count, setCount] = useState(1);
-
-
-
     const [count, setCount] = useState(1);
+
+
 
     // 장바구니 기능
     // 장바구니에 물건
-    const handleCart = () => {
-        const cartItem = {
-            id: id,
-            imgNo: imgNo,
-            productName: productName,
-            productPriceFormatted: productPriceFormatted,
-            productPromotion: productPromotion,
-            productInfo: productInfo,
-            productReview: productReview,
-            productGrade: productGrade,
-            quantity: count
-        };
-        setCart([...cart, cartItem]);
-    };
-
-    function handleCartAndOpenModal() {
-        handleCart();
-        openModal();
-    }
-
-    // if (indiItem.length > 0) {
-    //     return "상품 있음"
-    // } else {
-    //     return "상품 없음"
-    // }
-
-    const onDecrease = () => {
-        if (count >= 2) {
-            setCount(count - 1);
-        }
-    };
-
-    const onIncrease = () => {
-        if (count >= 1) {
-            setCount(count + 1);
-        }
-    };
-
-    const sellPrice = productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    const sum = count * productPriceFormatted;
-    const result = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-    const imgChange = (e) => {
-        setMainImg(e);
-    };
-
-    //======================================
-    // 대표 썸네일 이미지 클릭시 변경
-    const [mainImg, setMainImg] = useState(`../thumbs/${imgNo}_1.jpg`);
-
-
-    const test = mockList.map((content) => {
-
-        return (
-            <li><img onClick={() => imgChange(`/thumbs/${imgNo}_1.jpg`)} src={`/thumbs/${imgNo}_1.jpg`} alt="" id="thumb1" /></li>
-        );
-    });
-
-
-    //======================================
     const handleAddToCart = () => {
         const cartItem = {
             id: id,
@@ -110,13 +46,62 @@ function ProductDetail({ cart, setCart }) {
     const openModal = () => setModalIsOpen(true);
     const closeModal = () => setModalIsOpen(false);
 
-    // 상품 상세페이지 4가지 섹션으로 나뉘어지는 갈래
-    const location = useLocation();
 
     function handleCartAndOpenModal() {
         handleAddToCart();
         openModal();
     }
+    // if (indiItem.length > 0) {
+    //     return "상품 있음"
+    // } else {
+    //     return "상품 없음"
+    // }
+
+
+    //======================================
+    // 수량 변경한 만큼 가격에 계산
+    const onDecrease = () => {
+        if (count >= 2) {
+            setCount(count - 1);
+        }
+    }
+
+    const onIncrease = () => {
+        if (count >= 1) {
+
+            setCount(count + 1);
+        }
+    }
+
+    const sellPrice = productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    const sum = count * productPriceFormatted;
+
+    const result = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    //======================================
+    // 대표 썸네일 이미지 클릭시 변경
+    const imgChange = (e) => {
+        setMainImg(e)
+    };
+
+    //======================================
+    // 대표 썸네일 이미지 클릭시 변경
+    const [mainImg, setMainImg] = useState(`../thumbs/${imgNo}_1.jpg`);
+
+
+    const test = mockList.map((content) => {
+
+        return (
+            <li><img onClick={() => imgChange(`/thumbs/${imgNo}_1.jpg`)} src={`/thumbs/${imgNo}_1.jpg`} alt="" id="thumb1" /></li>
+        );
+    });
+
+
+    //======================================
+
+    // 상품 상세페이지 4가지 섹션으로 나뉘어지는 갈래
+    const location = useLocation();
 
     return (
         <div className="ProductDetail">
@@ -212,7 +197,7 @@ function ProductDetail({ cart, setCart }) {
             </div>
             <div className="PdIndex00">
                 <div className="pd_section">
-                    <a><NavLink to="./DetailInfo01" activeClassName="active" exact>
+                    <a><NavLink to="./DetailInfo01" activeClassName="active"exact>
                         <strong>상품상세정보</strong></NavLink></a>
                     <a><NavLink to="./OrderReview02" activeClassName="active" >
                         <strong>상품구매후기</strong></NavLink></a>
@@ -233,6 +218,5 @@ function ProductDetail({ cart, setCart }) {
 
     )
 };
-
 
 export default ProductDetail;

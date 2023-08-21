@@ -5,7 +5,8 @@ import Pagination from "../../components/Pagination/Pagination";
 import PLFilter from "./PLFilter";
 import { Link } from "react-router-dom";
 import mockList from '../../data/ItemsData'
-// import CategoryIndex from './CategoryIndex'
+import Modal from 'react-modal';
+// import AddCart from './Modal/AddCart';
 
 
 

@@ -106,7 +106,7 @@
 .CartList {
   position: relative;
   width: 1240px;
-  height: 150px;
+  height: auto;
   border-radius: 10px;
   border: 2px solid silver;
   margin: 0 auto;
@@ -249,12 +249,6 @@ thead>tr>th:first-child {
 }
 
 
-/* 항목별 맨끝 합계 가격 */
-.CartList .final_price {
-  font-weight: bold;
-  font-size: 20px;
-}
-
 
 /* 항목별 세일 가격 */
 
@@ -265,12 +259,21 @@ thead>tr>th:first-child {
 }
 
 
+/* 항목별 맨끝 합계 가격 */
+.CartList .final_price {
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
 /*취소버튼*/
 
-.CartList .product_remove img {
+.CartList .product_remove {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  /* display: inline-flex; */
+  top: 62px;
+  right: 15px;
   width: 25px;
   height: 25px;
 }

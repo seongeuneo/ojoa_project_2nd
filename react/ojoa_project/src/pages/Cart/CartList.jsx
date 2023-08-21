@@ -1,6 +1,6 @@
 import '../../pages/Cart/Cart.css';
 import React, { useState, useEffect } from "react";
-// import mockList from '../../data/ItemsData';
+import mockList from '../../data/ItemsData'
 // import { NavLink, Routes, Route, useParams, Link } from "react-router-dom"
 
 
@@ -46,7 +46,7 @@ const CartList = ({ cart, onDecrease, onIncrease, handleRemove, convertPrice, se
 
                                 </td>
 
-                                <td><img className="cart_img" src={`../images/chair${item.imgNo}.jpg`} alt={`Product ${item.productName}`} /></td>
+                                <td><img className="cart_img" src={`/thumbs/${item.imgNo}_1.jpg`} alt={`Product ${item.productName}`} /></td>
                                 <td>
                                     <div className="cart_mininame">[{item.productInfo}]</div>
                                     <td><a className="cart_mainname" href="#">{item.productName}</a></td>

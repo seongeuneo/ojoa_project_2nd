@@ -60,12 +60,10 @@ function App() {
           <Route path="/mypage/mileage/*" element={<Mileage />} />
           <Route path="/store/*" element={<Store />} />
           <Route path="/order/*" element={<Order />} />
-          {/* <Route path="/productList/*" element={<ProductList />} /> */}
-          <Route path="/productDetail/*" element={<ProductDetail />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/login/" element={<Login />} />
           <Route path="/" element={<Main />} />
-          <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart} />} />
+          <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart} handleCart={handleCart}/>} />
           <Route path="/productList/Chair/*" element={<Chair cart={cart} setCart={setCart} />} />
           <Route path="/productList/Sofa/*" element={<Sofa cart={cart} setCart={setCart} />} />
           <Route path="/productList/Bed/*" element={<Bed cart={cart} setCart={setCart} />} />
@@ -73,12 +71,8 @@ function App() {
           <Route path="/productList/Closet/*" element={<Closet cart={cart} setCart={setCart} />} />
           <Route path="/productList/Lighting/*" element={<Lighting cart={cart} setCart={setCart} />} />
           <Route path="/cart/*" element={<Cart cart={cart} handleCart={handleCart} convertPrice={convertPrice}
-            handleRemove={handleRemoveFromCart} isAllChecked={isAllChecked}
-            handleCheckAll={handleCheckAll} />} />
-          {/* <Route path="/productList/*" element={<ProductList />} />
                                               handleRemove={handleRemoveFromCart} isAllChecked={isAllChecked} 
-                                              handleCheckAll={handleCheckAll}/> } /> */}
-          {/* <Route path="/productList/*" element={<ProductList />} /> */}
+                                              handleCheckAll={handleCheckAll}/>} />
           <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />
           <Route path="/login/info/agree/popup" element={<Popup />} />

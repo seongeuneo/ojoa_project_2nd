@@ -152,12 +152,12 @@
 
 .Main .section .left {
     left: 30px;
-    /* background: url(../../../public/images/left.png) center center / 100% no-repeat; */
+    background: url(../../../public/images/left.png) center center / 100% no-repeat;
 }
 
 .Main .section .right {
     right: 30px;
-    /* background: url(../../../public/images/right.png) center center / 100% no-repeat; */
+    background: url(../../../public/images/right.png) center center / 100% no-repeat;
 }
 
 .Main .section input[id="slide01"]:checked~.slidewrap .slide-control>div:nth-child(1) {
