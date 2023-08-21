@@ -4,7 +4,7 @@ import "./ProductList.css";
 import Pagination from "../../components/Pagination/Pagination";
 import PLFilter from "./PLFilter";
 import { Link } from "react-router-dom";
-import mockList from '../../Chairs'
+import mockList from '../../MockList/Chairs'
 
 
 

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './Qna.css';
 import QnaThumbNail from './QnaThumbNail';
 import QnaFilter from './QnaFilter';
@@ -8,19 +8,23 @@ import QnaPageNationBtn from './QnaPageNationBtn';
 import Modal from 'react-modal';
 import { ModalProvider } from './QnaModal/ModalContext';
 import QnaWriteBtn from './QnaWriteBtn';
+import React from "react";
+import QnaPost from './QnaPost';
 
 Modal.setAppElement('#root');
 
 function Qna() {
+
     return (
         <ModalProvider>
             <div className="Qna">
-                <QnaThumbNail />
-                <QnaFilter />
-                <QnaTitleList />
+                        <QnaThumbNail />
+                        <QnaFilter />
+                        <QnaTitleList />
                 <QnaListItem />
-                <QnaWriteBtn />
-                <QnaPageNationBtn />
+                {/* <QnaPost/> */}
+                        <QnaWriteBtn />
+                        <QnaPageNationBtn />
             </div>
         </ModalProvider>
     );

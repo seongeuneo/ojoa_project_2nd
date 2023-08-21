@@ -1,3 +1,5 @@
+/* MyShop/Deposits.css */
+
 /* 페이지 너비 제한과 컨테이너 스타일링 */
 #wrap {
     width: 100%;
@@ -8,7 +10,7 @@
 }
 
 /* 경로 표시 스타일링 */
-.Mileage .path {
+.HistoryList .path {
     color: #333;
     font-size: 12px;
     margin: 20px auto;
@@ -17,7 +19,7 @@
     line-height: 30px;
 }
 
-.Mileage .path span {
+.HistoryList .path span {
     position: absolute;
     width: 0;
     height: 0;
@@ -26,33 +28,33 @@
     display: none;
 }
 
-.Mileage .path li {
+.HistoryList .path li {
     float: left;
     padding-left: 12px;
     margin: 0;
     color: #333;
 }
 
-.Mileage .path ol {
+.HistoryList .path ol {
     float: right;
 }
 
 /* 페이지 제목 스타일링 */
-.Mileage .headTltleArea {
+.HistoryList .headTltleArea {
     min-height: 30px;
     margin: 50px 0 20px;
     border-bottom: 0;
     text-align: left;
 }
 
-.Mileage .headTltleArea h2 {
+.HistoryList .headTltleArea h2 {
     font-size: 16px;
     color: #000;
     font-weight: 400;
 }
 
 /* 정보 박스 스타일링 */
-.Mileage .BaseBox {
+.HistoryList .BaseBox {
     padding: 20px 0;
     padding: 20px;
     margin-left: auto;
@@ -70,7 +72,7 @@
     justify-content: space-around;
 }
 
-.Mileage .BaseBox ul li {
+.HistoryList .BaseBox ul li {
     margin: 5px 0;
     padding: 0 45px;
     height: 20px;
@@ -78,52 +80,28 @@
     line-height: 1.6;
 }
 
-.ec-base-tab {
-    margin: 0px auto;
+.ec-base-tab ul.menu {
+    /* 탭 메뉴 스타일링 */
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 1240px;
+    justify-content: space-around;
+    border-bottom: 2px solid;
+    /* 밑줄 효과 */
+    padding: 10px 0;
 }
 
-.ec-base-tab .menu {
-    margin: 0 0 10px;
-    border: 1px solid #cbcdce;
-    border-bottom-color: #202020;
-    background: #f2f2f2;
+.ec-base-tab ul.menu li {
+    margin: 0;
+    padding: 0;
 }
 
-.ec-base-tab .menu li a {
-    display: block;
-    padding: 12px 5px 11px;
-    color: #707070;
+.ec-base-tab ul.menu li a {
     text-decoration: none;
-    outline: 0;
-    text-align: center;
-    background: #f2f2f2;
-}
-
-.ec-base-tab .menu li {
-    float: left;
-    border-left: 1px solid #cbcdce;
-    background: #f2f2f2;
     font-size: 12px;
-    text-decoration: none;
-    color: inherit;
-}
-
-.ec-base-tab .menu li .active {
-    /* border: 1px solid #202020; */
-    /* background: #4a5164; */
-    border-bottom: 0;
-    color: blue;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 /* 적립금 내역 테이블 스타일링 */
-.MileageHistoryList_inside {
+.HistoryList_inside {
     margin-top: 20px;
 }
 
@@ -224,15 +202,14 @@
     margin: 20px 0;
     border: 1px solid #d6d4d4;
     line-height: 18px;
-    color: #707070;
-    max-width: 1240px;
-    margin: 0 auto;
-    margin-bottom: 50px;
 }
 
-.ec-base-help .inner {
+.ec-base-help {
     padding: 0 9px 12px;
+}
 
+.ec-base-help {
+    color: #707070;
 }
 
 .ec-base-help ol .item1 {

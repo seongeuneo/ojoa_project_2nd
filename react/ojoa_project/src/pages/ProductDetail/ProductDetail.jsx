@@ -5,7 +5,7 @@ import DetailInfo01 from './DetailInfo01';
 import OrderReview02 from './OrderReview02';
 import ProdQna03 from './ProdQna03';
 import PurGuide04 from './PurGuide04';
-import mockList from '../../Chairs'
+import mockList from '../../MockList/Chairs'
 import Modal from 'react-modal';
 import AddCart from './Modal/AddCart';
 
