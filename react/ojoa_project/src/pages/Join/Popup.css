@@ -7,7 +7,7 @@
 
 
 .Popup {
-    /* background-image: url(../../../public/images/bg4.jpg); */
+    background-image: url(../../../public/images/bg4.jpg);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     /* 배경 이미지 */
