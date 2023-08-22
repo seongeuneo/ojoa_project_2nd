@@ -63,7 +63,7 @@ function ModalBasic({ setModalOpen }) {
                 <img
                     onClick={closeModal}
                     className="madal_close_rotate"
-                    src="./images/search_X.png"
+                    src="/images/search_X.png"
                     alt="search_x"
                 />
                 <form
@@ -81,13 +81,13 @@ function ModalBasic({ setModalOpen }) {
                         <img
                             type="reset"
                             className="btn-reset"
-                            src="./images/btn_reset.png"
+                            src="/images/btn_reset.png"
                             alt="reset"
                             onClick={handleResetClick}>
                         </img>
                     )}
                     <img
-                        src="./images/search_icon.png"
+                        src="/images/search_icon.png"
                         alt="검색"
                         className="search_btn"
                         onClick={handleSearchButtonClick}
@@ -105,7 +105,7 @@ function ModalBasic({ setModalOpen }) {
                             onClick={closeModalAndNavigate} // 클릭 시 모달을 닫는 함수 호출
                         >
                             <img
-                                src={`./thumbs/${product.imgNo}_1.jpg`}
+                                src={`/thumbs/${product.imgNo}_1.jpg`}
                                 alt={product.productName}
                             />
                             <h3>&nbsp;&nbsp;{product.productName}</h3>
