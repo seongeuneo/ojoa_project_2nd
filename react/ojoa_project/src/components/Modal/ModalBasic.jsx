@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
 import './ModalBasic.css';
 import mockList from '../../data/ItemsData';
@@ -6,6 +6,18 @@ import mockList from '../../data/ItemsData';
 // ** header search 모달 내용을 담당하는 컴포넌트 ** //
 
 function ModalBasic({ setModalOpen }) {
+
+    useEffect(() => {
+        if (setModalOpen) {
+            document.body.style.overflow = 'hidden'; // 모달이 열릴 때 스크롤 막음.
+        } else {
+            document.body.style.overflow = ''; // 모달이 닫힐 때 스크롤 허용.
+        }
+
+        return () => {
+            document.body.style.overflow = ''; // 컴포넌트 언마운트 시 스크롤 허용.
+        };
+    }, [setModalOpen]);
 
     const [inputValue, setInputValue] = useState(''); // 검색 입력 값.
     const [searchResults, setSearchResults] = useState([]); // 검색 결과.
@@ -33,7 +45,7 @@ function ModalBasic({ setModalOpen }) {
         }
     };
 
-    function numberWithCommas(x) { 
+    function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     } // 천 단위 쉼표로 변환하는 함수.
 
