@@ -319,62 +319,64 @@ const mockList = [
         id: 401,
         imgNo: 401,
         type: "closet",
-        productName: "해리포터 옷장",
-        productPriceFormatted: "890000",
-        productPromotion: "10",
-        productInfo: "닥쳐 말포이",
-        productReview: "20",
-        productGrade: "4.3"
+        productName: "심플 옷장",
+        productPriceFormatted: "209000",
+        productPromotion: "22",
+        productInfo: "신혼부부 재질",
+        productReview: "8",
+        productGrade: "4.0"
+
     },
     {
         id: 402,
         imgNo: 402,
         type: "closet",
-        productName: "옷장",
+        productName: "이걸 누가사 옷장",
         productPriceFormatted: "120000",
         productPromotion: "",
-        productInfo: "",
+        productInfo: "문을 열면 제2의 세계가 펼쳐집니다",
         productReview: "29",
-        productGrade: "2.8"
+        productGrade: "3.8"
     }, {
         id: 403,
         imgNo: 403,
         type: "closet",
-        productName: "옷장",
+        productName: "책장같아 보이지만 옷장",
         productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
-        productReview: "29",
-        productGrade: "2.8"
+        productPromotion: "2",
+        productInfo: "귀에걸면 귀걸이 코에걸면 코걸이",
+        productReview: "9",
+        productGrade: "3.8"
     }, {
         id: 404,
         imgNo: 404,
         type: "closet",
-        productName: "옷장",
+        productName: "별이 다섯개 옷장",
         productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
+        productPromotion: "2",
+        productInfo: "장수.. 도...ㄹ",
         productReview: "29",
-        productGrade: "2.8"
+        productGrade: "5.0"
     }, {
         id: 405,
         imgNo: 405,
         type: "closet",
-        productName: "옷장",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
+        productName: "웃장 옷장",
+        productPriceFormatted: "99000",
+        productPromotion: "10",
+        productInfo: "^_^",
         productReview: "29",
         productGrade: "2.8"
     }, {
         id: 406,
         imgNo: 406,
         type: "closet",
-        productName: "옷장",
-        productPromotion: "",
-        productInfo: "",
-        productReview: "29",
-        productGrade: "2.8"
+        productName: "도라에몽 옷장",
+        productPriceFormatted: '13000',
+        productPromotion: "50",
+        productInfo: "싸쥬?",
+        productReview: "33",
+        productGrade: "4.3"
     },
 
     // 카테고리 : 조명
@@ -383,32 +385,32 @@ const mockList = [
         id: 501,
         imgNo: 501,
         type: "lighting",
-        productName: "조명",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
+        productName: "한놈 조명",
+        productPriceFormatted: "30000",
+        productPromotion: "10",
+        productInfo: "한놈만 팬다",
         productReview: "29",
-        productGrade: "2.8"
+        productGrade: "4.5"
     },
     {
         id: 502,
         imgNo: 502,
         type: "lighting",
-        productName: "조명",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
+        productName: "두시기 조명",
+        productPriceFormatted: "40000",
+        productPromotion: "30",
+        productInfo: "오늘의 히트",
         productReview: "29",
-        productGrade: "2.8"
+        productGrade: "2.2"
     },
     {
         id: 503,
         imgNo: 503,
         type: "lighting",
-        productName: "조명",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
+        productName: "석삼 조명",
+        productPriceFormatted: "50000",
+        productPromotion: "10",
+        productInfo: "놓치지마세요",
         productReview: "29",
         productGrade: "2.8"
     },
@@ -416,54 +418,54 @@ const mockList = [
         id: 504,
         imgNo: 504,
         type: "lighting",
-        productName: "조명",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
-        productReview: "29",
-        productGrade: "2.8"
+        productName: "너구리 조명",
+        productPriceFormatted: "50000",
+        productPromotion: "10",
+        productInfo: "맛있겠다 츄릅",
+        productReview: "3",
+        productGrade: "4.4"
     },
     {
         id: 505,
         imgNo: 505,
         type: "lighting",
-        productName: "조명",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
+        productName: "오징어 조명",
+        productPriceFormatted: "70000",
+        productPromotion: "3",
+        productInfo: "생일초를 이렇게 구부려보세요",
         productReview: "29",
-        productGrade: "2.8"
+        productGrade: "5.0"
     },
     {
         id: 506,
         imgNo: 506,
         type: "lighting",
-        productName: "조명",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
+        productName: "욱개장 조명",
+        productPriceFormatted: "40000",
+        productPromotion: "3",
+        productInfo: "베이직 오브 베이직",
         productReview: "29",
-        productGrade: "2.8"
+        productGrade: "3.6"
     },
     {
         id: 507,
         imgNo: 507,
         type: "lighting",
-        productName: "조명",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
-        productReview: "29",
-        productGrade: "2.8"
+        productName: "칠면조 조명",
+        productPriceFormatted: "5000",
+        productPromotion: "8",
+        productInfo: "장난감처럼 보이십니까? 네 맞아요",
+        productReview: "9",
+        productGrade: "3.8"
     },
     {
         id: 508,
         imgNo: 508,
         type: "lighting",
-        productName: "조명",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
+        productName: "팔보채 조명",
+        productPriceFormatted: "50000",
+        productPromotion: "8",
+        productInfo: "군만두 서비스 드립니다",
         productReview: "29",
         productGrade: "2.8"
     },
@@ -471,12 +473,12 @@ const mockList = [
         id: 509,
         imgNo: 509,
         type: "lighting",
-        productName: "조명",
-        productPriceFormatted: "120000",
-        productPromotion: "",
-        productInfo: "",
-        productReview: "29",
-        productGrade: "2.8"
+        productName: "구공탄 조명",
+        productPriceFormatted: "90000",
+        productPromotion: "6",
+        productInfo: "포브스 선정 네이밍 제일 안어울리는 조명 1위",
+        productReview: "33",
+        productGrade: "4.9"
     },
 
 ]; //mockList

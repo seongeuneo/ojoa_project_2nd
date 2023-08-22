@@ -20,6 +20,7 @@ import Qna from './pages/Qna/Qna';
 import Mileage from './pages/MyPage/MyShop/Mileage';
 import productList from './pages/ProductList/ProductList';
 import ScrollTop from './components/ScrollToTop';
+// import NewList from './pages/ProductList/NewList';
 // import ProductList from './pages/ProductList'
 
 
@@ -64,6 +65,7 @@ function App() {
           <Route path="/login/" element={<Login />} />
           <Route path="/" element={<Main />} />
           <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart} handleCart={handleCart}/>} />
+          {/* <Route path="/productList/NewList/*" element={<NewList cart={cart} setCart={setCart} handleCart={handleCart}/>} /> */}
           <Route path="/productList/Chair/*" element={<Chair cart={cart} setCart={setCart} />} />
           <Route path="/productList/Sofa/*" element={<Sofa cart={cart} setCart={setCart} />} />
           <Route path="/productList/Bed/*" element={<Bed cart={cart} setCart={setCart} />} />

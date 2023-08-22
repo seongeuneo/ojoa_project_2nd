@@ -109,7 +109,7 @@ function ProductDetail({ handleCart }) {
                 <span>현재 위치</span>
                 <ol>
                     <li><NavLink to="/">홈</NavLink></li>
-                    <li><NavLink to="/ProductList">&gt; &nbsp;&nbsp;의자</NavLink></li>
+                    {/* <li><NavLink to="/ProductList">&gt; &nbsp;&nbsp;의자</NavLink></li> */}
                     <li title="현재 위치">&gt; &nbsp;&nbsp;현재 위치</li>
                 </ol>
             </div>

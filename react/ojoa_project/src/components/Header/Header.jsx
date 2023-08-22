@@ -60,6 +60,7 @@ function Header() {
                 <ul>
                     <li><Link to="#" onClick={handleLinkClick}>BEST</Link></li>
                     <li><Link to="#" onClick={handleLinkClick}>NEW</Link></li>
+                    {/* <li><Link to="/ProductList/NewList">NEW</Link></li> */}
                     <li><Link to='/ProductList/Bed'>침대</Link>
                         <ul>
                             <li><Link to="#" onClick={handleLinkClick}>싱글</Link></li>
