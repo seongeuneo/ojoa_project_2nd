@@ -8,17 +8,17 @@ const Login = () => {
     const [findIdModalVisible, setFindIdModalVisible] = useState(false);
     const [findPasswordModalVisible, setFindPasswordModalVisible] = useState(false);
 
-    function showFindIdModal(){
+    function showFindIdModal() {
         setFindIdModalVisible(true);
     }
-    function showFindPasswordModal(){
+    function showFindPasswordModal() {
         setFindPasswordModalVisible(true);
     }
 
     return (
         <div>
-            {findIdModalVisible && <FindIdModal setModalVisible={setFindIdModalVisible}/>}
-            {findPasswordModalVisible && <FindPasswordModal setModalVisible={setFindPasswordModalVisible}/>}
+            {findIdModalVisible && <FindIdModal setModalVisible={setFindIdModalVisible} />}
+            {findPasswordModalVisible && <FindPasswordModal setModalVisible={setFindPasswordModalVisible} />}
 
             <div className="login_path">
                 <span>현재 위치</span>
