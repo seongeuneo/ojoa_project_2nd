@@ -192,7 +192,7 @@ function ProductDetail({ handleCart }) {
                     <Modal className="ModalContent" handleCart={handleCart} isOpen={modalIsOpen} onRequestClose={closeModal}>
                         <AddCart closeModal={closeModal} />
                     </Modal>
-                    <Link to='../Cart/Cart' className="pd_btn2" onClick={() => handleCart}>구매하기</Link>
+                    <Link to='../Cart/Cart' className="pd_btn2" onClick={() => handleAddToCart()}>구매하기</Link>
                 </div>
             </div>
             <div className="PdIndex00">

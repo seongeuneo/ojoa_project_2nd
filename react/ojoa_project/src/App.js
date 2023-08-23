@@ -59,12 +59,12 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart} handleCart={handleCart} />} />
           {/* <Route path="/productList/NewList/*" element={<NewList cart={cart} setCart={setCart} handleCart={handleCart}/>} /> */}
-          <Route path="/productList/Chair/*" element={<Chair cart={cart} setCart={setCart} />} />
-          <Route path="/productList/Sofa/*" element={<Sofa cart={cart} setCart={setCart} />} />
-          <Route path="/productList/Bed/*" element={<Bed cart={cart} setCart={setCart} />} />
-          <Route path="/productList/Bookshelf/*" element={<Bookshelf cart={cart} setCart={setCart} />} />
-          <Route path="/productList/Closet/*" element={<Closet cart={cart} setCart={setCart} />} />
-          <Route path="/productList/Lighting/*" element={<Lighting cart={cart} setCart={setCart} />} />
+          <Route path="/productList/Chair/*" element={<Chair cart={cart} setCart={setCart}  handleCart={handleCart} />} />
+          <Route path="/productList/Sofa/*" element={<Sofa cart={cart} setCart={setCart}  handleCart={handleCart} />} />
+          <Route path="/productList/Bed/*" element={<Bed cart={cart} setCart={setCart}  handleCart={handleCart} />} />
+          <Route path="/productList/Bookshelf/*" element={<Bookshelf cart={cart} setCart={setCart}  handleCart={handleCart} />} />
+          <Route path="/productList/Closet/*" element={<Closet cart={cart} setCart={setCart}  handleCart={handleCart} />} />
+          <Route path="/productList/Lighting/*" element={<Lighting cart={cart} setCart={setCart}  handleCart={handleCart} />} />
           <Route path="/cart/*" element={<Cart cart={cart} handleCart={handleCart} convertPrice={convertPrice}
             setCart={setCart} isAllChecked={isAllChecked} setIsAllChecked={setIsAllChecked} />} />
           <Route path="/login/info" element={<Info />} />
