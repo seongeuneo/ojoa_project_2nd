@@ -78,7 +78,8 @@
 .Modal_container .search_btn {
     position: absolute;
     float: right;
-    margin-top: 90px;
+    margin-top: -45px;
+    margin-left: 335px;
     cursor: pointer;
     height: 50px;
 }
