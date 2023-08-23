@@ -21,8 +21,6 @@ function sortProducts(products, sortKey) {
             return products.slice().sort((a, b) => parseFloat(a.productPriceFormatted.replace(/,/g, "")) - parseFloat(b.productPriceFormatted.replace(/,/g, "")));
         case "높은가격":
             return products.slice().sort((a, b) => parseFloat(b.productPriceFormatted.replace(/,/g, "")) - parseFloat(a.productPriceFormatted.replace(/,/g, "")));
-        case "제조사":
-            return products.slice().sort((a, b) => a.productInfo.localeCompare(b.productInfo));
         case "사용후기":
             return products.slice().sort((a, b) => parseInt(b.productReview) - parseInt(a.productReview));
         default:
@@ -208,7 +206,7 @@ const Bookshelf = ({ cart, setCart }) => {
             </div>
             <div className="pageTlt">
                 <h2>BOOKSHELF</h2>
-                <div className="txt_01">옷장 전체 상품</div>
+                <div className="txt_01">책장 전체 상품</div>
             </div>
             <PLFilter numOfList={sortedList.length} setSortKey={setSortKey} />
 

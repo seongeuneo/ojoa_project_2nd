@@ -109,7 +109,7 @@ function ProductDetail({ handleCart }) {
                 <span>현재 위치</span>
                 <ol>
                     <li><NavLink to="/">홈</NavLink></li>
-                    <li><NavLink to="/ProductList">&gt; &nbsp;&nbsp;의자</NavLink></li>
+                    {/* <li><NavLink to="/ProductList">&gt; &nbsp;&nbsp;의자</NavLink></li> */}
                     <li title="현재 위치">&gt; &nbsp;&nbsp;현재 위치</li>
                 </ol>
             </div>
@@ -192,7 +192,7 @@ function ProductDetail({ handleCart }) {
                     <Modal className="ModalContent" handleCart={handleCart} isOpen={modalIsOpen} onRequestClose={closeModal}>
                         <AddCart closeModal={closeModal} />
                     </Modal>
-                    <Link to='../Cart/Cart' className="pd_btn2" onClick={() => handleAddToCart()}>구매하기</Link>
+                    <Link to='../Cart/Cart' className="pd_btn2" onClick={() => handleCart}>구매하기</Link>
                 </div>
             </div>
             <div className="PdIndex00">
