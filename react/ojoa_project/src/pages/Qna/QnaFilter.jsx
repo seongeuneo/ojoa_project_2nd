@@ -6,28 +6,28 @@ import QnaData from "../Qna/QnaData";
 const QnaFilter = () => {
 
     // 카테고리 번호에 따라 카테고리 이름을 반환하는 함수
-    const getCategoryName = (categoryNumber) => {
-        switch (categoryNumber) {
-            case '2':
-                return '상품문의';
-            case '3':
-                return '배송문의';
-            case '4':
-                return '주문/결제';
-            case '5':
-                return '취소문의';
-            case '6':
-                return '반품/교환';
-            case '7':
-                return '환불문의';
-            case '8':
-                return '재입고문의';
-            case '9':
-                return '기타문의';
-            default:
-                return '';
-        }
-    };
+    // const getCategoryName = (categoryNumber) => {
+    //     switch (categoryNumber) {
+    //         case '2':
+    //             return '상품문의';
+    //         case '3':
+    //             return '배송문의';
+    //         case '4':
+    //             return '주문/결제';
+    //         case '5':
+    //             return '취소문의';
+    //         case '6':
+    //             return '반품/교환';
+    //         case '7':
+    //             return '환불문의';
+    //         case '8':
+    //             return '재입고문의';
+    //         case '9':
+    //             return '기타문의';
+    //         default:
+    //             return '';
+    //     }
+    // };
 
     // 검색기능 
     const [searchDate, setSearchDate] = useState('period');
@@ -60,7 +60,8 @@ const QnaFilter = () => {
     return (
         <div className='qna_filter_container'>
             <div className="qna_board_sort">
-                <select name="board_category" value={selectedCategory} onChange={handleCategoryChange}>
+                {/* <select name="board_category" value={selectedCategory} onChange={handleCategoryChange}> */}
+                <select name="board_category" >
                     <option value="1" >전체</option>
                     <option value="2">상품문의</option>
                     <option value="3">배송문의</option>
@@ -95,7 +96,7 @@ const QnaFilter = () => {
                     </fieldset>
                 </form>
             </div>
-        </div>
+        </div >
     );
 };
 export default QnaFilter;
