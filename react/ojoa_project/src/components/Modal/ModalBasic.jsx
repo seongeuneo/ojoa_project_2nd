@@ -58,60 +58,67 @@ function ModalBasic({ setModalOpen }) {
     };
 
     return (
-        <div className="Modal_container">
-            <div className="Modal_container2">
-                <img
-                    onClick={closeModal}
-                    className="madal_close_rotate"
-                    src="/images/search_X.png"
-                    alt="search_x"
-                />
-                <form
-                    id="search-form-view"
-                    onSubmit={handleSearchFormSubmit}>
-                    <input
-                        name="keyword"
-                        className="inputTypeText"
-                        value={inputValue}
-                        type="text"
-                        onChange={handleInputChange}
-                        autoFocus
-                    />
-                    {inputValue && (
-                        <img
-                            type="reset"
-                            className="btn-reset"
-                            src="/images/btn_reset.png"
-                            alt="reset"
-                            onClick={handleResetClick}>
-                        </img>
-                    )}
+        <div className='Modal_wrap'>
+            <div className="Modal_container">
+                <div className="Modal_container2">
                     <img
-                        src="/images/search_icon.png"
-                        alt="검색"
-                        className="search_btn"
-                        onClick={handleSearchButtonClick}
+                        onClick={closeModal}
+                        className="madal_close_rotate"
+                        src="/images/search_X.png"
+                        alt="search_x"
                     />
-                </form>
-            </div>
-            {/* 검색 결과 출력 */}
-            <div className="search-container">
-                <div className="search-results">
-                    {searchResults.map((product) => (
-                        <Link
-                            to={`/ProductDetail/${product.id}`}
-                            key={product.id}
-                            className="search-result-item"
-                            onClick={closeModalAndNavigate} // 클릭 시 모달을 닫는 함수 호출
-                        >
+                    <form
+                        id="search-form-view"
+                        onSubmit={handleSearchFormSubmit}>
+                        <input
+                            name="keyword"
+                            className="inputTypeText"
+                            value={inputValue}
+                            type="text"
+                            onChange={handleInputChange}
+                            placeholder="상품을 검색 하세요."
+                            autoFocus
+                        />
+                        {inputValue && (
                             <img
-                                src={`/thumbs/${product.imgNo}_1.jpg`}
-                                alt={product.productName}
-                            />
-                            <h3>&nbsp;&nbsp;{product.productName}</h3>
-                            <p>&nbsp;&nbsp;&nbsp;{numberWithCommas(product.productPriceFormatted)}원</p>
-                        </Link>
-                    ))}
+                                type="reset"
+                                className="btn-reset"
+                                src="/images/btn_reset.png"
+                                alt="reset"
+                                onClick={handleResetClick}>
+                            </img>
+                        )}
+                        <img
+                            src="/images/search_icon.png"
+                            alt="검색"
+                            className="search_btn"
+                            onClick={handleSearchButtonClick}
+                        />
+                    </form>
+                </div>
+                {/* 검색 결과 출력 */}
+                <div className="search-container">
+                    <div className="search-results">
+                        {searchResults.length === 0 ? ( // 검색 결과가 없을 때
+                            <h4>검색 상품이 존재하지 않습니다.</h4>
+                        ) : (
+                            searchResults.map((product) => (
+                                <Link
+                                    to={`/ProductDetail/${product.id}`}
+                                    key={product.id}
+                                    className="search-result-item"
+                                    onClick={closeModalAndNavigate} // 클릭 시 모달을 닫는 함수 호출
+                                >
+                                    <img
+                                        src={`/thumbs/${product.imgNo}_1.jpg`}
+                                        alt={product.productName}
+                                    />
+                                    <h3>&nbsp;&nbsp;{product.productName}</h3>
+                                    <p>&nbsp;&nbsp;&nbsp;{numberWithCommas(product.productPriceFormatted)}원</p>
+                                </Link>
+                            ))
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
