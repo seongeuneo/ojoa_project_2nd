@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState, useRef } from "react";
 import "../Qna/Qna.css";
 import Modal from 'react-modal';
 import QnaModal from './QnaModal/QnaModal';
@@ -12,6 +12,7 @@ const QnaWriteBtn = () => {
     const closeModal = () => setModalIsOpen(false);
 
     return (
+
         <div className="qna_write_btn">
             <a onClick={openModal}>글쓰기</a>
             <Modal className="ModalContent" isOpen={modalIsOpen} onRequestClose={closeModal}>

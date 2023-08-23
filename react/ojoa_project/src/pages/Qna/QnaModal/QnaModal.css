@@ -1,33 +1,29 @@
-/* 모달창을 화면 중앙 노출 */
+/* ============================== */
+/* 모달창 디자인 */
 #QnaModal_Background {
-    /* 모달창 크기 */
-    width: 900px;
-    height: 650px;
-
-    z-index: 999;
-
-    /* 중앙 배치 */
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
-    /* 모달창 디자인 */
+    width: 900px;
+    height: 650px;
     background-color: white;
-    box-shadow: 2px 4px 5px 0px gray;
+    transform: translate(-50%, -50%);
     display: flex;
     /* align-items: center; */
     justify-content: center;
+    z-index: 5;
+    box-shadow: 2px 4px 5px 0px gray;
+
 }
 
-.QnaModal_container2 {
+.QnaModal_container {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     width: 800px;
     height: 700px;
     display: inline-block;
-    z-index: 999;
+    /* z-index: 999; */
 
 }
 
@@ -39,7 +35,6 @@
     top: 30px;
     transition: all 0.3s ease-in-out;
     z-index: 2222;
-    cursor: pointer;
 }
 
 .qnaModal_close_rotate:hover {
@@ -49,23 +44,11 @@
 }
 
 .qnaModal_container2 {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    float: right;
+    margin-top: 17px;
+    cursor: pointer;
 }
 
-.qna_board_table input:focus {
-    outline: none;
-}
-
-.inputTypeText {
-    color: #222;
-    font-size: 22px;
-    float: left;
-    padding: 5px 40px;
-}
 
 /* ============================== */
 /* 글쓰기 */
@@ -80,15 +63,14 @@
     width: 100%;
     position: relative;
     margin: 10px 0 0;
-    color: black;
+    color: #fff;
     line-height: 1.5;
     border-spacing: 0;
     border-collapse: collapse;
 }
 
 .qna_board_table {
-    border: 1px solid #ccc;
-    margin: 20px 10px;
+    border: 1px solid #e9e9e9;
 }
 
 .qna_board_table tbody {
@@ -100,10 +82,11 @@
 .qna_board_table tr {
     display: table-row;
     vertical-align: inherit;
-    color: black;
+    color: #fff;
     line-height: 1.5;
     border-spacing: 0;
     border-collapse: collapse;
+
 }
 
 .qna_board_table th {
@@ -116,6 +99,7 @@
     font-weight: normal;
     background-color: #fbfafa;
     text-align: center;
+
 }
 
 .qna_board_table td {
@@ -125,6 +109,7 @@
     vertical-align: middle;
     word-break: break-all;
     word-wrap: break-word;
+
 }
 
 .qna_write_info input[type="text"] {
@@ -147,11 +132,14 @@
     min-height: 20px;
 }
 
+
+
 /* ============================== */
 /* 카테고리부분 */
 #board_category1 {
     margin-right: 20px;
 }
+
 
 #board_category2 .qna_write_filter option {
     font-weight: normal;
@@ -160,26 +148,29 @@
     padding: 0px 2px 1px;
 }
 
+
 /* ============================== */
 /* 등록완료 버튼*/
-
-.qna_btnSet {
-    display: flex;
-    text-align: center;
+.qna_btnSet,
+.qna_btnSet_cancle {
+    display: inline-flex;
+    margin-top: 20px;
     justify-content: center;
+    align-items: center;
 }
 
-.qna_writesubmit_btn {
+.qna_writesubmit_btn,
+.qna_writeback_btn {
+
+    display: inline-flex;
     background-color: #a3a1a1;
     color: white;
-    margin-top: 10px;
     font-size: 12px;
-    position: relative;
     padding: 10px 15px;
     border-radius: 15px;
     font-family: "paybooc-Light", sans-serif;
     font-weight: 600;
     transition: 0.25s;
-    margin-left: -1px;
+    margin: 0 5px;
     cursor: pointer;
 }

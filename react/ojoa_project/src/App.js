@@ -1,5 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ModalProvider } from './pages/Qna/QnaModal/ModalContext';
+
 import React, { useState } from "react";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -51,6 +53,7 @@ function App() {
 
 
   return (
+
     <div className="App">
       <BrowserRouter>
         <ScrollTop />
@@ -63,7 +66,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/login/" element={<Login />} />
           <Route path="/" element={<Main />} />
-          <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart} handleCart={handleCart}/>} />
+          <Route path="/productDetail/:mockList_id/*" element={<ProductDetail cart={cart} setCart={setCart} handleCart={handleCart} />} />
           <Route path="/productList/Chair/*" element={<Chair cart={cart} setCart={setCart} />} />
           <Route path="/productList/Sofa/*" element={<Sofa cart={cart} setCart={setCart} />} />
           <Route path="/productList/Bed/*" element={<Bed cart={cart} setCart={setCart} />} />
@@ -71,8 +74,8 @@ function App() {
           <Route path="/productList/Closet/*" element={<Closet cart={cart} setCart={setCart} />} />
           <Route path="/productList/Lighting/*" element={<Lighting cart={cart} setCart={setCart} />} />
           <Route path="/cart/*" element={<Cart cart={cart} handleCart={handleCart} convertPrice={convertPrice}
-                                              handleRemove={handleRemoveFromCart} isAllChecked={isAllChecked} 
-                                              handleCheckAll={handleCheckAll}/>} />
+            handleRemove={handleRemoveFromCart} isAllChecked={isAllChecked}
+            handleCheckAll={handleCheckAll} />} />
           <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />
           <Route path="/login/info/agree/popup" element={<Popup />} />
@@ -82,6 +85,7 @@ function App() {
         <TopButton />
       </BrowserRouter>
     </div >
+
   );
 };
 
