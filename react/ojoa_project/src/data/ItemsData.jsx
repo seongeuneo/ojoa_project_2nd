@@ -206,7 +206,7 @@ const mockList = [
         type: "bed",
         productName: "조금 큰 나무 침대",
         productPriceFormatted: "385000",
-        productPromotion: "0",
+        productPromotion: "7",
         productInfo: "안녕하세요 그렇습니다",
         productReview: "8",
         productGrade: "4.8"
@@ -332,8 +332,8 @@ const mockList = [
         imgNo: 402,
         type: "closet",
         productName: "이걸 누가사 옷장",
-        productPriceFormatted: "120000",
-        productPromotion: "",
+        productPriceFormatted: "1780000",
+        productPromotion: "40",
         productInfo: "문을 열면 제2의 세계가 펼쳐집니다",
         productReview: "29",
         productGrade: "3.8"
@@ -342,7 +342,7 @@ const mockList = [
         imgNo: 403,
         type: "closet",
         productName: "책장같아 보이지만 옷장",
-        productPriceFormatted: "120000",
+        productPriceFormatted: "236000",
         productPromotion: "2",
         productInfo: "귀에걸면 귀걸이 코에걸면 코걸이",
         productReview: "9",
@@ -353,7 +353,7 @@ const mockList = [
         type: "closet",
         productName: "별이 다섯개 옷장",
         productPriceFormatted: "120000",
-        productPromotion: "2",
+        productPromotion: "23",
         productInfo: "장수.. 도...ㄹ",
         productReview: "29",
         productGrade: "5.0"
@@ -364,7 +364,7 @@ const mockList = [
         productName: "웃장 옷장",
         productPriceFormatted: "99000",
         productPromotion: "10",
-        productInfo: "^_^",
+        productInfo: "누누슴^_^",
         productReview: "29",
         productGrade: "2.8"
     }, {
@@ -374,7 +374,7 @@ const mockList = [
         productName: "도라에몽 옷장",
         productPriceFormatted: '13000',
         productPromotion: "50",
-        productInfo: "싸쥬?",
+        productInfo: "싸쥬?싸니까 단팥방",
         productReview: "33",
         productGrade: "4.3"
     },
@@ -409,7 +409,7 @@ const mockList = [
         type: "lighting",
         productName: "석삼 조명",
         productPriceFormatted: "50000",
-        productPromotion: "10",
+        productPromotion: "60",
         productInfo: "놓치지마세요",
         productReview: "29",
         productGrade: "2.8"
@@ -431,7 +431,7 @@ const mockList = [
         type: "lighting",
         productName: "오징어 조명",
         productPriceFormatted: "70000",
-        productPromotion: "3",
+        productPromotion: "23",
         productInfo: "생일초를 이렇게 구부려보세요",
         productReview: "29",
         productGrade: "5.0"
@@ -442,7 +442,7 @@ const mockList = [
         type: "lighting",
         productName: "욱개장 조명",
         productPriceFormatted: "40000",
-        productPromotion: "3",
+        productPromotion: "30",
         productInfo: "베이직 오브 베이직",
         productReview: "29",
         productGrade: "3.6"
@@ -453,7 +453,7 @@ const mockList = [
         type: "lighting",
         productName: "칠면조 조명",
         productPriceFormatted: "5000",
-        productPromotion: "8",
+        productPromotion: "20",
         productInfo: "장난감처럼 보이십니까? 네 맞아요",
         productReview: "9",
         productGrade: "3.8"
@@ -464,7 +464,7 @@ const mockList = [
         type: "lighting",
         productName: "팔보채 조명",
         productPriceFormatted: "50000",
-        productPromotion: "8",
+        productPromotion: "28",
         productInfo: "군만두 서비스 드립니다",
         productReview: "29",
         productGrade: "2.8"
@@ -473,9 +473,9 @@ const mockList = [
         id: 509,
         imgNo: 509,
         type: "lighting",
-        productName: "구공탄 조명",
-        productPriceFormatted: "90000",
-        productPromotion: "6",
+        productName: "워니의 폭주 구공탄 조명",
+        productPriceFormatted: "900000",
+        productPromotion: "1",
         productInfo: "포브스 선정 네이밍 제일 안어울리는 조명 1위",
         productReview: "33",
         productGrade: "4.9"

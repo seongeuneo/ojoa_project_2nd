@@ -30,7 +30,7 @@ function sortProducts(products, sortKey) {
 
 
 //카테고리 : 의자
-function Chair({ cart, setCart }) {
+function Chair({ cart, setCart, handleCart }) {
     const chair_filter = mockList.filter((chair) => chair.type === 'chair');
 
     const [sortKey, setSortKey] = useState(""); // 초기 정렬 기준: 신상품
@@ -41,7 +41,7 @@ function Chair({ cart, setCart }) {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -77,7 +77,7 @@ function Chair({ cart, setCart }) {
 
 }; //Chair
 
-const Bed = ({ cart, setCart }) => {
+const Bed = ({ cart, setCart, handleCart }) => {
 
     const bed_filter = mockList.filter((bed) => bed.type === 'bed');
 
@@ -89,7 +89,7 @@ const Bed = ({ cart, setCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -124,7 +124,7 @@ const Bed = ({ cart, setCart }) => {
     )
 }; //Bed
 
-const Sofa = ({ cart, setCart }) => {
+const Sofa = ({ cart, setCart, handleCart }) => {
 
     const sofa_filter = mockList.filter((sofa) => sofa.type === 'sofa');
 
@@ -136,7 +136,7 @@ const Sofa = ({ cart, setCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -171,7 +171,7 @@ const Sofa = ({ cart, setCart }) => {
     )
 }; //Sofa
 
-const Bookshelf = ({ cart, setCart }) => {
+const Bookshelf = ({ cart, setCart, handleCart }) => {
 
     const bookshelf_filter = mockList.filter((bookshelf) => bookshelf.type === 'bookshelf');
 
@@ -183,7 +183,7 @@ const Bookshelf = ({ cart, setCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -218,7 +218,7 @@ const Bookshelf = ({ cart, setCart }) => {
     )
 }; //Bookshelf
 
-const Closet = ({ cart, setCart }) => {
+const Closet = ({ cart, setCart, handleCart }) => {
 
     const closet_filter = mockList.filter((closet) => closet.type === 'closet');
 
@@ -230,7 +230,7 @@ const Closet = ({ cart, setCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -265,7 +265,7 @@ const Closet = ({ cart, setCart }) => {
     )
 }; //Closet
 
-const Lighting = ({ cart, setCart }) => {
+const Lighting = ({ cart, setCart, handleCart }) => {
 
     const lighting_filter = mockList.filter((lighting) => lighting.type === 'lighting');
 
@@ -277,7 +277,7 @@ const Lighting = ({ cart, setCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
