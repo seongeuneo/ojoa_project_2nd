@@ -34,7 +34,7 @@ function Header() {
                     <div>
                         {/* 상단 로고 */}
                         <div>
-                            <Link to="/"><img className="logo" src="/images/ojoa_logo_b.png" alt="logo" height="100px" /></Link>
+                            <Link to="/"><img className="logo" src="/images/ojoa_logo_b.png" alt="logo"/></Link>
                         </div>
                         <div className="search">
                             <Modal />
