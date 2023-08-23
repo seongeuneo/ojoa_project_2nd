@@ -85,14 +85,9 @@
 .qna_board_find legend {
     position: absolute;
     text-indent: -9999em;
+
 }
 
-.qna_filter_container select,
-.qna_board_find select {
-    height: 24px;
-    border: 1px solid #d5d5d5;
-    width: 100px;
-}
 
 .qna_board_find input[type=text] {
     margin-left: 20px;
@@ -100,6 +95,17 @@
     width: 200px;
     border: 1px solid #d5d5d5;
     color: #353535;
+}
+
+.qna_board_find #search_date {
+    margin-right: 5px;
+}
+
+.qna_board_find #search_date,
+.qna_board_find #search_key {
+    height: 24px;
+    border: 1px solid #d5d5d5;
+    width: 100px;
 }
 
 .qna_board_find_btn {
@@ -137,19 +143,16 @@
 
 .qna_Tboard_st {
     font-weight: bold;
+    font-size: 13px;
 }
 
 
 .qna_board_st2 {
-    width: 50px;
+    width: 100px;
     display: inline-block;
-    /* flex-direction: row; */
 }
 
 .qna_board_st2 {
-    /* width: 80px; */
-    /* padding: 10px 10px 10px 8px; */
-    /* text-align: initial; */
     justify-content: space-between;
 }
 
@@ -159,7 +162,6 @@
 .qna_board_st6 {
     text-align: center;
 }
-
 
 .qna_board_st4 a,
 .qna_borad_st4 span {
@@ -203,25 +205,30 @@
 
 
 .qna_write_btn {
+    position: relative;
     width: 1240px;
-
-    display: inline-flex;
+    margin: 10px auto 0px;
+    /*글쓰기 위치: 상,좌,하,우*/
+    display: flex;
     justify-content: flex-end;
-    position: absolute;
 
 }
+
 
 .qna_write_btn a {
     background-color: #a3a1a1;
     color: white;
     display: inline-flex;
+    margin-top: 10px;
     font-size: 12px;
+    position: relative;
     padding: 10px 15px;
     border-radius: 15px;
     font-family: "paybooc-Light", sans-serif;
     font-weight: 600;
     transition: 0.25s;
-
+    margin-left: -1px;
+    margin-right: 65px;
     cursor: pointer;
 }
 

@@ -1,25 +1,39 @@
 import '../Login/Login.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import FindIdModal from './FindIdModal/FindIdModal';
+import FindPasswordModal from './FindPasswordModal/FindPasswordModal';
 
 const Login = () => {
+    const [findIdModalVisible, setFindIdModalVisible] = useState(false);
+    const [findPasswordModalVisible, setFindPasswordModalVisible] = useState(false);
+
+    function showFindIdModal(){
+        setFindIdModalVisible(true);
+    }
+    function showFindPasswordModal(){
+        setFindPasswordModalVisible(true);
+    }
+
     return (
         <div>
-            <div class="login_path">
+            {findIdModalVisible && <FindIdModal setModalVisible={setFindIdModalVisible}/>}
+            {findPasswordModalVisible && <FindPasswordModal setModalVisible={setFindPasswordModalVisible}/>}
+
+            <div className="login_path">
                 <span>현재 위치</span>
                 <ol>
                     <li><Link to="/">홈</Link></li>
                     <li title="현재 위치"> &gt; Login</li>
                 </ol>
             </div>
-            <div class="login_title">
+            <div className="login_title">
                 <h2>LOGIN</h2>
-                <div class="txt_01">회원만의 혜택을 경험하세요</div>
+                <div className="txt_01">회원만의 혜택을 경험하세요</div>
             </div>
             <main className="login_page">
                 <div className="login_container">
-                    <form auction="">
+                    <form action="">
                         <div className="login_content">
                             <div className="login">
                                 <fieldset className="login_fieldset">
@@ -39,7 +53,7 @@ const Login = () => {
                                     </div>
                                     <div className="login_security">
                                         <img src="../images/ico_access.gif" alt="보안접속" />
-                                        "보안접속"
+                                        &quot;보안접속&quot;
                                     </div>
                                     <div className="login_forget">
                                         <label>
@@ -49,11 +63,11 @@ const Login = () => {
                                     <div className="login_find">
                                         <ul>
                                             <li>
-                                                <Link to="#">아이디찾기</Link>
+                                                <button type="button" onClick={showFindIdModal}>아이디찾기</button>
                                             </li>
                                             <li>&nbsp;|&nbsp;</li>
                                             <li>
-                                                <Link to="#">비밀번호찾기</Link>
+                                                <button type="button" onClick={showFindPasswordModal}>비밀번호찾기</button>
                                             </li>
                                         </ul>
                                     </div>
@@ -75,9 +89,9 @@ const Login = () => {
                             <div className="login_join">
                                 <div className="login_join_area">
                                     <div className="login_join_title">회원가입</div>
-                                    "아직 회원이 아니십니까?"
+                                    &quot;아직 회원이 아니십니까?&quot;
                                     <br />
-                                    "회원을 위한 다양한 혜택이 준비되어 있습니다."
+                                    &quot;회원을 위한 다양한 혜택이 준비되어 있습니다.&quot;
                                 </div>
                                 <div className="login_join_btn">
                                     <Link to="/login/info">회원가입</Link>
