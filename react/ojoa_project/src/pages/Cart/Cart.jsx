@@ -49,7 +49,7 @@ const Cart = ({ cart, convertPrice }) => {
     };
 
 //handleCheckAll: isAllChecked 상태를 토글하고 
-//selectedItems 배열을 그에 맞게 업데이트합니다.
+//selectedItems 배열을 그에 맞게 업데이트
     const handleCheckAll = () => {
         setIsAllChecked(!isAllChecked);
         const updatedSelectedItems = !isAllChecked ? cartState.map((item) => item.id) : [];
