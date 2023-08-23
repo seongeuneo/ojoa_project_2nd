@@ -39,16 +39,6 @@ function App() {
     return productPriceFormatted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
-  const handleRemoveFromCart = (itemId) => {
-    // itemId에 해당하는 아이템을 장바구니에서 제거하는 로직
-    const updatedCart = cart.filter((item) => item.id !== itemId);
-    setCart(updatedCart);
-  };
-
-  const handleCheckAll = () => {
-    setIsAllChecked(!isAllChecked);
-  };
-
 
   return (
     <div className="App">
@@ -71,8 +61,7 @@ function App() {
           <Route path="/productList/Closet/*" element={<Closet cart={cart} setCart={setCart} />} />
           <Route path="/productList/Lighting/*" element={<Lighting cart={cart} setCart={setCart} />} />
           <Route path="/cart/*" element={<Cart cart={cart} handleCart={handleCart} convertPrice={convertPrice}
-                                              handleRemove={handleRemoveFromCart} isAllChecked={isAllChecked} 
-                                              handleCheckAll={handleCheckAll}/>} />
+                                setCart={setCart} isAllChecked={isAllChecked}  setIsAllChecked={setIsAllChecked} />} />
           <Route path="/login/info" element={<Info />} />
           <Route path="/login/info/agree" element={<Agree />} />
           <Route path="/login/info/agree/popup" element={<Popup />} />
