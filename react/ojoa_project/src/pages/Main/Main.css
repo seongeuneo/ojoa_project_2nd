@@ -354,8 +354,6 @@
 
 
 
-
-
 .MiniItems .img_top {
     content: "";
     position: absolute;
@@ -412,10 +410,12 @@
 /*---------하트부분-------*/
 
 
-.MiniItems .colsection .heartbtn {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
+
+.MiniItembox .heartbtn {
+    /* position: absolute; */
+    position:relative;
+    bottom: 45px;
+    left: 365px;
+    width: 25px;
+    height: 25px;
 }
