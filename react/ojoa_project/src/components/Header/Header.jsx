@@ -28,8 +28,8 @@ function Header() {
     return (
         <>
             <header className='header'>
-                <Link to="/qna" className="mtalk"><img src="/images/mtalk_icon.png" alt="mtalk" /></Link>
-                <Link to="/qna" className="mchannel"><img src="/images/mchannel_icon.png" alt="mchannel" /></Link>
+                {/* <Link to="/qna" className="mtalk"><img src="/images/mtalk_icon.png" alt="mtalk" /></Link> */}
+                <a id="chat-channel-button" href="javascript:chatChannel()" className="mchannel"><img src="/images/mchannel_icon.png" alt="카카오톡 채널 채팅하기 버튼" /></a>
                 <div id="mheader">
                     {/*---------------------------------------------------------*/}
                     {/* header */}
