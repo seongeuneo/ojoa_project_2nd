@@ -11,6 +11,8 @@ function Header() {
 
     const generateToLink = (category) => {
         const CATEGORY_PATHS = {
+            'New': '/ProductList/New',
+            'Best': '/ProductList/Best',
             '침대': '/ProductList/Bed',
             '소파': '/ProductList/Sofa',
             '책장': '/ProductList/Bookshelf',
@@ -58,8 +60,8 @@ function Header() {
             {/* category_navi_drop_bar */}
             <div className="sticky" id="category_nav">
                 <ul>
-                    <li><Link to="#" onClick={handleLinkClick}>BEST</Link></li>
-                    <li><Link to="#" onClick={handleLinkClick}>NEW</Link></li>
+                    <li><Link to={generateToLink("Best")}>BEST</Link></li>
+                    <li><Link to={generateToLink("New")}>NEW</Link></li>
                     {/* <li><Link to="/ProductList/NewList">NEW</Link></li> */}
                     <li><Link to='/ProductList/Bed'>침대</Link>
                         <ul>
