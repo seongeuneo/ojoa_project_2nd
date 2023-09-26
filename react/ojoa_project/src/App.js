@@ -22,6 +22,7 @@ import Qna from './pages/Qna/Qna';
 import Mileage from './pages/MyPage/MyShop/Mileage';
 import productList from './pages/ProductList/ProductList';
 import ScrollTop from './components/ScrollToTop';
+import Checkout from "./pages/Checkout/Checkout";
 // import NewList from './pages/ProductList/NewList';
 // import ProductList from './pages/ProductList'
 
