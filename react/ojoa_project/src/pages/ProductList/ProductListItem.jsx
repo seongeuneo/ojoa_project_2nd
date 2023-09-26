@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom"
 import "./ProductListItem.css";
-import mockList from '../../data/ItemsData'
-import { Chair, Bed, Sofa, Closet, Bookshelf, Lighting } from '../../data/ItemsData'
+import { Chair, Bed, Sofa, Closet, Bookshelf, Lighting, Best, New } from '../../data/ItemsData'
 
 const ProductListItem = ({ content, onSelect, handleCart }) => {
 
