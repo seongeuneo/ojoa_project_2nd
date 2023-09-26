@@ -101,6 +101,7 @@ function Qna() {
     const qnaList = [
         {
             num: '공지',
+            imgNo: '-',
             itemInfo: '-',
             category: '-',
             title: '리뷰작성 포인트 적립안내',
@@ -111,6 +112,7 @@ function Qna() {
         },
         {
             num: '공지',
+            imgNo: '-',
             itemInfo: '-',
             category: '-',
             title: 'ojoa 온라인몰 배송관련 안내',

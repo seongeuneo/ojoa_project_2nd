@@ -3,10 +3,12 @@ import '../../pages/Cart/Cart.css';
 import CartHeader from '../../pages/Cart/CartHeader';
 import CartList from '../../pages/Cart/CartList';
 import CartTotal from '../../pages/Cart/CartTotal';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Cart = ({ cart, convertPrice }) => {
+
+    const navigate = useNavigate()
 
     // 상태 관리할 state 추가
     const [cartState, setCartState] = useState(cart);
@@ -97,6 +99,13 @@ const Cart = ({ cart, convertPrice }) => {
         }, 0);
     };
 
+    /**
+     * 주문 정보 DB 저장 후, 결제페이지로 이동
+     */
+    const handleCheckout = () => {
+        navigate('/checkout')
+    }
+
 
     return (
         <div className="Cart">
@@ -133,6 +142,7 @@ const Cart = ({ cart, convertPrice }) => {
                 convertPrice={convertPrice}
                 selectedItems={selectedItems} // 선택된 아이템 리스트 전달
                 selectedItemsTotal={selectedItemsTotal} // 선택된 아이템 합계 전달
+                onCheckout={handleCheckout}
             />
         </div>
     );

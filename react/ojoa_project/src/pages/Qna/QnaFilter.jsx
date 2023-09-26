@@ -2,10 +2,10 @@ import './Qna.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const QnaFilter = ({setFilters}) => {
+const QnaFilter = ({ setFilters }) => {
     function handleCategoryChange(e) {
         let category = e.target.value;
-        
+
         setFilters((filters) => ({ ...filters, category }));
     }
     function handleSubmit(e) {
@@ -22,7 +22,7 @@ const QnaFilter = ({setFilters}) => {
     return (
         <div className="qna_filter_container">
             <div className="qna_board_sort">
-                <select name="board_category" onChange={handleCategoryChange}>
+                <select name="board_category" id="board_category" onChange={handleCategoryChange}>
                     <option value="">전체</option>
                     <option>상품문의</option>
                     <option>배송문의</option>

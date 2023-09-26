@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import FindIdModal from './FindIdModal/FindIdModal';
 import FindPasswordModal from './FindPasswordModal/FindPasswordModal';
 
+
 const Login = () => {
     const [findIdModalVisible, setFindIdModalVisible] = useState(false);
     const [findPasswordModalVisible, setFindPasswordModalVisible] = useState(false);
@@ -15,10 +16,20 @@ const Login = () => {
         setFindPasswordModalVisible(true);
     }
 
+    // 클릭버튼 handle
+    // const handleNaverClick = () => {
+    //     const naverLoginButton = document.getElementById(
+    //         "naverIdLogin_loginButton"
+    //     );
+    //     if (naverLoginButton) naverLoginButton.click();
+    // };
+
     return (
         <div>
             {findIdModalVisible && <FindIdModal setModalVisible={setFindIdModalVisible} />}
             {findPasswordModalVisible && <FindPasswordModal setModalVisible={setFindPasswordModalVisible} />}
+
+            {/* <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script> */}
 
             <div className="login_path">
                 <span>현재 위치</span>
@@ -72,15 +83,20 @@ const Login = () => {
                                         </ul>
                                     </div>
                                     <div className="login_cboth"></div>
+
+
+                                    {/* <div onClick={handleNaverClick}><img src="../images/btn_naver_login.gif" alt='네이버로그인' /></div>
+                                    <div id="naverIdLogin" style={{ display: "none" }} /> */}
+
                                     <div className="login_sns">
                                         <p className="sns">
-                                            <Link to="#" target="_blank"><img src="../images/btn_naver_login.gif" alt='네이버로그인' /></Link>
+                                            <Link to="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/" target="_blank"><img src="../images/btn_naver_login.gif" alt='네이버로그인' /></Link>
                                         </p>
                                         <p className="sns">
-                                            <Link to="#" target="_blank"><img src="../images/btn_facebook_login.gif" alt='페이스북로그인' /></Link>
+                                            <Link to="http://www.facebook.com/" target="_blank"><img src="../images/btn_facebook_login.gif" alt='페이스북로그인' /></Link>
                                         </p>
                                         <p className="sns">
-                                            <Link to="#" target="_blank"><img src="../images/btn_kakao_login.gif" alt='카카오톡로그인' /></Link>
+                                            <Link to="https://accounts.kakao.com/login/?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount%2Finfo#login" target="_blank"><img src="../images/btn_kakao_login.gif" alt='카카오톡로그인' /></Link>
                                         </p>
                                     </div>
                                     <div className="login_cboth"></div>
