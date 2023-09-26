@@ -41,7 +41,7 @@ function Chair({ cart, setCart, handleCart }) {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart} handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -89,7 +89,7 @@ const Bed = ({ cart, setCart, handleCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart} handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -136,7 +136,7 @@ const Sofa = ({ cart, setCart, handleCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart} handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -183,7 +183,7 @@ const Bookshelf = ({ cart, setCart, handleCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart} handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -230,7 +230,7 @@ const Closet = ({ cart, setCart, handleCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart} handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>
@@ -277,7 +277,7 @@ const Lighting = ({ cart, setCart, handleCart }) => {
 
     const singleLi = sortedList.map((content) => (
         <li key={content.id}>
-            <ProductListItem content={content} cart={cart} setCart={setCart}  handleCart={handleCart}>
+            <ProductListItem content={content} cart={cart} setCart={setCart} handleCart={handleCart}>
                 <Link className="productLink" to={`/products/detail/${content.id}`} key={content.id}>
                     {content.productName}
                 </Link>

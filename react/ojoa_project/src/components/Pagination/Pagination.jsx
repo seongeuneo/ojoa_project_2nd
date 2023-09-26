@@ -1,29 +1,64 @@
 import React from "react";
 import "./Pagination.css";
 
-function Pagination() {
-    return (
-        <div className="Pagination">
-            {/* <!-- 페이지네이션 --> */}
-            <div className="pl_page">
-                <ul className="pl_pagination pl_modal">
-                    <li><a href="#" className="pl_first">처음 페이지</a></li>
-                    <li><a href="#" className="pl_arrow pl_left">◀</a></li>
-                    <li><a href="#" className="pl_active pl_num">1</a></li>
-                    <li><a href="#" className="pl_num">2</a></li>
-                    <li><a href="#" className="pl_num">3</a></li>
-                    <li><a href="#" className="pl_num">4</a></li>
-                    <li><a href="#" className="pl_num">5</a></li>
-                    <li><a href="#" className="pl_num">6</a></li>
-                    <li><a href="#" className="pl_num">7</a></li>
-                    <li><a href="#" className="pl_num">8</a></li>
-                    <li><a href="#" className="pl_num">9</a></li>
-                    <li><a href="#" className="pl_arrow pl_right">▶</a></li>
-                    <li><a href="#" className="pl_last">끝 페이지</a></li>
-                </ul>
-            </div>
-        </div>
-    )
-};
+function Pagination({ itemsPerPage, totalItems, currentPage, onPageChange }) {
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const pageNumbers = [];
+
+  for (let i = 1; i <= totalPages; i++) {
+    pageNumbers.push(i);
+  }
+
+  return (
+    <div className="Pagination">
+      <div className="ec-base-paginate">
+        <ol>
+          <li>
+            <a href="#" className="first" onClick={() => onPageChange(1)}>
+              &lt;&lt;
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              onClick={() => onPageChange(currentPage > 1 ? currentPage - 1 : 1)}
+            >
+              &lt;
+            </a>
+          </li>
+        </ol>
+        <ol>
+          {pageNumbers.map((number) => (
+            <li
+              key={number}
+              className={currentPage === number ? "record" : null}
+            >
+              <a href="#" onClick={() => onPageChange(number)}>
+                {number}
+              </a>
+            </li>
+          ))}
+        </ol>
+        <ol>
+          <li>
+            <a
+              href="#"
+              onClick={() =>
+                onPageChange(currentPage < totalPages ? currentPage + 1 : totalPages)
+              }
+            >
+              &gt;
+            </a>
+          </li>
+          <li>
+            <a href="#" className="last" onClick={() => onPageChange(totalPages)}>
+              &gt;&gt;
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  );
+}
 
 export default Pagination;
