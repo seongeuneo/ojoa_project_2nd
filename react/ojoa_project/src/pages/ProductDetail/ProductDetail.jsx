@@ -90,18 +90,11 @@ function ProductDetail({ handleCart }) {
     const [mainImg, setMainImg] = useState(`../thumbs/${imgNo}_1.jpg`);
 
 
-    const test = mockList.map((content) => {
 
-        return (
-            <li><img onClick={() => imgChange(`/thumbs/${imgNo}_1.jpg`)} src={`/thumbs/${imgNo}_1.jpg`} alt="" id="thumb1" /></li>
-        );
-    });
 
 
     //======================================
 
-    // 상품 상세페이지 4가지 섹션으로 나뉘어지는 갈래
-    const location = useLocation();
 
     return (
         <div className="ProductDetail">
@@ -197,7 +190,7 @@ function ProductDetail({ handleCart }) {
             </div>
             <div className="PdIndex00">
                 <div className="pd_section">
-                    <a><NavLink to="./DetailInfo01" activeClassName="active"exact>
+                    <a><NavLink to="./DetailInfo01" activeClassName="active" exact>
                         <strong>상품상세정보</strong></NavLink></a>
                     <a><NavLink to="./OrderReview02" activeClassName="active" >
                         <strong>상품구매후기</strong></NavLink></a>
