@@ -112,8 +112,6 @@
     margin-top: 7px;
 }
 
-/* .stores .storeInfo div { */
-    /* border: 1px solid #333; */
-    /* width: 550px;
-    height: 400px;
-} */
+.stores .storeInfo .map {
+    border: 1px solid #333;
+}

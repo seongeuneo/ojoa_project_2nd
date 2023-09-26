@@ -1,16 +1,8 @@
 import '../MyShop/Mileage.css';
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Pagination from '../../../components/Pagination/Pagination';
 
 function MileageCouponList() {
-
-    const [currentPage, setCurrentPage] = useState(1);  // 현재 페이지 상태 추가
-
-    // 페이지 변경 핸들러
-    const handlePageChange = (page) => {
-        // 페이지 변경 시 현재 페이지 업데이트
-        setCurrentPage(page);
-    };
 
     return (
         <div className='MileageCouponList'>
@@ -42,7 +34,7 @@ function MileageCouponList() {
                             </div>
                         </div>
                     </div>
-                    <Pagination currentPage={currentPage} totalPages={1} onPageChange={handlePageChange} />
+                    <Pagination />
                 </div>
             </div>
         </div>
