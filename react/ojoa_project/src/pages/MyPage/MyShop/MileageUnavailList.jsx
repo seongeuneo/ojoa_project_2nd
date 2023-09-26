@@ -1,9 +1,17 @@
 import '../MyShop/Mileage.css';
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import Pagination from '../../../components/Pagination/Pagination';
 
 function MileageUnavailList() {
-    
+
+    const [currentPage, setCurrentPage] = useState(1);  // 현재 페이지 상태 추가
+
+    // 페이지 변경 핸들러
+    const handlePageChange = (page) => {
+        // 페이지 변경 시 현재 페이지 업데이트
+        setCurrentPage(page);
+    };
+
     return (
         <div className='MileageUnavailList'>
             <div id='wrap'>
@@ -34,7 +42,7 @@ function MileageUnavailList() {
                             </div>
                         </div>
                     </div>
-                    <Pagination />
+                    <Pagination currentPage={currentPage} totalPages={1} onPageChange={handlePageChange} />
                 </div>
             </div>
         </div>
