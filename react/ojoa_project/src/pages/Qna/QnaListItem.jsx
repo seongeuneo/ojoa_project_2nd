@@ -26,6 +26,7 @@ function QnaListItem({ qnaList, filters }) {
         if (filters.category && item.category != filters.category)
             return false;
 
+        //모든기간 필터
         if (filters.date) {
             const date = new Date(item.date);
             const diff_days = ((new Date()) - date) / 1000 / 60 / 60 / 24;
@@ -37,6 +38,7 @@ function QnaListItem({ qnaList, filters }) {
                 return false;
         }
 
+        //제목 필터
         if (filters.key && filters.query) {
             if (filters.key == "subject" && !item.title.includes(filters.query))
                 return false;
@@ -52,14 +54,14 @@ function QnaListItem({ qnaList, filters }) {
     });
 
     return (
-        <tbody>
+        <tbody className='qna_ListItem_container'>
             {qnaList.map((item, i) => (
                 <React.Fragment key={i}>
                     {
                         (item.num == "공지") ? (
                             <tr className='qna_Tboard_st'>
                                 <td className='qna_board_st1'>{item.num}</td>
-                                <td className='qna_board_st2'>{item.itemInfo}</td>
+                                <td className='qna_Tboard_st2'>{item.itemInfo}</td>
                                 <td className='qna_board_st3'>{item.category}</td>
                                 <td className='qna_board_st4'>
                                     <a className='title_button' onClick={() => handleTitleClick(i)}>{item.title}</a>
@@ -70,7 +72,7 @@ function QnaListItem({ qnaList, filters }) {
                         ) : (
                             <tr className='qna_Lboard_st'>
                                 <td className='qna_board_st1'>{item.num}</td>
-                                <td className='qna_board_st2'>
+                                <td className='qna_Lboard_st2'>
                                     <div><img src={`../thumbs/${item.imgNo}_1.jpg`} alt='상품' /></div>
                                     <div>{item.itemInfo}</div>
                                 </td>

@@ -1,7 +1,7 @@
 import '../../pages/Cart/Cart.css';
 import { useEffect, useState } from "react";
 
-const CartTotal = ({ cart, convertPrice, selectedItems }) => {
+const CartTotal = ({ cart, convertPrice, selectedItems, onCheckout }) => {
 
 
     // 선택된 아이템의 총 가격 상태
@@ -78,7 +78,7 @@ const CartTotal = ({ cart, convertPrice, selectedItems }) => {
                     </div>
                 </div>
 
-                <div className="button">
+                <div className="button" onClick={onCheckout}>
                     <p className="btnText">PAY NOW</p>
                     <div className="btnTwo">
                         <p className="btnText2">GO!</p>
